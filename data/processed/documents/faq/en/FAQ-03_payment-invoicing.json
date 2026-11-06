@@ -1,0 +1,69 @@
+{
+  "doc_id": "FAQ-03",
+  "title": "FAQ — Payment and invoicing",
+  "language": "en",
+  "category": "faq",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": "FAQ-03-Q01",
+      "question": "Which payment methods do you accept?",
+      "answer": "Bank card (Visa, Mastercard, CMI) online, cash on delivery in cash or by card, bank transfer, in-store payment, and payment in 3x or 4x interest-free for orders above 2 000 MAD through our approved partner."
+    },
+    {
+      "id": "FAQ-03-Q02",
+      "question": "Is cash on delivery available everywhere?",
+      "answer": "Yes, throughout Morocco, with a limit of 5 000 MAD per order and a 25 MAD service fee. A cash-on-delivery order refused without reason may lead to temporary suspension of this payment method."
+    },
+    {
+      "id": "FAQ-03-Q03",
+      "question": "Can I pay in instalments?",
+      "answer": "Payment in 3x or 4x interest-free is offered above 2 000 MAD, subject to approval by the financial partner. An identity document and proof of income may be requested. If declined, paying in one instalment remains possible."
+    },
+    {
+      "id": "FAQ-03-Q04",
+      "question": "Is my banking data secure?",
+      "answer": "Yes. Payments are processed by the CMI provider on a secure page. NovaShop never stores the full card number or the security code. 3-D Secure is enabled when the customer's bank offers it."
+    },
+    {
+      "id": "FAQ-03-Q05",
+      "question": "How do I get my invoice?",
+      "answer": "The invoice is generated automatically after shipment and is available in PDF format in the customer account under \"My invoices\". It is also sent by email to the order address."
+    },
+    {
+      "id": "FAQ-03-Q06",
+      "question": "Can I get an invoice in my company's name?",
+      "answer": "Yes, if the request is made within 30 days of purchase, with the ICE number and company name. Use the contact form and include the order number. Beyond 30 days, no corrected invoice can be issued."
+    },
+    {
+      "id": "FAQ-03-Q07",
+      "question": "Why was my card payment declined?",
+      "answer": "Common causes are: card limit reached, 3-D Secure not validated, expired card, or a block by the bank for an online transaction. Contact your bank, then try again. No amount is charged if the payment is declined."
+    },
+    {
+      "id": "FAQ-03-Q08",
+      "question": "I was charged twice, what should I do?",
+      "answer": "A double charge is usually a temporary authorisation that disappears within 3 to 5 business days. If the charge persists, contact support with the order number and the bank statement. An adjustment is made within 10 business days."
+    },
+    {
+      "id": "FAQ-03-Q09",
+      "question": "The invoiced amount does not match what I paid, why?",
+      "answer": "Check the delivery fees and the cash-on-delivery service fee, added at checkout. If the difference persists, contact support within 30 days: an adjustment is possible within 10 business days."
+    },
+    {
+      "id": "FAQ-03-Q10",
+      "question": "Can I use a promo code and a gift card together?",
+      "answer": "Yes. A gift card can be combined with a promo code. However, two promo codes are never combined on the same order."
+    },
+    {
+      "id": "FAQ-03-Q11",
+      "question": "Do you accept cryptocurrencies or cheques?",
+      "answer": "No. NovaShop accepts only the payment methods listed in the payment policy (POL-05). Personal cheques and cryptocurrencies are not accepted."
+    },
+    {
+      "id": "FAQ-03-Q12",
+      "question": "How do I dispute an unrecognised charge?",
+      "answer": "First contact your bank to identify the transaction, then NovaShop support with the order identifier. A bank dispute does not suspend the standard refund procedure."
+    }
+  ]
+}

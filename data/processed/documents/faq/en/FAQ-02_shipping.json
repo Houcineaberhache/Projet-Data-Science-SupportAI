@@ -1,0 +1,69 @@
+{
+  "doc_id": "FAQ-02",
+  "title": "FAQ — Shipping",
+  "language": "en",
+  "category": "faq",
+  "version": "1.0",
+  "questions": [
+    {
+      "id": "FAQ-02-Q01",
+      "question": "What are the delivery times?",
+      "answer": "Casablanca, Rabat, Salé and Mohammedia: 24 to 48 hours. Marrakech, Fès, Tanger, Agadir, Meknès, Oujda, Kénitra and Tétouan: 2 to 4 business days. Other cities and rural areas: 3 to 6 business days. Times run from payment confirmation."
+    },
+    {
+      "id": "FAQ-02-Q02",
+      "question": "How much does delivery cost?",
+      "answer": "39 MAD for any order below 500 MAD. Delivery is free from 500 MAD. In area C the fee is 49 MAD and free delivery applies from 800 MAD. Cash on delivery adds a 25 MAD service fee."
+    },
+    {
+      "id": "FAQ-02-Q03",
+      "question": "Do you deliver throughout Morocco?",
+      "answer": "Yes, NovaShop delivers across Moroccan territory through its logistics partners. Some very remote locations may require a pickup point. Delivery outside Morocco is not offered."
+    },
+    {
+      "id": "FAQ-02-Q04",
+      "question": "Can I choose a delivery slot?",
+      "answer": "The carrier contacts the customer by phone before delivery to agree on a time. No precise time slot can be guaranteed at checkout. For bulky orders, an appointment can be arranged."
+    },
+    {
+      "id": "FAQ-02-Q05",
+      "question": "What happens if I am not home at delivery?",
+      "answer": "The carrier makes a second attempt. After two failures, the parcel returns to the warehouse. The customer is then contacted to choose between reshipment (39 MAD) and a refund, with the initial delivery fees not refunded."
+    },
+    {
+      "id": "FAQ-02-Q06",
+      "question": "Can I collect my order in store?",
+      "answer": "Yes, pickup is free in the Casablanca, Rabat and Marrakech stores. You receive a pickup code as soon as the order is ready. You have 7 days to collect it."
+    },
+    {
+      "id": "FAQ-02-Q07",
+      "question": "How do I track my parcel?",
+      "answer": "The tracking number is sent by email and SMS as soon as the parcel is handed to the carrier. It is also visible in the customer account and on the carrier's tracking page."
+    },
+    {
+      "id": "FAQ-02-Q08",
+      "question": "My parcel is late, what should I do?",
+      "answer": "A parcel is considered late when the maximum time for its area has been exceeded by 3 business days. You may request a carrier investigation (answer within 48 hours), cancel and be refunded if the parcel cannot be located, or wait with a 50 MAD store credit."
+    },
+    {
+      "id": "FAQ-02-Q09",
+      "question": "What should I do if the parcel arrives damaged?",
+      "answer": "Refuse the parcel if the packaging is visibly damaged. If you have accepted it, report the damage within 48 hours with at least three photos. See POL-09."
+    },
+    {
+      "id": "FAQ-02-Q10",
+      "question": "Do you deliver on Sundays?",
+      "answer": "No delivery is made on Sundays or public holidays. Orders placed on Sunday are processed on Monday."
+    },
+    {
+      "id": "FAQ-02-Q11",
+      "question": "Can I change the delivery address?",
+      "answer": "Yes, before shipment, from the customer account or by contacting support. Once handed to the carrier, NovaShop can no longer change the address: contact the carrier directly using the tracking number."
+    },
+    {
+      "id": "FAQ-02-Q12",
+      "question": "Are delivery fees refunded?",
+      "answer": "They are refunded in the event of cancellation before shipment, a wrong product, a damaged product or non-delivery. They are not refunded for a change-of-mind return."
+    }
+  ]
+}
