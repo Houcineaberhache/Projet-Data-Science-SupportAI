@@ -44,3 +44,11 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Data Engineering deliverables (Task 1) — versioned on purpose
+!data/raw/corpus/
+!data/raw/corpus/**
+!data/processed/documents/
+!data/processed/documents/**
+!data/processed/extracted/
+!data/processed/extracted/**

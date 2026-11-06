@@ -1,0 +1,9 @@
+# Binary deliverables — never normalize line endings
+*.pdf binary
+*.docx binary
+
+# Text data — keep LF in the repository
+*.md text eol=lf
+*.py text eol=lf
+*.csv text eol=lf
+*.jsonl text eol=lf

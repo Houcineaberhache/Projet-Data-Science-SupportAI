@@ -1,0 +1,178 @@
+# Data schema — Data Engineering (Task 1)
+
+> Generated from the actual files in this repository. Every path below is relative to the repository root.
+
+## 1. Layout
+
+| Path | Content |
+| --- | --- |
+| `data/raw/corpus/fr/`, `data/raw/corpus/en/` | 37 Markdown documents per language, YAML front matter |
+| `data/processed/documents/{pdf,docx,faq}/{fr,en}/` | 74 generated deliverables (28 PDF, 30 DOCX, 16 FAQ) |
+| `data/processed/documents/manifest_documents.csv` | Traceability of the 74 deliverables |
+| `data/processed/extracted/documents.jsonl` | 522 extracted, cleaned records |
+| `data/annotations/intents.csv` | Bilingual intent taxonomy (13 intents + `out_of_scope`) |
+| `data/source_manifest.csv` | Master manifest: 74 documents + 7 external references |
+| `docs/reports/` | Generated quality reports and annotation logs |
+| `scripts/` | Build, validate, extract and test pipeline |
+
+## 2. Corpus Markdown
+
+### 2.1 Naming
+
+`{DOC_ID}_{slug}.md`, for example `POL-01_politique-retours.md` (FR) and
+`POL-01_returns-exchanges.md` (EN). The `doc_id` is identical in both languages;
+only the slug differs.
+
+### 2.2 YAML front matter
+
+Required for every file (validated):
+
+| Field | Type | Example | Rule |
+| --- | --- | --- | --- |
+| `doc_id` | string | `POL-01` | Unique per language; must match the filename prefix |
+| `title` | string | `Politique de retours` | Non-empty |
+| `category` | enum | `policies` | `policies`, `faq`, `procedures`, `internal_operations`, `product_guides`, `legal_summaries` |
+| `doc_type` | string | `policy` | Lowercase, stable across languages |
+| `language` | enum | `fr` | Must match the parent folder |
+| `version` | string | `1.0` | Same in both languages |
+| `effective_date` | date | `2026-09-01` | ISO `YYYY-MM-DD`, same in both languages |
+| `owner` | string | `NovaShop` | Same in both languages |
+| `sensitivity` | enum | `public` | Same in both languages |
+| `source_type` | enum | `synthetic` | `synthetic` for all NovaShop documents |
+
+Optional: `review_status` (used by the four `REG-*` summaries).
+
+### 2.3 Body
+
+Short `##` sections, one topic per section. The section count must be identical
+in FR and EN. Tables are allowed and are extracted as text by the DOCX reader.
+
+## 3. `data/source_manifest.csv`
+
+- Encoding: UTF-8 with BOM, comma separated.
+- 81 rows = 74 `knowledge_base_document` + 7 `external_reference`.
+- Primary key: **(`doc_id`, `language`)**.
+
+35 columns:
+
+```
+doc_id, record_type, title, category, doc_type, language, variant,
+translation_of, version, effective_date, owner, author, source_type,
+source_origin, source_url, license, license_url, license_status,
+verified_by, verified_on, reuse_permission, attribution_required,
+attribution_text, contains_pii, sensitivity, index_in_rag,
+chunking_profile, review_status, word_count, est_tokens, sha256,
+relative_path, document_format, document_path, notes
+```
+
+Key fields:
+
+| Field | Meaning |
+| --- | --- |
+| `record_type` | `knowledge_base_document` or `external_reference` |
+| `variant` | `original` (FR) or `translation` (EN) |
+| `translation_of` | `doc_id` of the French original, empty for originals |
+| `license_status` | `verified`, `verified_link_only`, `presumed_public_domain`, `pending_verification`, `internal_verified` |
+| `license` | `NovaShop-Proprietary-Synthetic` for internal documents |
+| `index_in_rag` | `yes` for the 74 corpus documents, `no` for the 7 external references |
+| `review_status` | `approved` for the 74 documents, `verified` for the external references |
+| `chunking_profile` | Chunking strategy expected at indexing time |
+| `sha256` | SHA-256 of the source Markdown file |
+| `relative_path` | Corpus path (`data/raw/corpus/{fr,en}/...`) |
+| `document_format` | `pdf`, `docx`, `json`, `jsonl`, `csv` |
+| `document_path` | Generated deliverable path |
+
+## 4. `data/processed/documents/manifest_documents.csv`
+
+One row per generated deliverable (74 rows).
+
+```
+doc_id, language, format, relative_path, source_path, title,
+category, units, source_words, size_bytes, sha256
+```
+
+`units` is the number of extraction units the deliverable will produce
+(pages for PDF, sections for DOCX, Q/A pairs for FAQ).
+
+## 5. `data/processed/extracted/documents.jsonl`
+
+One JSON object per line, one line per extraction unit: 522 records
+(56 PDF pages, 274 DOCX sections, 192 FAQ pairs).
+
+| Field | Type | Meaning |
+| --- | --- | --- |
+| `doc_id` | string | Document identifier |
+| `language` | `fr` / `en` | Language of the record |
+| `format` | `pdf` / `docx` / `json` / `jsonl` / `csv` | Source format |
+| `category` | string | Corpus category |
+| `title` | string | Document title |
+| `source_path` | string | Path of the extracted file |
+| `source_sha256` | string | SHA-256 of the source file |
+| `extracted_at` | ISO 8601 | Extraction timestamp (UTC) |
+| `record_id` | string | `{doc_id}:{language}:{format}:{unit_id}` |
+| `unit_type` | `page` / `section` / `qa` | Granularity |
+| `unit_id` | string | `p1`, `s3`, `q7`… |
+| `page` | integer or null | PDF page number |
+| `section` | string or null | DOCX section heading |
+| `text` | string | Cleaned text |
+| `needs_ocr` | boolean | True when a PDF page has fewer than 40 extractable characters |
+| `warnings` | list | Non-blocking extraction warnings |
+| `extractor` | string | `pypdf`, `ooxml-stdlib`, `faq-json`, `faq-jsonl`, `faq-csv` |
+| `char_count` | integer | Characters in `text` |
+| `word_count` | integer | Words in `text` |
+
+## 6. FAQ formats
+
+The same 8 FAQ documents are delivered in three shapes.
+
+**JSON** (FAQ-01 to FAQ-03) — one object per document:
+
+```json
+{
+  "doc_id": "FAQ-01",
+  "title": "FAQ — Commandes et suivi",
+  "language": "fr",
+  "category": "faq",
+  "version": "1.0",
+  "questions": [
+    {"id": "FAQ-01-Q01", "question": "...", "answer": "..."}
+  ]
+}
+```
+
+**JSONL** (FAQ-04 to FAQ-06) — one object per Q/A pair:
+
+```json
+{"doc_id": "FAQ-04", "title": "...", "language": "fr", "category": "faq",
+ "version": "1.0", "id": "FAQ-04-Q01", "question": "...", "answer": "..."}
+```
+
+**CSV** (FAQ-07, FAQ-08) — header:
+
+```
+doc_id,language,id,title,category,version,question,answer
+```
+
+## 7. Invariants enforced by `scripts/manage_corpus.py validate`
+
+- Front matter present and complete; `doc_id` matches the filename.
+- `language` matches the parent folder.
+- At least 120 words per document; at least 5 questions per FAQ.
+- No `lorem ipsum`, no `TODO`, no IBAN or card number.
+- No near-duplicate document pair (Jaccard > 0.30).
+- FR/EN parity: same category, `doc_type`, version, `effective_date`,
+  sensitivity, section count and numeric values; length ratio between 0.60 and 1.25.
+- SHA-256 declared in the manifest matches the current file.
+
+## 8. Reproduce
+
+```bash
+python scripts/build_sources.py        # Markdown -> PDF / DOCX / FAQ
+python scripts/manage_corpus.py build  # manifest + statistics
+python scripts/manage_corpus.py validate
+python scripts/extract_documents.py    # PDF / DOCX / FAQ -> JSONL
+python scripts/test_extraction.py      # 14 unit tests
+```
+
+The extraction step preserves accents and French punctuation, and flags PDF
+pages that would need OCR instead of silently returning empty text.
