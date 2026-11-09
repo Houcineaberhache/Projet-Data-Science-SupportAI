@@ -1,0 +1,21 @@
+id;language;text;annotator_1_intent;annotator_2_intent;ambiguous_oui_non;notes
+INT-0001;fr;bonjour, où en est ma commande ? je n'ai pas reçu de mail de suivi;order_tracking;;non;Suivi sans incident signalé
+INT-0002;en;Can you tell me how to track my parcel? I only have the order number.;order_tracking;;non;Tracking inquiry without incident
+INT-0003;fr;je voudrais annuler ma commande passée ce matin, c'est encore possible ?;order_change_cancel;;non;Annulation avant expédition
+INT-0004;en;I typed the wrong delivery address, can I change it before it ships?;order_change_cancel;;non;Modification d'adresse avant expédition (boundary rule POL-08)
+INT-0005;fr;j'ai commandé un casque il y a 12 jours et je n'ai toujours rien reçu;delivery_issue;;non;Incident de retard livraison (ex: >10 jours sans réception)
+INT-0006;en;My package arrived with a crushed box and the screen is cracked.;delivery_issue;;non;Colis/produit endommagé à la réception (POL-09)
+INT-0007;fr;je veux retourner ces écouteurs, ils ne me conviennent pas;return_request;;non;Rétractation sous 14 jours (POL-01)
+INT-0008;fr;j'ai renvoyé mon colis il y a 3 semaines et je n'ai toujours pas été remboursé;refund_status;;non;Attente de remboursement suite à un retour déjà effectué
+INT-0009;en;Where is my refund? The carrier confirmed the return ten days ago.;refund_status;;non;Refund tracking post-return confirmation
+INT-0010;fr;est-ce que vous acceptez le paiement en plusieurs fois ?;payment_info;;non;Information sur les modalités et facilités de paiement
+INT-0011;fr;j'ai été débité deux fois pour la même commande;payment_issue;;non;Incident de transaction / double débit constaté
+INT-0012;en;My card was declined at checkout, what should I do?;payment_issue;;non;Échec transaction carte bancaire au paiement
+INT-0013;fr;mon téléphone ne s'allume plus depuis la dernière mise à jour;technical_support;;non;Panne technique logicielle/matérielle sans demande formelle de garantie
+INT-0014;en;My laptop battery died after 8 months, is it covered by the warranty?;warranty_claim;;non;Demande explicite sur la couverture de garantie (POL-04)
+INT-0015;fr;ce portable a-t-il un port HDMI et combien de RAM ?;product_info;;non;Demande de caractéristiques techniques catalogue
+INT-0016;fr;mon code promo ne fonctionne pas au moment de payer;promotion_loyalty;;non;Problème d'application d'un code promo (POL-10)
+INT-0017;en;How do I delete my account and all my personal data?;account_privacy;;non;Exercice de droits données personnelles / suppression compte (POL-06)
+INT-0018;fr;je veux parler à un responsable, personne ne répond à mes messages;human_support;;non;Demande explicite d'escalade vers un agent humain
+INT-0019;en;Thanks, it's all sorted now!;out_of_scope;;non;Remerciement / clôture hors périmètre support direct
+INT-0020;fr;mon écran s'est fissuré au bout de 2 mois, vous pouvez faire quelque chose ?;warranty_claim;;oui;Demande de prise en charge SAV / litige sur la couverture garantie casse
