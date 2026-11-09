@@ -121,6 +121,41 @@ One JSON object per line, one line per extraction unit: 522 records
 | `char_count` | integer | Characters in `text` |
 | `word_count` | integer | Words in `text` |
 
+## 5.1 `data/processed/cleaned_corpus.jsonl`
+
+Cleaned, normalized and deduplicated version of `documents.jsonl`: **522
+records**, same order, same identity fields, **no timestamp**. Produced by
+`scripts/clean_corpus.py`; two runs produce byte-identical files.
+
+| Field | Type | Example | Values / notes |
+| --- | --- | --- | --- |
+| `record_id` | string | `POL-01:en:pdf:p1` | `{doc_id}:{language}:{format}:{unit_id}`, unique |
+| `doc_id` | string | `POL-01` | Document identifier |
+| `language` | `fr` / `en` | `en` | 261 records per language |
+| `format` | `pdf` / `docx` / `json` / `jsonl` / `csv` | `pdf` | Source format |
+| `category` | string | `policies` | Corpus category |
+| `title` | string | `Returns and exchanges policy` | Document title |
+| `source_path` | string | `data/processed/documents/pdf/en/POL-01_returns-exchanges.pdf` | Extracted source file |
+| `source_sha256` | string | `52a8d826…` | SHA-256 of the source file (64 hex characters) |
+| `unit_type` | `page` / `section` / `qa_pair` | `page` | Extraction granularity |
+| `unit_id` | string | `p1`, `s3`, `FAQ-01-Q01` | Unit identifier inside the document |
+| `page` | integer or null | `1` | PDF page number, `null` otherwise |
+| `section` | string or null | `2. Return window` | DOCX section heading, `null` for PDF and FAQ |
+| `text` | string | `Returns and exchanges policy\nScope: …` | Normalized text, without repeated headers |
+| `char_count` | integer | `4700` | Characters in `text` |
+| `word_count` | integer | `743` | Words in `text` |
+| `cleaning` | object | see below | Applied steps and traceability |
+
+The `cleaning` object records what happened to the record:
+
+| Field | Type | Example | Values / notes |
+| --- | --- | --- | --- |
+| `steps` | list of strings | `["normalisation", "entetes", "reflow_pdf"]` | Applied steps, in order: `normalisation`, `entetes`, `reflow_pdf`, `quasi_doublon`, `titre_seul` |
+| `removed` | list of strings | `["Référence POL-01 · version 1.0 · …", "Document fictif — …"]` | Exact removed segments, in order (empty when nothing was removed) |
+| `reflowed` | boolean | `true` | `true` when PDF hard line breaks were joined |
+| `heading_only` | boolean | `false` | `true` for a `section` of at most 8 words without final punctuation; kept as-is |
+| `near_duplicate_of` | string or null | `null` | `record_id` of the earlier near-duplicate (word-trigram Jaccard ≥ 0.90, same language); near-duplicates are never removed |
+
 ## 6. FAQ formats
 
 The same 8 FAQ documents are delivered in three shapes.

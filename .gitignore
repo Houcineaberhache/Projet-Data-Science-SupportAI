@@ -27,6 +27,7 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+!data/processed/cleaned_corpus.jsonl
 
 # Vector databases and models
 chroma_db/

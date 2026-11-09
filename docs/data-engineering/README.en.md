@@ -16,6 +16,7 @@ Deliverables for **Task 1 — Student 1 (Data Engineer & Dataset Manager)**.
 | `data/raw/corpus/fr/`, `data/raw/corpus/en/` | The 37 NovaShop knowledge-base documents, in both languages (Markdown, YAML front matter) — authoring source |
 | `data/processed/documents/` | The same documents delivered as **PDF**, **Word (.docx)** and **FAQ (JSON, JSONL, CSV)** |
 | `data/processed/extracted/documents.jsonl` | Ingestion pipeline output: extracted, cleaned text with metadata |
+| `data/processed/cleaned_corpus.jsonl` | Cleaned, normalized and deduplicated corpus (522 records, no repeated headers) |
 | `data/annotations/intents.csv` | Machine-readable bilingual taxonomy: 13 intents + `out_of_scope` |
 | `docs/reports/corpus_stats.md` | Corpus statistics (generated) |
 | `docs/reports/extraction_report.md` | Extraction report: coverage, OCR, accent checks (generated) |
@@ -77,6 +78,9 @@ python scripts/manage_corpus.py validate
 
 # 4. Extract, clean and export to JSONL
 python scripts/extract_documents.py
+
+# 5. Clean, normalize and deduplicate the corpus
+python scripts/clean_corpus.py
 
 # Tests for cleaning and extractors
 python scripts/test_extraction.py

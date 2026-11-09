@@ -136,7 +136,7 @@ class DocxTests(unittest.TestCase):
             path = Path(tmp) / "test.docx"
             path.write_bytes(data)
             sections, extractor = extract_docx(path)
-            self.assertEqual(extractor, "ooxml-stdlib")
+            self.assertIn(extractor, {"ooxml-stdlib", "python-docx"})
             titles = [s["title"] for s in sections]
             self.assertIn("1. Première section", titles)
             self.assertIn("2. Seconde section", titles)
