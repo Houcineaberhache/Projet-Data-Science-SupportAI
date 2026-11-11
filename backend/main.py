@@ -1,18 +1,18 @@
+#!/usr/bin/env python3
 import json
+import os
+import re
+import shutil
 import time
 import uuid
-from typing import Optional
-
-import os
-import shutil
-from fastapi import File, HTTPException, UploadFile
 
 import psycopg2
-from fastapi import FastAPI
+from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from services import classify_intent, generate_rag_answer, retrieve_documents
 
 app = FastAPI()
-from fastapi.middleware.cors import CORSMiddleware
 
 app.add_middleware(
     CORSMiddleware,
@@ -20,6 +20,25 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# ---------------------------------------------------------------------------
+# Synthetic orders seed data (10 rows)
+# ---------------------------------------------------------------------------
+_SEED_ORDERS = [
+    ("ORD001", "CUST001", "PROD001", "shipped",    "2026-11-10"),
+    ("ORD002", "CUST002", "PROD002", "processing", "2026-11-14"),
+    ("ORD003", "CUST003", "PROD003", "delivered",  "2026-11-02"),
+    ("ORD004", "CUST004", "PROD004", "shipped",    "2026-11-12"),
+    ("ORD005", "CUST005", "PROD005", "processing", "2026-11-16"),
+    ("ORD006", "CUST006", "PROD006", "delivered",  "2026-10-28"),
+    ("ORD007", "CUST007", "PROD007", "cancelled",  "N/A"),
+    ("ORD008", "CUST008", "PROD008", "shipped",    "2026-11-13"),
+    ("ORD009", "CUST009", "PROD009", "processing", "2026-11-18"),
+    ("ORD010", "CUST010", "PROD010", "delivered",  "2026-11-05"),
+]
+
+_ORDER_ID_RE = re.compile(r"\b(ORD\d{3,})\b", re.IGNORECASE)
+
 
 def get_conn():
     url = os.getenv("DATABASE_URL")
@@ -31,38 +50,132 @@ def get_conn():
     )
 
 
+def _init_orders_table() -> None:
+    """Create the orders table if absent and upsert the seed rows (idempotent)."""
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute("""
+        CREATE TABLE IF NOT EXISTS orders (
+            order_id           VARCHAR(20) PRIMARY KEY,
+            customer_id        VARCHAR(20),
+            product_id         VARCHAR(20),
+            status             VARCHAR(30),
+            estimated_delivery VARCHAR(20)
+        )
+    """)
+    cur.executemany(
+        "INSERT INTO orders VALUES (%s, %s, %s, %s, %s)"
+        " ON CONFLICT (order_id) DO NOTHING",
+        _SEED_ORDERS,
+    )
+    conn.commit()
+    cur.close()
+    conn.close()
 
-def predict_intent(text: str) -> dict:
-    t = text.lower()
-    if "return" in t or "refund" in t:
-        return {"intent": "return_request", "confidence": 0.9}
-    if "order" in t:
-        return {"intent": "order_tracking", "confidence": 0.9}
-    return {"intent": "other", "confidence": 0.5}
+
+@app.on_event("startup")
+def startup() -> None:
+    _init_orders_table()
 
 
-def generate_answer(question: str) -> dict:
-    if "return" in question.lower():
-        return {
-            "answer": "You can return your product within 14 days.",
-            "is_abstained": False,
-            "sources": [{
-                "doc_name": "return_policy.pdf",
-                "snippet": "Returns are accepted within 14 days of delivery.",
-                "score": 0.89,
-            }],
-        }
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _lookup_order(order_id: str) -> dict | None:
+    """Return order row as dict or None if not found."""
+    conn = get_conn()
+    cur = conn.cursor()
+    cur.execute(
+        "SELECT order_id, customer_id, product_id, status, estimated_delivery"
+        " FROM orders WHERE order_id = %s",
+        (order_id.upper(),),
+    )
+    row = cur.fetchone()
+    cur.close()
+    conn.close()
+    if row is None:
+        return None
     return {
-        "answer": "I could not find this in our documents.",
-        "is_abstained": True,
-        "sources": [],
+        "order_id": row[0],
+        "customer_id": row[1],
+        "product_id": row[2],
+        "status": row[3],
+        "estimated_delivery": row[4],
     }
 
 
-# ---- Route ----
+@app.get("/health")
+def health():
+    try:
+        conn = get_conn()
+        cur = conn.cursor()
+        cur.execute("SELECT 1")
+        cur.close()
+        conn.close()
+        return {"status": "ok", "database": "connected"}
+    except Exception as e:
+        raise HTTPException(status_code=503, detail=f"Database unreachable: {e!s}")
+
+
+# ---------------------------------------------------------------------------
+# Order tracking endpoint
+# ---------------------------------------------------------------------------
+
+@app.get("/api/orders/{order_id}")
+def get_order(order_id: str):
+    order = _lookup_order(order_id)
+    if order is None:
+        raise HTTPException(status_code=404, detail=f"Order {order_id.upper()} not found.")
+    return {
+        "order_id": order["order_id"],
+        "product_id": order["product_id"],
+        "status": order["status"],
+        "estimated_delivery": order["estimated_delivery"],
+    }
+
+
+# ---------------------------------------------------------------------------
+# Intent / answer helpers
+# ---------------------------------------------------------------------------
+
+def predict_intent(text: str) -> dict:
+    if _ORDER_ID_RE.search(text):
+        return {"intent": "order_tracking", "confidence": 0.95}
+    return classify_intent(text)
+
+
+def generate_answer(question: str) -> dict:
+    # Order-ID lookup takes priority
+    match = _ORDER_ID_RE.search(question)
+    if match:
+        order_id = match.group(1).upper()
+        order = _lookup_order(order_id)
+        if order:
+            return {
+                "answer": (
+                    f"Order {order['order_id']}: status is "
+                    f"**{order['status']}**, estimated delivery "
+                    f"{order['estimated_delivery']}."
+                ),
+                "is_abstained": False,
+                "sources": [],
+                "order_status": order["status"],
+            }
+        return {
+            "answer": f"I could not find order {order_id} in our system.",
+            "is_abstained": True,
+            "sources": [],
+        }
+
+    docs = retrieve_documents(question)
+    return generate_rag_answer(question, docs)
+
+
+# ---- Routes ----
 class ChatRequest(BaseModel):
     message: str
-    session_id: Optional[str] = None
+    session_id: str | None = None
 
 
 @app.post("/api/chat")
@@ -110,7 +223,7 @@ def upload(file: UploadFile = File(...)):
     with open(os.path.join("uploads", name), "wb") as f:
         shutil.copyfileobj(file.file, f)
 
-    chunks_count = 3  #fake
+    chunks_count = 3  # fake
 
     conn = get_conn()
     cur = conn.cursor()
@@ -187,7 +300,7 @@ def history():
 
 class FeedbackRequest(BaseModel):
     message_id: int
-    rating: int 
+    rating: int
 
 
 @app.post("/api/feedback")
