@@ -9,14 +9,9 @@ type Message = {
   role: "user" | "bot";
   text: string;
   sources?: Source[];
-  abstained?: boolean;
-  id?: number;
-  rated?: 1 | -1;
-  intent?: string;
-  order_status?: string;
 };
 
-const API_URL = "http://localhost:8000";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 const EXAMPLE_QUESTIONS = [
   {
@@ -36,36 +31,10 @@ const EXAMPLE_QUESTIONS = [
   },
 ];
 
-function getOrderStatus(text: string): string | null {
-  const match = text.match(/status is \*\*?([a-zA-Z]+)\*\*?/i);
-  if (match) return match[1].toLowerCase();
-  const lower = text.toLowerCase();
-  for (const s of ["shipped", "processing", "delivered", "cancelled"]) {
-    if (lower.includes(s)) return s;
-  }
-  return null;
-}
-
-function getStatusBadgeStyle(status: string): string {
-  switch (status.toLowerCase()) {
-    case "shipped":
-      return "bg-blue-50 text-blue-700 border-blue-200 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800";
-    case "processing":
-      return "bg-amber-50 text-amber-800 border-amber-200 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800";
-    case "delivered":
-      return "bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800";
-    case "cancelled":
-      return "bg-rose-50 text-rose-700 border-rose-200 dark:bg-rose-950/60 dark:text-rose-300 dark:border-rose-800";
-    default:
-      return "bg-gray-50 text-gray-700 border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-700";
-  }
-}
-
 export default function Home() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
-  const [sessionId, setSessionId] = useState<string | null>(null);
   const [isDark, setIsDark] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -102,21 +71,16 @@ export default function Home() {
       const res = await fetch(`${API_URL}/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text, session_id: sessionId }),
+        body: JSON.stringify({ message: text }),
       });
       if (!res.ok) throw new Error("Server error");
       const data = await res.json();
-      setSessionId(data.session_id);
       setMessages((m) => [
         ...m,
         {
           role: "bot",
           text: data.answer,
           sources: data.sources,
-          abstained: data.is_abstained,
-          id: data.message_id,
-          intent: data.intent,
-          order_status: data.order_status,
         },
       ]);
     } catch {
@@ -128,27 +92,9 @@ export default function Home() {
     setLoading(false);
   }
 
-  async function rate(i: number, rating: 1 | -1) {
-    const m = messages[i];
-    if (!m.id || m.rated) return;
-    try {
-      await fetch(`${API_URL}/api/feedback`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message_id: m.id, rating }),
-      });
-      setMessages((all) =>
-        all.map((x, k) => (k === i ? { ...x, rated: rating } : x))
-      );
-    } catch {
-      // feedback fail silently
-    }
-  }
-
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 flex flex-col justify-center items-center p-3 sm:p-6 transition-colors">
       <div className="w-full max-w-3xl flex flex-col h-[94vh] sm:h-[88vh] bg-white dark:bg-gray-900 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
-        
         {/* Header */}
         <header className="px-5 py-3.5 border-b border-gray-200 dark:border-gray-800 flex items-center justify-between bg-white dark:bg-gray-900 shrink-0">
           <div className="flex items-center gap-3">
@@ -164,7 +110,7 @@ export default function Home() {
                 </span>
               </h1>
               <p className="text-xs text-gray-500 dark:text-gray-400">
-                Grounded support with semantic retrieval & order tracking
+                Grounded support with semantic retrieval & RAG
               </p>
             </div>
           </div>
@@ -179,7 +125,7 @@ export default function Home() {
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700 transition text-sm"
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700 transition text-sm cursor-pointer"
             >
               {isDark ? "☀️" : "🌙"}
             </button>
@@ -197,7 +143,7 @@ export default function Home() {
                 How can we help you today?
               </h2>
               <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-6">
-                Ask about product returns, check your live shipment status, or inquire about warranties.
+                Ask about product returns, policies, or warranties.
               </p>
 
               <div className="w-full space-y-2">
@@ -209,7 +155,7 @@ export default function Home() {
                     <button
                       key={idx}
                       onClick={() => handleSend(ex.query)}
-                      className="w-full flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/60 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 text-left transition text-xs sm:text-sm shadow-xs group"
+                      className="w-full flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900/60 hover:border-indigo-300 dark:hover:border-indigo-700 hover:bg-indigo-50/50 dark:hover:bg-indigo-950/30 text-left transition text-xs sm:text-sm shadow-xs group cursor-pointer"
                     >
                       <span className="text-base p-1.5 rounded-lg bg-gray-50 dark:bg-gray-800 group-hover:bg-white dark:group-hover:bg-gray-700 transition">
                         {ex.icon}
@@ -245,19 +191,6 @@ export default function Home() {
                     : "bg-white dark:bg-gray-900/90 text-gray-800 dark:text-gray-200 border border-gray-200/80 dark:border-gray-800 rounded-bl-xs")
                 }
               >
-                {/* Status Badge for Order Tracking */}
-                {m.role === "bot" && m.intent === "order_tracking" && !m.abstained && (() => {
-                  const status = m.order_status || getOrderStatus(m.text);
-                  return status ? (
-                    <div className="mb-2">
-                      <span className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold border ${getStatusBadgeStyle(status)}`}>
-                        <span className="w-1.5 h-1.5 rounded-full bg-current" />
-                        {status.toUpperCase()}
-                      </span>
-                    </div>
-                  ) : null;
-                })()}
-
                 {/* Message Body */}
                 <p className="leading-relaxed whitespace-pre-wrap">{m.text}</p>
 
@@ -286,40 +219,6 @@ export default function Home() {
                           </p>
                         </div>
                       ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Abstained Notice */}
-                {m.abstained && (
-                  <div className="mt-2 text-xs text-amber-700 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/40 border border-amber-200/60 dark:border-amber-800/60 rounded-lg p-2">
-                    ℹ️ Information not found in knowledge base. Would you like to connect with a human agent?
-                  </div>
-                )}
-
-                {/* Feedback Controls */}
-                {m.role === "bot" && m.id && (
-                  <div className="mt-2.5 pt-1.5 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between text-xs text-gray-400 dark:text-gray-500">
-                    <span>Was this helpful?</span>
-                    <div className="flex items-center gap-1">
-                      <button
-                        onClick={() => rate(i, 1)}
-                        aria-label="Thumbs up"
-                        className={`p-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition ${
-                          m.rated === 1 ? "text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50 dark:bg-emerald-950/50" : ""
-                        }`}
-                      >
-                        👍
-                      </button>
-                      <button
-                        onClick={() => rate(i, -1)}
-                        aria-label="Thumbs down"
-                        className={`p-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition ${
-                          m.rated === -1 ? "text-rose-600 dark:text-rose-400 font-bold bg-rose-50 dark:bg-rose-950/50" : ""
-                        }`}
-                      >
-                        👎
-                      </button>
                     </div>
                   </div>
                 )}
@@ -354,7 +253,7 @@ export default function Home() {
           >
             <input
               className="flex-1 bg-transparent py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none"
-              placeholder="Ask about returns, policies, or type an order ID (e.g. ORD001)..."
+              placeholder="Ask about returns, policies, or questions..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               disabled={loading}
@@ -362,7 +261,7 @@ export default function Home() {
             <button
               type="submit"
               disabled={!input.trim() || loading}
-              className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed text-white px-3.5 py-1.5 rounded-lg text-sm font-medium transition flex items-center gap-1 shadow-xs"
+              className="bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed text-white px-3.5 py-1.5 rounded-lg text-sm font-medium transition flex items-center gap-1 shadow-xs cursor-pointer"
             >
               Send
             </button>
@@ -371,7 +270,6 @@ export default function Home() {
             SupportAI prototype · Answers verified with knowledge base retrieval
           </div>
         </div>
-
       </div>
     </main>
   );
