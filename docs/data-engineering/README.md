@@ -17,6 +17,7 @@ Livrables de la **tâche 1 — Étudiant 1 (Data Engineer & Dataset Manager)**.
 | `data/processed/documents/` | Les mêmes documents livrés en **PDF**, **Word (.docx)** et **FAQ (JSON, JSONL, CSV)** |
 | `data/processed/extracted/documents.jsonl` | Sortie du pipeline d'ingestion : texte extrait, nettoyé, avec métadonnées |
 | `data/processed/cleaned_corpus.jsonl` | Corpus nettoyé, normalisé et dédupliqué (522 enregistrements, sans en-têtes répétés) |
+| `data/processed/chunked_corpus.jsonl` | Corpus découpé en chunks prêts pour le retrieval/RAG (678 chunks, clé `(chunk_id, language)`) — généré par `python scripts/chunk_corpus.py` |
 | `data/annotations/intents.csv` | Taxonomie bilingue machine-lisible : 13 intentions + `out_of_scope` |
 | `docs/reports/corpus_stats.md` | Statistiques du corpus (générées) |
 | `docs/reports/extraction_report.md` | Rapport d'extraction : couverture, OCR, contrôles d'accents (généré) |

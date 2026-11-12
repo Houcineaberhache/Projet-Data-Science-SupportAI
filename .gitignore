@@ -25,6 +25,7 @@ coverage/
 # Local datasets
 data/raw/*
 data/processed/*
+!data/processed/chunked_corpus.jsonl
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/processed/cleaned_corpus.jsonl

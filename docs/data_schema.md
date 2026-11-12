@@ -156,6 +156,51 @@ The `cleaning` object records what happened to the record:
 | `heading_only` | boolean | `false` | `true` for a `section` of at most 8 words without final punctuation; kept as-is |
 | `near_duplicate_of` | string or null | `null` | `record_id` of the earlier near-duplicate (word-trigram Jaccard ≥ 0.90, same language); near-duplicates are never removed |
 
+## 5.2 `data/processed/chunked_corpus.jsonl`
+
+Chunks ready for retrieval/RAG, produced from the raw Markdown corpus by
+`scripts/chunk_corpus.py`: **678 records** (339 FR + 339 EN), no timestamp,
+byte-identical across two runs. The unique key is **`(chunk_id, language)`**.
+One `##` section produces one chunk; a section over 300 words is split by
+paragraphs into `.1`, `.2`, … parts. The current corpus has no such split
+(maximum section: 221 words).
+
+| Field | Type | Example | Values / notes |
+| --- | --- | --- | --- |
+| `chunk_id` | string | `POL-01#c2` | `<DOC_ID>#c<n>`, where `n` is the section order; `.1`, `.2` suffix only when split |
+| `doc_id` | string | `POL-01` | Document identifier, identical in FR and EN |
+| `language` | `fr` / `en` | `en` | 339 chunks per language |
+| `chunk_index` | integer | `2` | Sequential chunk order inside the document and language |
+| `part` | integer or null | `null` | `null` when the section is not split; `1..N` otherwise |
+| `doc_title` | string | `Returns and exchanges policy` | Title from the YAML front matter |
+| `category` | string | `policies` | Corpus category |
+| `doc_type` | string | `policy` | Document type from the front matter |
+| `chunking_profile` | string | `policy_clause` | Profile from `data/source_manifest.csv` |
+| `section_heading` | string | `2. Return window` | Full `##` heading, including its number when present |
+| `section_number` | string or null | `2` | Leading section number; `null` for FAQ questions |
+| `text` | string | `The customer has **14 calendar days** …` | Section body without the `#` title, the fictif block or the `##` heading; the preamble, when present, is kept in the first section |
+| `text_for_embedding` | string | `Returns and exchanges policy — 2. Return window\nThe customer has …` | Exactly `<doc_title> — <section_heading>\n<text>` |
+| `word_count` | integer | `69` | Whitespace-separated words in `text` (heading excluded) |
+| `est_tokens` | integer | `93` | `round(word_count × 1.35)` |
+| `has_table` | boolean | `false` | `true` when the chunk contains a Markdown table; tables are never split |
+| `cross_refs` | list of strings | `["POL-04"]` | Cited `POL`/`REG`/`PRO`/`OPS`/`CAT`/`FAQ-NN` references, sorted and deduplicated |
+| `amounts_mad` | list of strings | `["39"]` | Amounts before `MAD`, spaces removed, sorted numerically and deduplicated |
+| `version` | string | `1.0` | Front matter version |
+| `effective_date` | string | `2026-09-01` | Front matter effective date |
+| `sensitivity` | `public` / `internal` | `public` | Front matter sensitivity |
+| `audience` | `customer` / `internal` | `customer` | `customer` when `sensitivity` is `public`, otherwise `internal` |
+| `index_in_rag` | boolean | `true` | Manifest policy; set to `false` for `too_short` chunks |
+| `exclusion_reason` | string or null | `null` | `null`, or `too_short` when the chunk is excluded from indexing |
+| `license` | string | `NovaShop-Proprietary-Synthetic` | Licence from the manifest |
+| `source_path` | string | `data/raw/corpus/en/POL-01_returns-exchanges.md` | Raw Markdown source |
+| `source_sha256` | string | `e3b0c442…` | SHA-256 of the raw Markdown file (64 hex characters) |
+
+The `too_short` decision is applied to the FR/EN pair of the same `chunk_id`:
+both variants are excluded together when their heading plus text is under 15
+words. This yields exactly **6 lines** (3 IDs × 2 languages):
+`POL-01#c9`, `REG-02#c8` and `REG-03#c9`. All other chunks keep
+`index_in_rag: true` and `exclusion_reason: null`.
+
 ## 6. FAQ formats
 
 The same 8 FAQ documents are delivered in three shapes.
