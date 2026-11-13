@@ -52,3 +52,4 @@ Thumbs.db
 !data/processed/documents/**
 !data/processed/extracted/
 !data/processed/extracted/**
+.ruff_cache/
