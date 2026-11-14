@@ -18,6 +18,7 @@ Livrables de la **tâche 1 — Étudiant 1 (Data Engineer & Dataset Manager)**.
 | `data/processed/extracted/documents.jsonl` | Sortie du pipeline d'ingestion : texte extrait, nettoyé, avec métadonnées |
 | `data/processed/cleaned_corpus.jsonl` | Corpus nettoyé, normalisé et dédupliqué (522 enregistrements, sans en-têtes répétés) |
 | `data/processed/chunked_corpus.jsonl` | Corpus découpé en chunks prêts pour le retrieval/RAG (678 chunks, clé `(chunk_id, language)`) — généré par `python scripts/chunk_corpus.py` |
+| `data/annotations/rag_eval.jsonl` + `robustness_eval.jsonl` | Jeu d'évaluation RAG (140 questions) et jeu de robustesse (35 cas), validés par `python scripts/build_rag_eval.py validate` ; passages copiés dans `rag_eval_with_passages.jsonl` par `python scripts/build_rag_eval.py build` |
 | `data/annotations/intents.csv` | Taxonomie bilingue machine-lisible : 13 intentions + `out_of_scope` |
 | `docs/reports/corpus_stats.md` | Statistiques du corpus (générées) |
 | `docs/reports/extraction_report.md` | Rapport d'extraction : couverture, OCR, contrôles d'accents (généré) |
@@ -82,6 +83,11 @@ python scripts/extract_documents.py
 
 # 5. Nettoyer, normaliser et dédupliquer le corpus
 python scripts/clean_corpus.py
+
+# 6. Valider et construire le jeu d'évaluation RAG
+python scripts/build_rag_eval.py validate
+python scripts/build_rag_eval.py build
+python tests/test_rag_eval.py
 
 # Tests du nettoyage et des extracteurs
 python scripts/test_extraction.py
@@ -166,7 +172,8 @@ Cette cohérence est ce qui permet de mesurer la fidélité du RAG : si deux doc
 
 ## Points en attente
 
-- [ ] Production des jeux annotés (`intent_dataset`, `retrieval_eval`, `rag_eval`, `ner_dataset`, `sentiment_dataset`, `urgency_dataset`)
+- [x] Jeu d'évaluation RAG (140 questions) et jeu de robustesse (35 cas) — voir `data/annotations/rag_eval.jsonl` et `robustness_eval.jsonl`
+- [ ] Production des jeux annotés restants (`intent_dataset`, `retrieval_eval`, `ner_dataset`, `sentiment_dataset`, `urgency_dataset`)
 - [ ] Calcul du kappa de Cohen après double annotation
 - [ ] Ajout d'un catalogue produits complet (100–200 références) — les guides `CAT-*` n'en couvrent que 25
 - [ ] Ajout de la mention « document fictif » sur l'ensemble des livrables

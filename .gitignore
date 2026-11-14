@@ -23,6 +23,7 @@ dist/
 coverage/
 
 # Local datasets
+data/annotations/_private/
 data/raw/*
 data/processed/*
 !data/processed/chunked_corpus.jsonl

@@ -1,0 +1,3 @@
+id,intent_a,intent_b,adjudicated_intent,arbiter,date,justification
+INT-0007,order_tracking,delivery_issue,delivery_issue,Aya,2026-11-08,Le client signale un colis non reçu après 10 jours : incident et non simple demande de statut.
+INT-0031,technical_support,warranty_claim,warranty_claim,Aya,2026-11-08,Le client demande explicitement une prise en charge sous garantie pour un écran défectueux.

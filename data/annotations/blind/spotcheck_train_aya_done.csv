@@ -1,0 +1,57 @@
+id,language,text,intent,ambiguous,acceptable_labels,notes
+INT-0376,en,the payment is still pending but the money was taken,payment_issue,FALSE,,Incident transactionnel constat?.
+INT-0290,en,refund still not received,refund_status,FALSE,,Suivi d’un remboursement déjà attendu ; priorité au statut du remboursement.
+INT-0427,fr,"mon laptop est tomber en panne, cest couvert ?",warranty_claim,FALSE,,Demande explicite de garantie ou de prise en charge SAV.
+INT-0267,fr,sa fait 15 jours et jai pas mon argent,refund_status,FALSE,,Suivi d’un remboursement déjà attendu ; priorité au statut du remboursement.
+INT-0650,en,what time is it?,out_of_scope,FALSE,,Aucune demande de support NovaShop identifiable.
+INT-0345,fr,jai ete debiter deux foi pour la meme comande,payment_issue,FALSE,,Incident transactionnel ou contestation de débit.
+INT-0156,fr,"ma commande est validée mais pas encore partie, puis-je la modifier ?",order_change_cancel,FALSE,,Action demandée sur une commande avant réception.
+INT-0291,en,"I sent the product back three weeks ago, the tracking shows that the parcel arrived and I would like to know when the refund will be credited to my account",refund_status,FALSE,,Suivi d’un remboursement déjà attendu ; priorité au statut du remboursement.
+INT-0106,fr,"jai pas recu de mail avec le numero de suivi, comment le retrouver ?",order_tracking,FALSE,,"Demande d’information sur le statut ou le suivi, sans incident explicite."
+INT-0447,en,does the waranty cover cracked earbuds?,warranty_claim,FALSE,,Demande explicite de garantie ou de prise en charge SAV.
+INT-0450,en,I want a repair under warranty,warranty_claim,FALSE,,Demande explicite de garantie ou de prise en charge SAV.
+INT-0336,en,how do I get a detailed invoice for my purchase?,payment_info,FALSE,,"Demande d’information sur le paiement ou la facturation, sans échec transactionnel."
+INT-0166,en,"I picked the wrong model, can you cancel ORD-100246 before it leaves?",order_change_cancel,FALSE,,Action demandée sur une commande avant réception.
+INT-0228,fr,jai ouvert le colis mais je veut le retourner quand meme,return_request,FALSE,,Action principale : retourner ou échanger un produit.
+INT-0432,fr,"mon téléphone est tombé en panne sans que je l'aie fait tomber, je souhaite ouvrir un dossier SAV et connaître les pièces à fournir pour la garantie",warranty_claim,FALSE,,Demande explicite de garantie ou de prise en charge SAV.
+INT-0539,en,can a gift card be used with a promo code?,promotion_loyalty,FALSE,,"Sujet principal lié à une promotion, une carte cadeau ou au programme fidélité."
+INT-0157,fr,comment annuler un achat que je viens de faire sur votre site ?,order_change_cancel,FALSE,,Action demandée sur une commande avant réception.
+INT-0417,en,the Wi-Fi keeps dropping on my laptop,technical_support,FALSE,,Problème de fonctionnement ou demande d’aide technique sans demande SAV explicite.
+INT-0260,en,"I received the wrong model, I would rather return it than exchange it",return_request,FALSE,,Action principale : retourner ou échanger un produit.
+INT-0583,fr,"le robot ne comprend pas, je préfère parler à une personne",human_support,FALSE,,Demande explicite de transfert vers un agent humain prioritaire.
+INT-0492,en,"I would like to compare the two smart watches you sell, especially battery life, compatibility and price, before placing an order so that I can choose the one that fits my needs",product_info,FALSE,,"Question sur les caractéristiques, le prix, la disponibilité ou la compatibilité."
+INT-0519,fr,une carte cadeau peut-elle être utilisée avec un code promo ?,promotion_loyalty,FALSE,,"Sujet principal lié à une promotion, une carte cadeau ou au programme fidélité."
+INT-0268,fr,ou est passer le virement de mon retour ?,refund_status,FALSE,,Suivi d’un remboursement déjà attendu ; priorité au statut du remboursement.
+INT-0590,fr,parler à un responsable,human_support,FALSE,,Demande explicite de transfert vers un agent humain prioritaire.
+INT-0344,fr,le paiement à la livraison a été encaissé deux fois par le livreur,payment_issue,FALSE,,Incident transactionnel ou contestation de débit.
+INT-0369,en,card declined at checkout,payment_issue,FALSE,,Incident transactionnel ou contestation de débit.
+INT-0567,en,how do i delete my acount?,account_privacy,FALSE,,Gestion du compte ou des donn?es personnelles.
+INT-0123,fr,"ma commande a été expédiée hier, combien de temps prend le trajet jusqu'à Rabat ?",order_tracking,FALSE,,Suivi de commande sans incident signal?.
+INT-0566,en,which cookies are placed when I browse your website?,account_privacy,FALSE,,Gestion du compte ou des données personnelles.
+INT-0184,fr,il manque un article dans le colis que je viens d'ouvrir,delivery_issue,FALSE,,Incident constat? lors de l?acheminement ou de la r?ception.
+INT-0538,en,were my points cancelled after my return?,promotion_loyalty,FALSE,,"Sujet principal li? ? une promotion, une carte cadeau ou au programme fid?lit?."
+INT-0255,en,I want to exchange it for another colour,return_request,FALSE,,Action principale : retourner ou échanger un produit.
+INT-0628,fr,a bientot et merci,out_of_scope,FALSE,,Aucune demande de support NovaShop identifiable.
+INT-0194,fr,le colis a été livré à une adresse qui n'est pas la mienne,delivery_issue,FALSE,,Incident constat? lors de l?acheminement ou de la r?ception.
+INT-0660,en,how do you say hello in Spanish?,out_of_scope,FALSE,,Aucune demande de support NovaShop identifiable.
+INT-0629,fr,quel temps fait-il ?,out_of_scope,FALSE,,Aucune demande de support NovaShop identifiable.
+INT-0321,fr,peut-on payer avec une carte cadeau et une carte bancaire ensemble ?,promotion_loyalty,TRUE,payment_info|promotion_loyalty,"Cas ambigu : carte cadeau / moyen de paiement ; cible payment_info discutable, ?tiquette promotion_loyalty conserv?e."
+INT-0395,fr,l'écran de ma tablette reste noir après la mise en charge,technical_support,FALSE,,Problème de fonctionnement ou demande d’aide technique sans demande SAV explicite.
+INT-0140,en,when will my order be handed over to the carrier?,order_tracking,FALSE,,"Demande d’information sur le statut ou le suivi, sans incident explicite."
+INT-0476,fr,ce clavier est-il compatible avec un Mac ?,product_info,FALSE,,"Question sur les caractéristiques, le prix, la disponibilité ou la compatibilité."
+INT-0615,en,I want to be connected with an agent,human_support,FALSE,,Demande explicite de transfert vers un agent humain prioritaire.
+INT-0208,en,the box was opend and one item is missing,delivery_issue,FALSE,,Incident constaté lors de l’acheminement ou de la réception.
+INT-0552,fr,"je voudrais exercer mon droit de rectification sur mon adresse et mon numéro de téléphone, pouvez-vous m'indiquer la procédure à suivre dans les meilleurs délais",account_privacy,FALSE,,Gestion du compte ou des données personnelles.
+INT-0506,fr,jai pas recu mes points de fidelite,promotion_loyalty,FALSE,,"Sujet principal lié à une promotion, une carte cadeau ou au programme fidélité."
+INT-0415,en,my tablet screen stays black after charging,technical_support,FALSE,,Problème de fonctionnement ou demande d’aide technique sans demande SAV explicite.
+INT-0384,fr,"le clavier tape des caractères étranges, comment le réinitialiser ?",technical_support,FALSE,,Problème de fonctionnement ou demande d’aide technique sans demande SAV explicite.
+INT-0557,fr,comment m'opposer aux courriels marketing ?,account_privacy,FALSE,,Gestion du compte ou des données personnelles.
+INT-0132,en,"could you explain how to read the different order statuses on my account, from confirmation to delivery at my home, because the page is not very clear for a first order",order_tracking,FALSE,,"Demande d’information sur le statut ou le suivi, sans incident explicite."
+INT-0167,en,"i want to cancel my purchase, i made a mistake on the adress",order_change_cancel,FALSE,,Action demandée sur une commande avant réception.
+INT-0305,fr,est ce que vous accepter les cartes bancaire ?,payment_info,FALSE,,"Demande d?information sur le paiement ou la facturation, sans ?chec transactionnel."
+INT-0610,en,speak to a manager,human_support,FALSE,,Demande explicite de transfert vers un agent humain.
+INT-0213,en,"hello, my order was supposed to arrive yesterday but I have not received anything",delivery_issue,FALSE,,Incident constaté lors de l’acheminement ou de la réception.
+INT-0230,fr,comment faire un retour ?,return_request,FALSE,,Action principale : retourner ou échanger un produit.
+INT-0487,en,how mutch is the black headset?,product_info,FALSE,,Demande d?information catalogue sans panne ni promotion.
+INT-0463,fr,ce téléphone est-il compatible avec les réseaux marocains ?,product_info,FALSE,,"Question sur les caractéristiques, le prix, la disponibilité ou la compatibilité."
+INT-0325,en,can a gift card be used to pay for an order?,promotion_loyalty,TRUE,payment_info|promotion_loyalty,"Cas ambigu : carte cadeau / moyen de paiement ; cible payment_info discutable, ?tiquette promotion_loyalty conserv?e."

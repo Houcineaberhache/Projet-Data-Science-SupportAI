@@ -1,0 +1,561 @@
+id,text,language,intent,split
+INT-0101,"le statut de ma commande affiche expédiée, où je trouve le lien de suivi ?",fr,order_tracking,test
+INT-0102,"ma commande ORD-100234 est en préparation depuis hier, est-ce normal ?",fr,order_tracking,train
+INT-0103,"je n'ai pas de compte, comment consulter l'avancement de ma commande ?",fr,order_tracking,train
+INT-0104,"le transporteur m'a envoyé un numéro, comment l'utiliser pour suivre le colis ?",fr,order_tracking,test
+INT-0105,ou en est ma comande ORD-100235 ?,fr,order_tracking,val
+INT-0106,"jai pas recu de mail avec le numero de suivi, comment le retrouver ?",fr,order_tracking,train
+INT-0107,"ma commande est toujour en preparation, je peut avoir une estimation ?",fr,order_tracking,train
+INT-0108,"le suivie de mon colis ne se met pas a jour, c'est normal ?",fr,order_tracking,val
+INT-0109,ma commande est où ?,fr,order_tracking,val
+INT-0110,statut de ma commande ?,fr,order_tracking,train
+INT-0111,j'ai validé ma commande il y a trois jours et je voudrais savoir à quelle étape elle se trouve avant de prévoir ma journée,fr,order_tracking,train
+INT-0112,"pouvez-vous m'expliquer comment lire les différents statuts de commande sur mon compte, de la validation jusqu'à la livraison chez moi, sans me donner un numéro de suivi",fr,order_tracking,train
+INT-0113,"bonjour, je cherche à savoir quand mon colis va partir de l'entrepôt",fr,order_tracking,train
+INT-0114,avez-vous une idée de la date à laquelle je recevrai ma commande ORD-100236 ?,fr,order_tracking,train
+INT-0115,"je viens de commander un casque, comment je fais pour suivre l'expédition ?",fr,order_tracking,train
+INT-0116,"mon numéro de commande est ORD-100237, pouvez-vous me dire où elle en est ?",fr,order_tracking,train
+INT-0117,est-ce que je peux voir l'historique des déplacements de mon colis ?,fr,order_tracking,train
+INT-0118,"la page de suivi indique que le colis a quitté le centre, ça veut dire quoi ?",fr,order_tracking,train
+INT-0119,"je n'arrive pas à ouvrir le lien de tracking reçu par SMS, vous pouvez m'aider ?",fr,order_tracking,train
+INT-0120,quand est-ce que ma commande sera remise au transporteur ?,fr,order_tracking,val
+INT-0121,je voudrais connaître le délai restant avant la livraison de ma commande,fr,order_tracking,test
+INT-0122,comment savoir si mon colis est déjà en route ou encore dans l'entrepôt ?,fr,order_tracking,train
+INT-0123,"ma commande a été expédiée hier, combien de temps prend le trajet jusqu'à Rabat ?",fr,order_tracking,train
+INT-0124,pouvez-vous me confirmer que ma commande ORD-100238 est bien prise en charge ?,fr,order_tracking,train
+INT-0125,"my order shows as shipped, where can I find the tracking link?",en,order_tracking,val
+INT-0126,"I ordered without an account, how do I check the delivery progress?",en,order_tracking,train
+INT-0127,were is my order? I didnt get a tracking number,en,order_tracking,val
+INT-0128,"my order still says in preperation, can you give me an update?",en,order_tracking,train
+INT-0129,where is my package now?,en,order_tracking,train
+INT-0130,my order status please,en,order_tracking,train
+INT-0131,"I placed an order three days ago and I would like to know which stage it is at before I plan my week, and I have not received any tracking message yet",en,order_tracking,train
+INT-0132,"could you explain how to read the different order statuses on my account, from confirmation to delivery at my home, because the page is not very clear for a first order",en,order_tracking,train
+INT-0133,"hello, I want to know when my parcel will leave the warehouse",en,order_tracking,test
+INT-0134,do you have an estimated date for the delivery of order ORD-100239?,en,order_tracking,train
+INT-0135,"I just bought a headset, how can I follow the shipment?",en,order_tracking,train
+INT-0136,"my order number is ORD-100240, can you tell me where it is?",en,order_tracking,train
+INT-0137,is there a way to see the full travel history of my package?,en,order_tracking,test
+INT-0138,"the tracking page says the parcel left the hub, what does that mean?",en,order_tracking,test
+INT-0139,"I cannot open the tracking link I received by text message, can you help?",en,order_tracking,train
+INT-0140,when will my order be handed over to the carrier?,en,order_tracking,train
+INT-0141,"ma commande n'est pas encore expédiée, je peux changer la couleur du casque ?",fr,order_change_cancel,train
+INT-0142,"je me suis trompé de modèle, pouvez-vous annuler ORD-100241 avant l'expédition ?",fr,order_change_cancel,val
+INT-0143,"la commande est encore en préparation, est-il possible de modifier l'adresse de livraison ?",fr,order_change_cancel,train
+INT-0144,"j'ai validé deux fois la même commande par erreur, pouvez-vous supprimer la seconde ?",fr,order_change_cancel,train
+INT-0145,je veut annuler ma comande passee ce matin,fr,order_change_cancel,train
+INT-0146,"jai mis la mauvaise adresse, je peut la changer avant le depart ?",fr,order_change_cancel,train
+INT-0147,esque c'est encore possible de modifier ma commande ?,fr,order_change_cancel,train
+INT-0148,"je me suis tromper de taille, je veux changer le produit avant livraison",fr,order_change_cancel,train
+INT-0149,annuler ma commande svp,fr,order_change_cancel,val
+INT-0150,changer mon adresse de livraison,fr,order_change_cancel,train
+INT-0151,j'ai passé une commande hier soir avec la mauvaise adresse et je voudrais savoir s'il est encore temps de la corriger avant que le colis ne parte,fr,order_change_cancel,train
+INT-0152,"je dois annuler la commande ORD-100242 parce que je me suis trompé de produit, pouvez-vous me confirmer que rien n'a encore été expédié",fr,order_change_cancel,test
+INT-0153,"bonjour, je voudrais supprimer un article de ma commande avant l'expédition",fr,order_change_cancel,train
+INT-0154,est-ce que je peux ajouter un chargeur à la commande ORD-100243 ?,fr,order_change_cancel,train
+INT-0155,je veux remplacer le modèle blanc par le noir dans ma commande,fr,order_change_cancel,val
+INT-0156,"ma commande est validée mais pas encore partie, puis-je la modifier ?",fr,order_change_cancel,train
+INT-0157,comment annuler un achat que je viens de faire sur votre site ?,fr,order_change_cancel,train
+INT-0158,"je me suis trompé de numéro de rue, comment corriger l'adresse ?",fr,order_change_cancel,val
+INT-0159,pouvez-vous changer le mode de livraison de ma commande en cours ?,fr,order_change_cancel,train
+INT-0160,"je souhaite annuler la commande ORD-100244, elle n'a pas encore été préparée",fr,order_change_cancel,test
+INT-0161,est-il possible de changer la taille du t-shirt dans ma commande ?,fr,order_change_cancel,train
+INT-0162,"j'ai commandé deux casques au lieu d'un, pouvez-vous corriger la quantité ?",fr,order_change_cancel,train
+INT-0163,la commande ORD-100245 est encore modifiable ou elle est déjà bloquée ?,fr,order_change_cancel,train
+INT-0164,"je voudrais décaler la livraison à la semaine prochaine, c'est possible ?",fr,order_change_cancel,test
+INT-0165,"my order has not shipped yet, can I change the colour of the headphones?",en,order_change_cancel,train
+INT-0166,"I picked the wrong model, can you cancel ORD-100246 before it leaves?",en,order_change_cancel,train
+INT-0167,"i want to cancel my purchase, i made a mistake on the adress",en,order_change_cancel,train
+INT-0168,can i still change my delivery adress before it ships?,en,order_change_cancel,test
+INT-0169,cancel my order please,en,order_change_cancel,test
+INT-0170,change my delivery address,en,order_change_cancel,train
+INT-0171,I placed an order last night with the wrong address and I would like to know if there is still time to correct it before the parcel leaves,en,order_change_cancel,test
+INT-0172,"I need to cancel order ORD-100247 because I chose the wrong product, could you confirm that nothing has been shipped yet and that I will not have to return it after delivery",en,order_change_cancel,val
+INT-0173,"hello, I would like to remove one item from my order before it ships",en,order_change_cancel,train
+INT-0174,can I add a charger to order ORD-100248?,en,order_change_cancel,train
+INT-0175,I want to replace the white model with the black one in my order,en,order_change_cancel,val
+INT-0176,"my order is confirmed but not shipped yet, can I change it?",en,order_change_cancel,train
+INT-0177,how do I cancel a purchase I just made on your website?,en,order_change_cancel,train
+INT-0178,"I entered the wrong street number, how can I fix the address?",en,order_change_cancel,train
+INT-0179,could you change the delivery method for my current order?,en,order_change_cancel,train
+INT-0180,"I want to cancel order ORD-100249, it has not been prepared yet",en,order_change_cancel,train
+INT-0181,"le livreur a laissé le colis chez le voisin alors que j'étais absent, que faire ?",fr,delivery_issue,train
+INT-0182,"la boîte est arrivée écrasée mais le produit fonctionne encore, je dois signaler ?",fr,delivery_issue,train
+INT-0183,le transporteur indique livré mais je n'ai rien reçu à mon adresse,fr,delivery_issue,train
+INT-0184,il manque un article dans le colis que je viens d'ouvrir,fr,delivery_issue,train
+INT-0185,mon colis est arriver tout cabosse,fr,delivery_issue,train
+INT-0186,je nest pas recu ma commande depuis 12 jours,fr,delivery_issue,test
+INT-0187,le livreur est passer quand jetait absent et je lai pas,fr,delivery_issue,train
+INT-0188,mon paquet a ete livrer a la mauvaise adresse,fr,delivery_issue,test
+INT-0189,mon colis n'est pas arrivé,fr,delivery_issue,val
+INT-0190,le carton est arrivé abîmé,fr,delivery_issue,train
+INT-0191,"j'ai attendu toute la journée pour la livraison, le livreur n'est jamais passé et le suivi indique pourtant que le colis a été remis",fr,delivery_issue,train
+INT-0192,"le carton était ouvert et il manquait le câble de charge à l'intérieur, je voudrais savoir comment signaler ce problème et obtenir une solution",fr,delivery_issue,train
+INT-0193,"bonjour, ma commande devait arriver hier mais le colis n'est pas là",fr,delivery_issue,val
+INT-0194,le colis a été livré à une adresse qui n'est pas la mienne,fr,delivery_issue,train
+INT-0195,le carton était mouillé et l'emballage du casque est abîmé,fr,delivery_issue,val
+INT-0196,"le livreur m'a appelé mais je n'ai pas pu répondre, que se passe-t-il maintenant ?",fr,delivery_issue,train
+INT-0197,ma commande est bloquée au centre de tri depuis cinq jours,fr,delivery_issue,train
+INT-0198,j'ai reçu un colis avec le mauvais produit à la place de ma commande,fr,delivery_issue,test
+INT-0199,"le suivi dit que le colis est perdu, pouvez-vous ouvrir une enquête ?",fr,delivery_issue,train
+INT-0200,la livraison a été marquée comme effectuée mais personne n'a sonné chez moi,fr,delivery_issue,train
+INT-0201,il manque les écouteurs dans la boîte du téléphone,fr,delivery_issue,train
+INT-0202,le colis est arrivé avec du ruban adhésif recollé et un article en moins,fr,delivery_issue,train
+INT-0203,mon colis a été déposé au point relais mais je n'ai pas reçu de code,fr,delivery_issue,train
+INT-0204,"la commande ORD-100250 n'est jamais arrivée, le transporteur ne répond pas",fr,delivery_issue,val
+INT-0205,"the courier left the parcel with my neighbour while I was away, what should I do?",en,delivery_issue,train
+INT-0206,"the box arrived crushed but the device still works, should I report it?",en,delivery_issue,train
+INT-0207,my parcel is late and i still havent recieved it,en,delivery_issue,val
+INT-0208,the box was opend and one item is missing,en,delivery_issue,train
+INT-0209,my parcel has not arrived,en,delivery_issue,train
+INT-0210,the parcel arrived damaged,en,delivery_issue,train
+INT-0211,"I waited all day for the delivery, the courier never came and the tracking page still says the parcel was handed over, and I would like to know who to contact to open a claim",en,delivery_issue,train
+INT-0212,"the box was open and the charging cable was missing inside, I would like to know how to report this and get a solution as soon as possible",en,delivery_issue,val
+INT-0213,"hello, my order was supposed to arrive yesterday but I have not received anything",en,delivery_issue,train
+INT-0214,the parcel was delivered to an address that is not mine,en,delivery_issue,train
+INT-0215,the cardboard was wet and the headset packaging is damaged,en,delivery_issue,test
+INT-0216,"the courier called but I could not answer, what happens now?",en,delivery_issue,train
+INT-0217,my order has been stuck at the sorting centre for five days,en,delivery_issue,test
+INT-0218,I received a parcel with the wrong product instead of my order,en,delivery_issue,train
+INT-0219,"the tracking says the parcel is lost, can you open an investigation?",en,delivery_issue,test
+INT-0220,the delivery was marked as completed but nobody rang my door,en,delivery_issue,train
+INT-0221,"j'ai reçu le casque hier et je veux le renvoyer, le remboursement suivra",fr,return_request,train
+INT-0222,je souhaite échanger la montre contre un autre modèle reçu cette semaine,fr,return_request,val
+INT-0223,"le produit ne me convient pas, je veux ouvrir un retour avant la fin des 14 jours",fr,return_request,val
+INT-0224,"j'ai acheté deux tailles, je renvoie celle qui ne va pas",fr,return_request,val
+INT-0225,je veut retourner le casque que jai recu hier,fr,return_request,test
+INT-0226,comment on fait pour renvoyer un article qui me plait pas ?,fr,return_request,train
+INT-0227,je souhaite echanger mon telephone contre un autre modele,fr,return_request,train
+INT-0228,jai ouvert le colis mais je veut le retourner quand meme,fr,return_request,train
+INT-0229,je veux retourner ce casque,fr,return_request,train
+INT-0230,comment faire un retour ?,fr,return_request,train
+INT-0231,"j'ai commandé un ordinateur portable la semaine dernière, il ne correspond pas à ce que je cherchais et je voudrais savoir comment le renvoyer avant la fin du délai",fr,return_request,train
+INT-0232,"le pull que j'ai reçu est trop petit, je souhaite l'échanger contre une taille au-dessus et je voudrais connaître la procédure à suivre",fr,return_request,train
+INT-0233,"bonjour, je voudrais retourner un article acheté il y a trois jours",fr,return_request,train
+INT-0234,est-ce que je peux renvoyer seulement le chargeur de la commande ?,fr,return_request,train
+INT-0235,je souhaite faire un échange pour un autre coloris,fr,return_request,train
+INT-0236,comment obtenir le bon de retour pour mon colis ?,fr,return_request,test
+INT-0237,"le produit est conforme mais il ne me plaît pas, puis-je le retourner ?",fr,return_request,test
+INT-0238,"je veux retourner les écouteurs, la boîte est encore fermée",fr,return_request,train
+INT-0239,quel est le délai pour renvoyer un article après réception ?,fr,return_request,train
+INT-0240,"j'ai reçu un mauvais modèle, je préfère le retourner plutôt que l'échanger",fr,return_request,train
+INT-0241,puis-je déposer mon retour dans une boutique NovaShop ?,fr,return_request,train
+INT-0242,je voudrais échanger le clavier contre une version sans fil,fr,return_request,train
+INT-0243,"le casque ne me convient pas, comment lancer la demande de retour ?",fr,return_request,train
+INT-0244,"j'ai changé d'avis pour la tablette, je veux la renvoyer",fr,return_request,val
+INT-0245,"I received the headphones yesterday and I want to send them back, the refund will follow",en,return_request,train
+INT-0246,I would like to exchange the watch for another model I received this week,en,return_request,train
+INT-0247,i want to return the headphones i recieved yesterday,en,return_request,val
+INT-0248,how do i send back an item that doesnt fit?,en,return_request,test
+INT-0249,I want to return this headset,en,return_request,test
+INT-0250,how do I make a return?,en,return_request,train
+INT-0251,"I ordered a laptop last week, it does not match what I was looking for and I would like to know how to send it back before the deadline",en,return_request,test
+INT-0252,"the sweater I received is too small, I want to exchange it for one size larger and I would like to know the procedure before the end of the return window",en,return_request,val
+INT-0253,"hello, I would like to return an item bought three days ago",en,return_request,train
+INT-0254,can I send back only the charger from the order?,en,return_request,train
+INT-0255,I want to exchange it for another colour,en,return_request,train
+INT-0256,how do I get the return label for my parcel?,en,return_request,train
+INT-0257,"the product is fine but I do not like it, can I return it?",en,return_request,train
+INT-0258,"I want to return the earbuds, the box is still sealed",en,return_request,train
+INT-0259,what is the deadline to send an item back after delivery?,en,return_request,train
+INT-0260,"I received the wrong model, I would rather return it than exchange it",en,return_request,train
+INT-0261,"le retour a été validé il y a dix jours, je n'ai toujours pas reçu le virement",fr,refund_status,val
+INT-0262,"ma commande a été annulée la semaine dernière, quand serai-je remboursé ?",fr,refund_status,train
+INT-0263,"le transporteur a confirmé la réception du retour, où en est mon remboursement ?",fr,refund_status,train
+INT-0264,j'ai choisi un avoir mais je préfère finalement être remboursé sur ma carte,fr,refund_status,train
+INT-0265,jai toujours pas recu mon remboursement,fr,refund_status,train
+INT-0266,le remboursement de ma commande annulee nest pas arrive,fr,refund_status,test
+INT-0267,sa fait 15 jours et jai pas mon argent,fr,refund_status,train
+INT-0268,ou est passer le virement de mon retour ?,fr,refund_status,train
+INT-0269,où est mon remboursement ?,fr,refund_status,train
+INT-0270,remboursement toujours pas reçu,fr,refund_status,train
+INT-0271,"j'ai renvoyé le produit il y a trois semaines, le suivi indique que le colis est arrivé et je voudrais savoir quand le remboursement sera crédité sur mon compte",fr,refund_status,val
+INT-0272,"ma commande ORD-100251 a été annulée parce que le produit était indisponible, pouvez-vous me dire sous quel délai je serai remboursé et si je dois attendre un nouveau délai",fr,refund_status,train
+INT-0273,"bonjour, j'attends le remboursement de mon retour depuis deux semaines",fr,refund_status,train
+INT-0274,le remboursement a été annoncé mais je ne vois rien sur mon relevé,fr,refund_status,train
+INT-0275,combien de jours faut-il compter après la validation du retour ?,fr,refund_status,train
+INT-0276,je voudrais savoir si le remboursement a déjà été envoyé,fr,refund_status,val
+INT-0277,"mon retour est arrivé chez vous, quand vais-je être remboursé ?",fr,refund_status,test
+INT-0278,"le virement n'apparaît pas sur mon compte, pouvez-vous vérifier ?",fr,refund_status,test
+INT-0279,"j'ai payé par carte, le remboursement met combien de temps ?",fr,refund_status,train
+INT-0280,ma commande annulée n'a pas encore été remboursée,fr,refund_status,val
+INT-0281,pouvez-vous me confirmer le montant qui sera remboursé ?,fr,refund_status,train
+INT-0282,le remboursement est en attente depuis le 3 du mois,fr,refund_status,train
+INT-0283,j'ai reçu un avoir mais je voulais un remboursement bancaire,fr,refund_status,train
+INT-0284,où en est le traitement de mon dossier de remboursement ?,fr,refund_status,train
+INT-0285,the return was approved ten days ago and I still have not received the bank transfer,en,refund_status,train
+INT-0286,"my order was cancelled last week, when will I be refunded?",en,refund_status,train
+INT-0287,i still havent recieved my refund,en,refund_status,val
+INT-0288,the refund for my cancelled order hasnt arrived,en,refund_status,train
+INT-0289,where is my money?,en,refund_status,test
+INT-0290,refund still not received,en,refund_status,train
+INT-0291,"I sent the product back three weeks ago, the tracking shows that the parcel arrived and I would like to know when the refund will be credited to my account",en,refund_status,train
+INT-0292,"order ORD-100252 was cancelled because the product was unavailable, could you tell me how long the refund will take and whether the delay starts from the cancellation date",en,refund_status,test
+INT-0293,"hello, I have been waiting for the refund of my return for two weeks",en,refund_status,val
+INT-0294,the refund was announced but I cannot see anything on my bank statement,en,refund_status,train
+INT-0295,how many days should I allow after the return is approved?,en,refund_status,test
+INT-0296,I would like to know whether the refund has already been sent,en,refund_status,train
+INT-0297,"my return has arrived at your warehouse, when will I be refunded?",en,refund_status,train
+INT-0298,"the transfer does not appear on my account, can you check?",en,refund_status,train
+INT-0299,"I paid by card, what is the usual refund delay?",en,refund_status,train
+INT-0300,my cancelled order has not been refunded yet,en,refund_status,train
+INT-0301,est-ce que la carte cadeau peut servir à payer une commande ?,fr,payment_info,train
+INT-0302,combien de frais s'ajoutent si je choisis le paiement à la livraison ?,fr,payment_info,train
+INT-0303,puis-je régler une commande avec deux cartes différentes ?,fr,payment_info,val
+INT-0304,la facture peut-elle être émise au nom de mon entreprise ?,fr,payment_info,val
+INT-0305,est ce que vous accepter les cartes bancaire ?,fr,payment_info,train
+INT-0306,je peut payer en plusieur fois ?,fr,payment_info,train
+INT-0307,comment on obtien la facture apres la commande ?,fr,payment_info,train
+INT-0308,le paiement a la livraison est disponible partout ?,fr,payment_info,val
+INT-0309,accepter la carte bancaire ?,fr,payment_info,train
+INT-0310,comment avoir ma facture ?,fr,payment_info,train
+INT-0311,je voudrais savoir quels moyens de paiement vous acceptez pour une commande livrée à Casablanca et si le paiement à la livraison entraîne des frais supplémentaires,fr,payment_info,train
+INT-0312,"pour une facture destinée à ma société, quelles informations dois-je fournir et à quel moment puis-je la télécharger depuis mon compte avant de valider la commande",fr,payment_info,train
+INT-0313,"bonjour, est-ce que le paiement en espèces est possible à la livraison ?",fr,payment_info,train
+INT-0314,quelles cartes bancaires acceptez-vous sur le site ?,fr,payment_info,train
+INT-0315,puis-je payer ma commande en trois fois sans frais ?,fr,payment_info,test
+INT-0316,comment obtenir une facture détaillée pour mon achat ?,fr,payment_info,train
+INT-0317,le paiement à la livraison est-il disponible à Marrakech ?,fr,payment_info,test
+INT-0318,est-ce que vous acceptez les virements bancaires ?,fr,payment_info,train
+INT-0319,mes informations de carte sont-elles conservées après le paiement ?,fr,payment_info,train
+INT-0320,je voudrais une facture avec le nom de mon association,fr,payment_info,val
+INT-0321,peut-on payer avec une carte cadeau et une carte bancaire ensemble ?,fr,promotion_loyalty,train
+INT-0322,quel est le montant minimum pour payer en plusieurs fois ?,fr,payment_info,train
+INT-0323,la facture est-elle envoyée automatiquement par courriel ?,fr,payment_info,train
+INT-0324,acceptez-vous les chèques ou uniquement les cartes ?,fr,payment_info,test
+INT-0325,can a gift card be used to pay for an order?,en,promotion_loyalty,train
+INT-0326,how much extra is charged if I choose cash on delivery?,en,payment_info,train
+INT-0327,do you acept credit cards?,en,payment_info,train
+INT-0328,how can i obtain my invoice once the order is placed?,en,payment_info,val
+INT-0329,do you take cards?,en,payment_info,train
+INT-0330,where can I download my invoice?,en,payment_info,train
+INT-0331,I would like to know which payment methods you accept for an order delivered in Casablanca and whether cash on delivery costs anything extra before I confirm the order,en,payment_info,train
+INT-0332,"for an invoice addressed to my company, what information do I need to provide and when can I download it from my account before the order is shipped",en,payment_info,test
+INT-0333,"hello, is cash payment possible on delivery?",en,payment_info,test
+INT-0334,which credit cards do you accept on the website?,en,payment_info,train
+INT-0335,can I pay for my order in three instalments without fees?,en,payment_info,test
+INT-0336,how do I get a detailed invoice for my purchase?,en,payment_info,train
+INT-0337,is cash on delivery available in Marrakech?,en,payment_info,train
+INT-0338,do you accept bank transfers?,en,payment_info,train
+INT-0339,are my card details kept after payment?,en,payment_info,train
+INT-0340,I would like an invoice with my association's name,en,payment_info,val
+INT-0341,le montant débité est plus élevé que le total affiché dans mon panier,fr,payment_issue,train
+INT-0342,ma carte a été refusée puis débitée quand même,fr,payment_issue,val
+INT-0343,j'ai annulé le paiement mais la somme est partie de mon compte,fr,payment_issue,train
+INT-0344,le paiement à la livraison a été encaissé deux fois par le livreur,fr,payment_issue,train
+INT-0345,jai ete debiter deux foi pour la meme comande,fr,payment_issue,train
+INT-0346,ma carte etait refuser au moment de payer,fr,payment_issue,train
+INT-0347,le montant prelever est pas le bon,fr,payment_issue,train
+INT-0348,mon paiement est passer mais la commande nest pas validee,fr,payment_issue,train
+INT-0349,carte refusée au paiement,fr,payment_issue,train
+INT-0350,j'ai un double débit,fr,payment_issue,train
+INT-0351,"j'ai validé une commande avec ma carte, le paiement a été refusé mais le montant apparaît quand même sur mon relevé et je voudrais savoir comment le faire annuler",fr,payment_issue,train
+INT-0352,"le livreur m'a demandé de payer en espèces alors que j'avais déjà réglé en ligne, je voudrais contester ce double paiement car je ne veux pas payer deux fois",fr,payment_issue,test
+INT-0353,"bonjour, ma carte a été refusée alors qu'elle fonctionne ailleurs",fr,payment_issue,train
+INT-0354,ma carte a été débitée deux fois pour la commande ORD-100253,fr,payment_issue,test
+INT-0355,le montant facturé ne correspond pas à celui du panier,fr,payment_issue,val
+INT-0356,le paiement est resté en attente mais l'argent a été retiré,fr,payment_issue,train
+INT-0357,"je n'arrive pas à finaliser le paiement, le site affiche une erreur",fr,payment_issue,train
+INT-0358,une transaction inconnue apparaît sur mon relevé,fr,payment_issue,train
+INT-0359,j'ai payé par carte mais la commande n'est pas confirmée,fr,payment_issue,train
+INT-0360,le paiement à la livraison a été refusé par le livreur,fr,payment_issue,train
+INT-0361,j'ai été prélevé du mauvais montant pour ma commande,fr,payment_issue,val
+INT-0362,la plateforme a accepté le paiement puis annulé la commande,fr,payment_issue,test
+INT-0363,je veux contester un débit que je ne reconnais pas,fr,payment_issue,val
+INT-0364,le paiement en trois fois a été débité en une seule fois,fr,payment_issue,train
+INT-0365,the amount charged is higher than the total shown in my basket,en,payment_issue,train
+INT-0366,my card was declined and then charged anyway,en,payment_issue,val
+INT-0367,i was charged twice for the same order,en,payment_issue,test
+INT-0368,my card was rejected at checkout but the money left my acount,en,payment_issue,train
+INT-0369,card declined at checkout,en,payment_issue,train
+INT-0370,charged twice on my card,en,payment_issue,train
+INT-0371,"I placed an order with my card, the payment was declined but the amount still appears on my statement and I would like to know how to cancel it",en,payment_issue,train
+INT-0372,"the courier asked me to pay in cash even though I had already paid online, I would like to dispute this double payment because I do not want to pay twice",en,payment_issue,test
+INT-0373,"hello, my card was declined even though it works elsewhere",en,payment_issue,val
+INT-0374,I was charged twice for order ORD-100254,en,payment_issue,train
+INT-0375,the amount invoiced does not match the basket total,en,payment_issue,train
+INT-0376,the payment is still pending but the money was taken,en,payment_issue,train
+INT-0377,"I cannot complete the payment, the website shows an error",en,payment_issue,test
+INT-0378,an unknown transaction appears on my statement,en,payment_issue,train
+INT-0379,I paid by card but the order is not confirmed,en,payment_issue,train
+INT-0380,the cash on delivery payment was refused by the courier,en,payment_issue,train
+INT-0381,"mon portable refuse de démarrer mais je ne demande pas de prise en charge, juste une solution",fr,technical_support,val
+INT-0382,comment réinitialiser la montre sans passer par le SAV ?,fr,technical_support,test
+INT-0383,"mes écouteurs se déconnectent du téléphone, quelle manipulation essayer ?",fr,technical_support,train
+INT-0384,"le clavier tape des caractères étranges, comment le réinitialiser ?",fr,technical_support,train
+INT-0385,mon telephone ne salume plus depuis se matin,fr,technical_support,train
+INT-0386,je narrive pas a connecter mes ecouteur au pc,fr,technical_support,val
+INT-0387,lapplication plante a chaque fois que je louuvre,fr,technical_support,test
+INT-0388,mon ordinateur ne charge plus meme brancher,fr,technical_support,train
+INT-0389,téléphone ne s'allume plus,fr,technical_support,train
+INT-0390,comment appairer mes écouteurs ?,fr,technical_support,train
+INT-0391,"depuis la dernière mise à jour, mon téléphone redémarre tout seul plusieurs fois par jour et je voudrais savoir quelles manipulations je peux essayer avant de contacter le SAV",fr,technical_support,train
+INT-0392,"mon ordinateur portable devient très chaud et le ventilateur fait un bruit fort, pouvez-vous m'indiquer comment vérifier si c'est un problème logiciel ou matériel",fr,technical_support,train
+INT-0393,"bonjour, mon casque Bluetooth ne se connecte plus à mon ordinateur",fr,technical_support,test
+INT-0394,comment remettre la montre connectée à zéro ?,fr,technical_support,train
+INT-0395,l'écran de ma tablette reste noir après la mise en charge,fr,technical_support,train
+INT-0396,mes écouteurs ne sont pas détectés par mon téléphone,fr,technical_support,train
+INT-0397,le Wi-Fi se coupe sans arrêt sur mon ordinateur portable,fr,technical_support,train
+INT-0398,l'application NovaShop plante quand j'ouvre mes commandes,fr,technical_support,train
+INT-0399,comment mettre à jour le logiciel de ma montre ?,fr,technical_support,train
+INT-0400,mon enceinte ne charge plus depuis hier,fr,technical_support,val
+INT-0401,le clavier du laptop ne répond plus après une mise à jour,fr,technical_support,train
+INT-0402,comment faire un reset des écouteurs sans fil ?,fr,technical_support,train
+INT-0403,mon téléphone chauffe beaucoup quand je le recharge,fr,technical_support,val
+INT-0404,je n'arrive pas à connecter mon casque à la télévision,fr,technical_support,train
+INT-0405,"my handset refuses to start but I am not asking for a warranty repair, just a solution",en,technical_support,test
+INT-0406,how do I reset the watch without going through after-sales service?,en,technical_support,test
+INT-0407,my phone wont turn on since this morning,en,technical_support,train
+INT-0408,i cant connect my earbuds to the laptop,en,technical_support,train
+INT-0409,phone will not turn on,en,technical_support,train
+INT-0410,how can I pair my earbuds?,en,technical_support,train
+INT-0411,"since the last update, my phone restarts by itself several times a day and I would like to know which steps I can try before contacting after-sales support",en,technical_support,train
+INT-0412,"my laptop gets very hot and the fan makes a loud noise, could you tell me how to check whether this is a software or hardware problem",en,technical_support,val
+INT-0413,"hello, my Bluetooth headset no longer connects to my computer",en,technical_support,val
+INT-0414,how do I reset the smart watch?,en,technical_support,test
+INT-0415,my tablet screen stays black after charging,en,technical_support,train
+INT-0416,my earbuds are not detected by my phone,en,technical_support,train
+INT-0417,the Wi-Fi keeps dropping on my laptop,en,technical_support,train
+INT-0418,the NovaShop app crashes when I open my orders,en,technical_support,train
+INT-0419,how do I update the software on my watch?,en,technical_support,train
+INT-0420,my speaker no longer charges,en,technical_support,train
+INT-0421,"mon PC a 14 mois, la batterie est-elle encore couverte par la garantie ?",fr,warranty_claim,train
+INT-0422,"je veux ouvrir un dossier SAV pour mon téléphone, pas juste un conseil",fr,warranty_claim,val
+INT-0423,la garantie commerciale couvre-t-elle une chute survenue après l'achat ?,fr,warranty_claim,val
+INT-0424,"mon produit est tombé en panne dans les 48 heures, je demande une prise en charge",fr,warranty_claim,test
+INT-0425,la garanti couvre til les ecouteur casser ?,fr,warranty_claim,train
+INT-0426,je veut faire reparer mon telephone sous garanti,fr,warranty_claim,train
+INT-0427,"mon laptop est tomber en panne, cest couvert ?",fr,warranty_claim,train
+INT-0428,comment ouvrir un dosier sav pour ma montre ?,fr,warranty_claim,val
+INT-0429,garantie couvre écran cassé ?,fr,warranty_claim,train
+INT-0430,je veux une réparation sous garantie,fr,warranty_claim,train
+INT-0431,"j'ai acheté un ordinateur portable il y a huit mois, la batterie ne tient plus la charge et je voudrais savoir si la garantie commerciale prend en charge son remplacement",fr,warranty_claim,train
+INT-0432,"mon téléphone est tombé en panne sans que je l'aie fait tomber, je souhaite ouvrir un dossier SAV et connaître les pièces à fournir pour la garantie",fr,warranty_claim,train
+INT-0433,"bonjour, les écouteurs qui ne fonctionnent plus sont-ils couverts par la garantie ?",fr,warranty_claim,test
+INT-0434,"mon casque a un problème après trois mois, puis-je demander une réparation ?",fr,warranty_claim,train
+INT-0435,quelle est la durée de garantie du laptop ?,fr,warranty_claim,train
+INT-0436,je voudrais faire réparer ma tablette encore sous garantie,fr,warranty_claim,train
+INT-0437,la batterie de mon téléphone est-elle couverte par la garantie ?,fr,warranty_claim,train
+INT-0438,comment envoyer mon produit au SAV pour une prise en charge ?,fr,warranty_claim,train
+INT-0439,"mon écran s'est fissuré tout seul, est-ce couvert ?",fr,warranty_claim,test
+INT-0440,"j'ai perdu ma facture, puis-je quand même utiliser la garantie ?",fr,warranty_claim,train
+INT-0441,la garantie fonctionne-t-elle si j'ai acheté le produit en boutique ?,fr,warranty_claim,train
+INT-0442,"mon produit est non réparable, que propose le SAV ?",fr,warranty_claim,val
+INT-0443,je veux un échange sous garantie pour mon enceinte défectueuse,fr,warranty_claim,train
+INT-0444,combien de temps prend une réparation prise en charge ?,fr,warranty_claim,train
+INT-0445,"my PC is 14 months old, is the battery still covered by the warranty?",en,warranty_claim,test
+INT-0446,"I want to open an after-sales case for my phone, not just get advice",en,warranty_claim,val
+INT-0447,does the waranty cover cracked earbuds?,en,warranty_claim,train
+INT-0448,i need my laptop fixed under waranty,en,warranty_claim,train
+INT-0449,warranty covers cracked screen?,en,warranty_claim,train
+INT-0450,I want a repair under warranty,en,warranty_claim,train
+INT-0451,"I bought a laptop eight months ago, the battery no longer holds a charge and I would like to know whether the commercial warranty covers its replacement",en,warranty_claim,train
+INT-0452,"my phone stopped working without being dropped, I want to open an after-sales case and know which documents are needed for the warranty and what the next steps are",en,warranty_claim,test
+INT-0453,"hello, does the warranty cover earbuds that stop working?",en,warranty_claim,train
+INT-0454,"my headset has a problem after three months, can I ask for a repair?",en,warranty_claim,test
+INT-0455,what is the warranty period for the laptop?,en,warranty_claim,train
+INT-0456,I would like to have my tablet repaired while it is still under warranty,en,warranty_claim,train
+INT-0457,is the phone battery covered by the warranty?,en,warranty_claim,train
+INT-0458,how do I send my product to after-sales service for a claim?,en,warranty_claim,val
+INT-0459,"my screen cracked on its own, is that covered?",en,warranty_claim,train
+INT-0460,"I lost my invoice, can I still use the warranty?",en,warranty_claim,train
+INT-0461,le casque noir est-il disponible en boutique alors que le site le montre en stock ?,fr,product_info,val
+INT-0462,quelle différence entre le modèle 128 Go et le 256 Go de la tablette ?,fr,product_info,train
+INT-0463,ce téléphone est-il compatible avec les réseaux marocains ?,fr,product_info,train
+INT-0464,le prix affiché inclut-il les accessoires dans la boîte ?,fr,product_info,train
+INT-0465,combien coute le casque noir ?,fr,product_info,train
+INT-0466,est ce que vous avez le telephone en stock ?,fr,product_info,test
+INT-0467,le portable a til un port hdmi ?,fr,product_info,train
+INT-0468,quelle est la diference entre les deux modeles ?,fr,product_info,train
+INT-0469,prix du casque noir ?,fr,product_info,train
+INT-0470,ce laptop a un HDMI ?,fr,product_info,val
+INT-0471,"je cherche un ordinateur portable pour la bureautique et un peu de montage vidéo, pouvez-vous me dire quel modèle est le plus adapté et s'il est disponible en stock",fr,product_info,train
+INT-0472,"je voudrais comparer les deux montres connectées que vous vendez, notamment l'autonomie, la compatibilité et le prix, avant de passer commande pour savoir laquelle correspond le mieux à mon usage",fr,product_info,train
+INT-0473,"bonjour, est-ce que la tablette existe en version 256 Go ?",fr,product_info,train
+INT-0474,quel est le prix du téléphone Nova X ?,fr,product_info,train
+INT-0475,avez-vous le modèle blanc du casque en stock ?,fr,product_info,test
+INT-0476,ce clavier est-il compatible avec un Mac ?,fr,product_info,train
+INT-0477,quelle est la capacité de la batterie de ce laptop ?,fr,product_info,val
+INT-0478,la montre connectée fonctionne-t-elle avec Android ?,fr,product_info,test
+INT-0479,combien de ports USB possède cet ordinateur ?,fr,product_info,train
+INT-0480,est-ce que les écouteurs sont vendus avec un étui de charge ?,fr,product_info,val
+INT-0481,quel modèle de tablette conseillez-vous pour lire des livres ?,fr,product_info,train
+INT-0482,le téléphone est-il disponible en noir ou seulement en bleu ?,fr,product_info,train
+INT-0483,le produit est-il neuf et scellé ?,fr,product_info,train
+INT-0484,puis-je voir les caractéristiques complètes du casque sur le site ?,fr,product_info,train
+INT-0485,is the black headset available in store even though the website shows it in stock?,en,product_info,val
+INT-0486,what is the difference between the 128 GB and 256 GB versions of the tablet?,en,product_info,val
+INT-0487,how mutch is the black headset?,en,product_info,train
+INT-0488,do you have the phone in stok?,en,product_info,train
+INT-0489,price of the black headset?,en,product_info,test
+INT-0490,does this laptop have HDMI?,en,product_info,train
+INT-0491,"I am looking for a laptop for office work and a little video editing, could you tell me which model is best and whether it is in stock",en,product_info,train
+INT-0492,"I would like to compare the two smart watches you sell, especially battery life, compatibility and price, before placing an order so that I can choose the one that fits my needs",en,product_info,train
+INT-0493,"hello, is the tablet available in a 256 GB version?",en,product_info,train
+INT-0494,what is the price of the Nova X phone?,en,product_info,train
+INT-0495,do you have the white version of the headset in stock?,en,product_info,train
+INT-0496,is this keyboard compatible with a Mac?,en,product_info,train
+INT-0497,what is the battery capacity of this laptop?,en,product_info,train
+INT-0498,does the smart watch work with Android?,en,product_info,test
+INT-0499,how many USB ports does this computer have?,en,product_info,train
+INT-0500,are the earbuds sold with a charging case?,en,product_info,test
+INT-0501,"mes points ont disparu après le retour d'un produit, est-ce normal ?",fr,promotion_loyalty,val
+INT-0502,le code BIENVENUE10 est-il cumulable avec les soldes en cours ?,fr,promotion_loyalty,train
+INT-0503,"une promotion n'a pas été appliquée à ma commande, je veux la réclamer",fr,promotion_loyalty,val
+INT-0504,"ma carte cadeau a expiré avant que je puisse l'utiliser, que faire ?",fr,promotion_loyalty,val
+INT-0505,mon code promo ne fonctinne pas,fr,promotion_loyalty,train
+INT-0506,jai pas recu mes points de fidelite,fr,promotion_loyalty,train
+INT-0507,la reduction na pas ete appliquer a ma commande,fr,promotion_loyalty,train
+INT-0508,comment utiliser mes point de fideliter ?,fr,promotion_loyalty,train
+INT-0509,mon code promo est refusé,fr,promotion_loyalty,train
+INT-0510,utiliser mes points fidélité,fr,promotion_loyalty,train
+INT-0511,"j'ai appliqué le code promo avant de valider mon panier, mais le montant final n'a pas changé et je voudrais savoir pourquoi la réduction n'a pas été prise en compte",fr,promotion_loyalty,train
+INT-0512,"je voudrais connaître les conditions du programme de fidélité, notamment combien de points je gagne par achat et comment les utiliser sur une prochaine commande",fr,promotion_loyalty,train
+INT-0513,"bonjour, comment fonctionne le programme NovaPoints ?",fr,promotion_loyalty,train
+INT-0514,mon code promo est refusé alors qu'il n'a pas expiré,fr,promotion_loyalty,test
+INT-0515,puis-je cumuler deux codes promo sur une même commande ?,fr,promotion_loyalty,train
+INT-0516,la promotion affichée sur le site ne s'applique pas au produit que je veux,fr,promotion_loyalty,train
+INT-0517,comment utiliser mes points fidélité au moment du paiement ?,fr,promotion_loyalty,train
+INT-0518,mes points ont-ils été annulés après mon retour ?,fr,promotion_loyalty,test
+INT-0519,une carte cadeau peut-elle être utilisée avec un code promo ?,fr,promotion_loyalty,train
+INT-0520,je n'ai pas reçu les points de ma dernière commande,fr,promotion_loyalty,train
+INT-0521,les prix pendant les soldes sont-ils garantis jusqu'à la fin de la promotion ?,fr,promotion_loyalty,train
+INT-0522,comment passer au statut fidélité supérieur ?,fr,promotion_loyalty,train
+INT-0523,ma réduction de bienvenue n'a pas été appliquée au panier,fr,promotion_loyalty,test
+INT-0524,où puis-je trouver les codes promo en cours ?,fr,promotion_loyalty,val
+INT-0525,"my points disappeared after I returned a product, is that normal?",en,promotion_loyalty,train
+INT-0526,can the WELCOME10 code be combined with the current sale?,en,promotion_loyalty,train
+INT-0527,my promo code doesnt work,en,promotion_loyalty,train
+INT-0528,i didnt get my loyalty points,en,promotion_loyalty,test
+INT-0529,my promo code is refused,en,promotion_loyalty,train
+INT-0530,use my loyalty points,en,promotion_loyalty,test
+INT-0531,"I applied the promo code before confirming my basket, but the final amount did not change and I would like to know why the discount was not taken into account",en,promotion_loyalty,val
+INT-0532,"I would like to know the rules of the loyalty programme, especially how many points I earn per purchase and how to use them on a future order",en,promotion_loyalty,train
+INT-0533,"hello, how does the NovaPoints programme work?",en,promotion_loyalty,val
+INT-0534,my promo code is refused even though it has not expired,en,promotion_loyalty,train
+INT-0535,can I combine two promo codes on the same order?,en,promotion_loyalty,train
+INT-0536,the promotion shown on the website does not apply to the product I want,en,promotion_loyalty,train
+INT-0537,how do I use my loyalty points at checkout?,en,promotion_loyalty,test
+INT-0538,were my points cancelled after my return?,en,promotion_loyalty,train
+INT-0539,can a gift card be used with a promo code?,en,promotion_loyalty,train
+INT-0540,I did not receive the points for my last order,en,promotion_loyalty,train
+INT-0541,je veux modifier mon adresse e-mail dans mon compte sans passer par le support,fr,account_privacy,train
+INT-0542,quels cookies sont déposés quand je navigue sur votre site ?,fr,account_privacy,train
+INT-0543,mes données sont-elles revendues à des partenaires ?,fr,account_privacy,train
+INT-0544,je veux exercer mon droit d'accès aux informations que vous conservez sur moi,fr,account_privacy,val
+INT-0545,comment suprimer mon compte ?,fr,account_privacy,train
+INT-0546,jai oublier mon mot de passe,fr,account_privacy,val
+INT-0547,je veut savoir quel donnees vous garder sur moi,fr,account_privacy,train
+INT-0548,comment desactiver les cookies du site ?,fr,account_privacy,test
+INT-0549,je veux supprimer mon compte,fr,account_privacy,val
+INT-0550,comment gérer mes cookies ?,fr,account_privacy,train
+INT-0551,je souhaite savoir quelles données personnelles vous collectez lorsque je crée un compte et combien de temps elles sont conservées avant d'être supprimées et comment je peux les faire supprimer,fr,account_privacy,train
+INT-0552,"je voudrais exercer mon droit de rectification sur mon adresse et mon numéro de téléphone, pouvez-vous m'indiquer la procédure à suivre dans les meilleurs délais",fr,account_privacy,train
+INT-0553,"bonjour, comment puis-je changer mon mot de passe ?",fr,account_privacy,val
+INT-0554,je veux supprimer définitivement mon compte client,fr,account_privacy,test
+INT-0555,quelles informations personnelles sont stockées dans mon profil ?,fr,account_privacy,train
+INT-0556,puis-je demander une copie de toutes mes données ?,fr,account_privacy,train
+INT-0557,comment m'opposer aux courriels marketing ?,fr,account_privacy,train
+INT-0558,mes données sont-elles conservées après la suppression du compte ?,fr,account_privacy,train
+INT-0559,comment gérer les cookies sur mon navigateur ?,fr,account_privacy,train
+INT-0560,je voudrais mettre à jour mon numéro de téléphone dans mon compte,fr,account_privacy,train
+INT-0561,puis-je commander sans créer de compte ?,fr,account_privacy,train
+INT-0562,qui a accès à mes informations personnelles chez NovaShop ?,fr,account_privacy,test
+INT-0563,comment demander la suppression de mon historique de commandes ?,fr,account_privacy,train
+INT-0564,je veux savoir si mes données sont transférées hors du Maroc,fr,account_privacy,train
+INT-0565,I want to change my email address in my account without contacting support,en,account_privacy,train
+INT-0566,which cookies are placed when I browse your website?,en,account_privacy,train
+INT-0567,how do i delete my acount?,en,account_privacy,train
+INT-0568,"i forgot my passord, what should i do?",en,account_privacy,train
+INT-0569,I want to delete my account,en,account_privacy,train
+INT-0570,how do I manage my cookies?,en,account_privacy,test
+INT-0571,I would like to know which personal data you collect when I create an account and how long it is kept before being deleted and how I can request their deletion,en,account_privacy,val
+INT-0572,"I want to exercise my right to correct my address and phone number, could you tell me what procedure to follow as soon as possible",en,account_privacy,train
+INT-0573,"hello, how can I change my password?",en,account_privacy,test
+INT-0574,I want to permanently delete my customer account,en,account_privacy,train
+INT-0575,what personal information is stored in my profile?,en,account_privacy,test
+INT-0576,can I request a copy of all my data?,en,account_privacy,train
+INT-0577,how do I opt out of marketing emails?,en,account_privacy,train
+INT-0578,is my data kept after the account is deleted?,en,account_privacy,train
+INT-0579,how do I manage cookies in my browser?,en,account_privacy,train
+INT-0580,I would like to update my phone number in my account,en,account_privacy,val
+INT-0581,"pouvez-vous me passer un conseiller, pas le chatbot ?",fr,human_support,train
+INT-0582,je veux qu'un responsable me rappelle au sujet de ma commande,fr,human_support,train
+INT-0583,"le robot ne comprend pas, je préfère parler à une personne",fr,human_support,train
+INT-0584,je demande un agent humain même si mon problème est déjà réglé,fr,human_support,val
+INT-0585,je veut parler a quelquun de reel,fr,human_support,train
+INT-0586,passez moi un responsable svp,fr,human_support,train
+INT-0587,je narrive pas a avoir un humain au telephone,fr,human_support,train
+INT-0588,je veux parler a un agent pas a un robot,fr,human_support,train
+INT-0589,je veux un humain,fr,human_support,train
+INT-0590,parler à un responsable,fr,human_support,train
+INT-0591,"j'ai déjà essayé de résoudre mon problème avec l'assistant automatique mais je n'y arrive pas, je voudrais qu'une personne réelle reprenne mon dossier",fr,human_support,val
+INT-0592,pouvez-vous me mettre en relation avec un responsable du service client pour discuter de ma réclamation concernant la livraison car je n'arrive pas à obtenir une réponse par le chat,fr,human_support,test
+INT-0593,"bonjour, je voudrais parler à un conseiller humain",fr,human_support,train
+INT-0594,passez-moi quelqu'un du service client s'il vous plaît,fr,human_support,test
+INT-0595,je veux être mis en relation avec un agent,fr,human_support,train
+INT-0596,"le chatbot tourne en rond, je préfère un humain",fr,human_support,train
+INT-0597,puis-je avoir le numéro d'un responsable ?,fr,human_support,val
+INT-0598,"je souhaite parler à une personne réelle, pas à un robot",fr,human_support,train
+INT-0599,un conseiller peut-il me rappeler aujourd'hui ?,fr,human_support,train
+INT-0600,je demande l'escalade vers un agent humain,fr,human_support,test
+INT-0601,je veux discuter avec quelqu'un qui peut décider,fr,human_support,train
+INT-0602,transférez-moi vers le service client humain,fr,human_support,train
+INT-0603,je ne veux plus parler à l'assistant automatique,fr,human_support,val
+INT-0604,qui peut m'aider parmi vos agents ?,fr,human_support,train
+INT-0605,"can you put me through to an adviser, not the chatbot?",en,human_support,train
+INT-0606,I want a manager to call me back about my order,en,human_support,train
+INT-0607,"i would like to talk to a real person, not a robot",en,human_support,train
+INT-0608,can i talk to a human agent please,en,human_support,test
+INT-0609,I want a human please,en,human_support,test
+INT-0610,speak to a manager,en,human_support,train
+INT-0611,"I have already tried to solve my problem with the automated assistant but I cannot manage, I would like a real person to take over my case",en,human_support,train
+INT-0612,could you connect me with a customer service manager to discuss my complaint about the delivery because the automated assistant cannot solve my problem and I have already tried several times,en,human_support,train
+INT-0613,"hello, I would like to speak to a human adviser",en,human_support,val
+INT-0614,put me through to customer service please,en,human_support,train
+INT-0615,I want to be connected with an agent,en,human_support,train
+INT-0616,"the chatbot keeps going in circles, I prefer a human",en,human_support,test
+INT-0617,can I have a manager's phone number?,en,human_support,train
+INT-0618,"I want to talk to a real person, not a robot",en,human_support,val
+INT-0619,can an adviser call me back today?,en,human_support,train
+INT-0620,I am asking for escalation to a human agent,en,human_support,train
+INT-0621,"bonjour, je regarde juste votre site sans rien demander",fr,out_of_scope,train
+INT-0622,"merci, c'est réglé, je n'ai plus besoin d'aide",fr,out_of_scope,train
+INT-0623,je voulais juste dire que votre site est joli,fr,out_of_scope,train
+INT-0624,"test de connexion, ignorez ce message",fr,out_of_scope,train
+INT-0625,"bonjour, comment allez vous ?",fr,out_of_scope,train
+INT-0626,merci et bonne journee a vous,fr,out_of_scope,val
+INT-0627,cest juste un test,fr,out_of_scope,train
+INT-0628,a bientot et merci,fr,out_of_scope,train
+INT-0629,quel temps fait-il ?,fr,out_of_scope,train
+INT-0630,quelle heure est-il ?,fr,out_of_scope,val
+INT-0631,"je cherche une bonne recette de couscous pour ce week-end, pouvez-vous me donner les ingrédients et le temps de cuisson pour un repas de famille samedi soir",fr,out_of_scope,train
+INT-0632,"pouvez-vous me traduire cette phrase en anglais pour un devoir, sans lien avec une commande NovaShop, car je dois rendre le devoir demain matin",fr,out_of_scope,train
+INT-0633,"bonjour, j'espère que vous allez bien",fr,out_of_scope,test
+INT-0634,"merci beaucoup, bonne journée",fr,out_of_scope,train
+INT-0635,quel temps fera-t-il à Casablanca demain ?,fr,out_of_scope,train
+INT-0636,qui a gagné le match hier soir ?,fr,out_of_scope,train
+INT-0637,pouvez-vous me donner une recette de thé à la menthe ?,fr,out_of_scope,train
+INT-0638,quelle est la capitale de l'Australie ?,fr,out_of_scope,train
+INT-0639,racontez-moi une blague,fr,out_of_scope,val
+INT-0640,comment dit-on bonjour en espagnol ?,fr,out_of_scope,val
+INT-0641,je cherche un bon restaurant près de Rabat,fr,out_of_scope,train
+INT-0642,quel est le cours du dollar aujourd'hui ?,fr,out_of_scope,test
+INT-0643,pouvez-vous m'aider pour un exercice de mathématiques ?,fr,out_of_scope,train
+INT-0644,à quelle heure commence le match de ce soir ?,fr,out_of_scope,test
+INT-0645,"hello, I am just browsing your website without any request",en,out_of_scope,train
+INT-0646,"thanks, it is sorted, I do not need any more help",en,out_of_scope,train
+INT-0647,"hello, how are you today?",en,out_of_scope,test
+INT-0648,thanks and have a nice day,en,out_of_scope,train
+INT-0649,what is the weather like?,en,out_of_scope,test
+INT-0650,what time is it?,en,out_of_scope,train
+INT-0651,"I am looking for a good couscous recipe for this weekend, could you give me the ingredients and the cooking time for a family meal on Saturday evening",en,out_of_scope,train
+INT-0652,"could you translate this sentence into French for a homework assignment, it has nothing to do with a NovaShop order, because I have to hand it in tomorrow morning",en,out_of_scope,train
+INT-0653,"hello, I hope you are doing well",en,out_of_scope,test
+INT-0654,"thank you very much, have a good day",en,out_of_scope,train
+INT-0655,what will the weather be like in Casablanca tomorrow?,en,out_of_scope,val
+INT-0656,who won the match last night?,en,out_of_scope,train
+INT-0657,can you give me a recipe for mint tea?,en,out_of_scope,val
+INT-0658,what is the capital of Australia?,en,out_of_scope,train
+INT-0659,tell me a joke,en,out_of_scope,train
+INT-0660,how do you say hello in Spanish?,en,out_of_scope,train
