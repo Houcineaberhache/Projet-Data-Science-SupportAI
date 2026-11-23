@@ -1,0 +1,17 @@
+scikit-learn>=1.4
+pandas
+numpy
+joblib
+matplotlib
+seaborn
+fastapi
+uvicorn
+pydantic>=2
+# Embeddings (optionnel, recommandé) : le pipeline passe automatiquement en backend 'sbert' si disponible
+sentence-transformers
+# Dev / notebook / tests
+pytest
+httpx
+nbformat
+nbconvert
+ipykernel

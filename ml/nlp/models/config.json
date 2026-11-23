@@ -1,0 +1,21 @@
+{
+  "best_model": "tfidf_svm",
+  "embedding_backend": "lsa",
+  "confidence_threshold": 0.271,
+  "classes": [
+    "account_privacy",
+    "delivery_issue",
+    "human_support",
+    "order_change_cancel",
+    "order_tracking",
+    "out_of_scope",
+    "payment_info",
+    "payment_issue",
+    "product_info",
+    "promotion_loyalty",
+    "refund_status",
+    "return_request",
+    "technical_support",
+    "warranty_claim"
+  ]
+}
