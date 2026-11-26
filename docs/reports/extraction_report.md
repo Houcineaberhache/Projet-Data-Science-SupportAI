@@ -25,8 +25,8 @@
 | faq-csv | 4 |
 | faq-json | 6 |
 | faq-jsonl | 6 |
-| ooxml-stdlib | 30 |
-| pypdf | 28 |
+| pymupdf | 28 |
+| python-docx | 30 |
 
 ## Contrôles
 
@@ -55,7 +55,7 @@
 | espaces multiples réduits | 0 |
 | espaces de fin de ligne supprimés | 0 |
 | lignes vides réduites | 0 |
-| textes modifiés | 0 |
+| textes modifiés | 56 |
 
 ## Documents nécessitant un OCR
 

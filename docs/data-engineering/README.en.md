@@ -190,7 +190,7 @@ This consistency is what makes RAG faithfulness measurable: if two documents con
 - [ ] Production of the remaining annotated datasets (`intent_dataset`, `retrieval_eval`, `ner_dataset`, `sentiment_dataset`, `urgency_dataset`)
 - [ ] Cohen's kappa calculation after double annotation
 - [ ] Full product catalogue (100–200 references) — the `CAT-*` guides cover only 25
-- [ ] Addition of the "fictional document" notice to all deliverables
+- [x] Addition of the "fictional document" notice to all deliverables (PDF, DOCX and `disclaimer` field on JSON/JSONL/CSV FAQs)
 
 ## Disclaimer
 

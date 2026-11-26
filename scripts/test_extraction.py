@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from build_sources import PdfLayout, make_pdf, render_docx  # noqa: E402
+from build_sources import PdfLayout, make_pdf, render_docx, write_faq  # noqa: E402
 from extract_documents import (  # noqa: E402
     clean_text, extract_docx, extract_faq, extract_pdf,
 )
@@ -94,6 +94,27 @@ class FaqTests(unittest.TestCase):
             items, extractor = extract_faq(path)
             self.assertEqual(extractor, "csv")
             self.assertEqual(len(items), 2)
+
+    def test_write_faq_includes_disclaimer(self) -> None:
+        faq_meta = {
+            "doc_id": "FAQ-99",
+            "title": "FAQ test",
+            "language": "fr",
+            "category": "faq",
+            "version": "1.0",
+        }
+        blocks = [("h2", "Question ?"), ("p", "Réponse.")]
+        with tempfile.TemporaryDirectory() as tmp:
+            for fmt in ("json", "jsonl", "csv"):
+                target = Path(tmp) / f"faq.{fmt}"
+                count = write_faq(faq_meta, blocks, fmt, target)
+                self.assertEqual(count, 1)
+                text = target.read_text(encoding="utf-8-sig")
+                self.assertIn("Document fictif", text)
+                items, extractor = extract_faq(target)
+                self.assertEqual(extractor, fmt)
+                self.assertEqual(len(items), 1)
+                self.assertEqual(items[0]["question"], "Question ?")
 
 
 class PdfTests(unittest.TestCase):

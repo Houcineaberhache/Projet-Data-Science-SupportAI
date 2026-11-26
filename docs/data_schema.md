@@ -118,7 +118,7 @@ One JSON object per line, one line per extraction unit: 522 records
 | `text` | string | Cleaned text |
 | `needs_ocr` | boolean | True when a PDF page has fewer than 40 extractable characters |
 | `warnings` | list | Non-blocking extraction warnings |
-| `extractor` | string | `pypdf`, `ooxml-stdlib`, `faq-json`, `faq-jsonl`, `faq-csv` |
+| `extractor` | string | `pymupdf` / `pdfplumber` / `pypdf`, `python-docx` / `ooxml-stdlib`, `faq-json`, `faq-jsonl`, `faq-csv` |
 | `char_count` | integer | Characters in `text` |
 | `word_count` | integer | Words in `text` |
 
@@ -215,6 +215,7 @@ The same 8 FAQ documents are delivered in three shapes.
   "language": "fr",
   "category": "faq",
   "version": "1.0",
+  "disclaimer": "Document fictif — NovaShop est une société imaginaire créée pour le projet pédagogique SupportAI.",
   "questions": [
     {"id": "FAQ-01-Q01", "question": "...", "answer": "..."}
   ]
@@ -225,13 +226,13 @@ The same 8 FAQ documents are delivered in three shapes.
 
 ```json
 {"doc_id": "FAQ-04", "title": "...", "language": "fr", "category": "faq",
- "version": "1.0", "id": "FAQ-04-Q01", "question": "...", "answer": "..."}
+ "version": "1.0", "disclaimer": "Document fictif — ...", "id": "FAQ-04-Q01", "question": "...", "answer": "..."}
 ```
 
 **CSV** (FAQ-07, FAQ-08) — header:
 
 ```
-doc_id,language,id,title,category,version,question,answer
+doc_id,language,id,title,category,version,disclaimer,question,answer
 ```
 
 ## 7. Invariants enforced by `scripts/manage_corpus.py validate`

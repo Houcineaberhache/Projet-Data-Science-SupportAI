@@ -54,7 +54,7 @@
 | 4 | Structure des titres | OK | 486/486 titres conservés |
 | 5 | Volumes et parité | OK | 522 en sortie / 522 attendus, 261 FR / 261 EN, parité OK, identifiants uniques |
 | 6 | Valeurs métier | OK | 522 enregistrements, 0 écart(s) |
-| 7 | Déterminisme | OK | sha256 identique (09e2fc3a00dd494d…) |
+| 7 | Déterminisme | OK | sha256 identique (0bdfce183b539631…) |
 
 ## 4. Doublons exacts supprimés
 

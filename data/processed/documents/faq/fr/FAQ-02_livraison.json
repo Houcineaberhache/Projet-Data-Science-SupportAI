@@ -4,6 +4,7 @@
   "language": "fr",
   "category": "faq",
   "version": "1.0",
+  "disclaimer": "Document fictif — NovaShop est une société imaginaire créée pour le projet pédagogique SupportAI.",
   "questions": [
     {
       "id": "FAQ-02-Q01",

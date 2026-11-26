@@ -190,7 +190,7 @@ Cette cohérence est ce qui permet de mesurer la fidélité du RAG : si deux doc
 - [ ] Production des jeux annotés restants (`intent_dataset`, `retrieval_eval`, `ner_dataset`, `sentiment_dataset`, `urgency_dataset`)
 - [ ] Calcul du kappa de Cohen après double annotation
 - [ ] Ajout d'un catalogue produits complet (100–200 références) — les guides `CAT-*` n'en couvrent que 25
-- [ ] Ajout de la mention « document fictif » sur l'ensemble des livrables
+- [x] Ajout de la mention « document fictif » sur l'ensemble des livrables (PDF, DOCX et champ `disclaimer` sur les FAQ JSON/JSONL/CSV)
 
 ## Avertissement
 

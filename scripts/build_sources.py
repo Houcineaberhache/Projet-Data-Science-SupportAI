@@ -55,6 +55,11 @@ PDF_TRANSLIT = {
     "\u2713": "[x]", "\u2717": "[ ]",
 }
 
+FICTIF_NOTICE = {
+    "fr": "Document fictif — NovaShop est une société imaginaire créée pour le projet pédagogique SupportAI.",
+    "en": "Fictional document — NovaShop is an imaginary company created for the SupportAI educational project.",
+}
+
 WARNINGS: list[str] = []
 
 
@@ -509,6 +514,7 @@ def write_faq(meta: dict, blocks: list[tuple[str, object]], fmt: str, target: Pa
         "language": meta["language"],
         "category": meta["category"],
         "version": meta["version"],
+        "disclaimer": FICTIF_NOTICE.get(meta["language"], FICTIF_NOTICE["fr"]),
     }
     if fmt == "json":
         payload = dict(base, questions=items)
@@ -522,7 +528,7 @@ def write_faq(meta: dict, blocks: list[tuple[str, object]], fmt: str, target: Pa
         with target.open("w", encoding="utf-8-sig", newline="") as fh:
             writer = csv.DictWriter(fh, fieldnames=[
                 "doc_id", "language", "id", "title", "category", "version",
-                "question", "answer"])
+                "disclaimer", "question", "answer"])
             writer.writeheader()
             for item in items:
                 writer.writerow({**base, **item})
