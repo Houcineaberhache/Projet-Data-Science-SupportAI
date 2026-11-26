@@ -2131,6 +2131,10 @@ def write_findings(metrics: dict) -> None:
         "",
         "> Fichier généré par `python scripts/run_eda.py`. Aucun horodatage, "
         "aucun chemin absolu.",
+        "> L'EDA porte sur la source canonique v1.0. La source v1.1 utilisée par "
+        "le gel courant ne diffère que par le `split` de `INT-0421` "
+        "(train → test) ; les métriques de texte et de classes restent "
+        "identiques, seuls les effectifs de train/test changent d'une unité.",
         "",
         "## Périmètre",
         "",
