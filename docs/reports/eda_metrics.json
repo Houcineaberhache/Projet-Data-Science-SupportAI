@@ -1,0 +1,916 @@
+{
+  "documents": {
+    "by_family_language": {
+      "CAT": {
+        "en": {
+          "documents": 6,
+          "words": 2297
+        },
+        "fr": {
+          "documents": 6,
+          "words": 2441
+        }
+      },
+      "FAQ": {
+        "en": {
+          "documents": 8,
+          "words": 3714
+        },
+        "fr": {
+          "documents": 8,
+          "words": 4062
+        }
+      },
+      "OPS": {
+        "en": {
+          "documents": 5,
+          "words": 2360
+        },
+        "fr": {
+          "documents": 5,
+          "words": 2502
+        }
+      },
+      "POL": {
+        "en": {
+          "documents": 10,
+          "words": 5188
+        },
+        "fr": {
+          "documents": 10,
+          "words": 5682
+        }
+      },
+      "PRO": {
+        "en": {
+          "documents": 4,
+          "words": 1904
+        },
+        "fr": {
+          "documents": 4,
+          "words": 2025
+        }
+      },
+      "REG": {
+        "en": {
+          "documents": 4,
+          "words": 1775
+        },
+        "fr": {
+          "documents": 4,
+          "words": 1968
+        }
+      }
+    },
+    "chunk_length": {
+      "en": {
+        "max": 221,
+        "mean": 44.49,
+        "median": 35.0,
+        "min": 5,
+        "n": 339
+      },
+      "fr": {
+        "max": 221,
+        "mean": 48.31,
+        "median": 39.0,
+        "min": 5,
+        "n": 339
+      },
+      "overall": {
+        "max": 221,
+        "mean": 46.4,
+        "median": 37.0,
+        "min": 5,
+        "n": 678
+      }
+    },
+    "chunks_by_audience_index": {
+      "customer": {
+        "indexed": 562,
+        "indexed_share": 0.9965,
+        "not_indexed": 2,
+        "total": 564
+      },
+      "internal": {
+        "indexed": 110,
+        "indexed_share": 0.9649,
+        "not_indexed": 4,
+        "total": 114
+      }
+    },
+    "chunks_indexed": 672,
+    "chunks_indexed_share": 0.9912,
+    "chunks_not_indexed": 6,
+    "chunks_total": 678,
+    "document_length": {
+      "en": {
+        "max": 656,
+        "mean": 465.89,
+        "median": 461.0,
+        "min": 304,
+        "n": 37
+      },
+      "fr": {
+        "max": 729,
+        "mean": 504.86,
+        "median": 498.0,
+        "min": 328,
+        "n": 37
+      },
+      "overall": {
+        "max": 729,
+        "mean": 485.38,
+        "median": 478.0,
+        "min": 304,
+        "n": 74
+      }
+    },
+    "documents_by_language": {
+      "en": 37,
+      "fr": 37
+    },
+    "documents_total": 74,
+    "exclusion_reasons": {
+      "too_short": 6
+    },
+    "parity": {
+      "CAT": {
+        "documents_en": 6,
+        "documents_fr": 6,
+        "documents_ratio_fr_en": 1.0,
+        "words_en": 2297,
+        "words_fr": 2441,
+        "words_ratio_fr_en": 1.0627
+      },
+      "FAQ": {
+        "documents_en": 8,
+        "documents_fr": 8,
+        "documents_ratio_fr_en": 1.0,
+        "words_en": 3714,
+        "words_fr": 4062,
+        "words_ratio_fr_en": 1.0937
+      },
+      "OPS": {
+        "documents_en": 5,
+        "documents_fr": 5,
+        "documents_ratio_fr_en": 1.0,
+        "words_en": 2360,
+        "words_fr": 2502,
+        "words_ratio_fr_en": 1.0602
+      },
+      "POL": {
+        "documents_en": 10,
+        "documents_fr": 10,
+        "documents_ratio_fr_en": 1.0,
+        "words_en": 5188,
+        "words_fr": 5682,
+        "words_ratio_fr_en": 1.0952
+      },
+      "PRO": {
+        "documents_en": 4,
+        "documents_fr": 4,
+        "documents_ratio_fr_en": 1.0,
+        "words_en": 1904,
+        "words_fr": 2025,
+        "words_ratio_fr_en": 1.0636
+      },
+      "REG": {
+        "documents_en": 4,
+        "documents_fr": 4,
+        "documents_ratio_fr_en": 1.0,
+        "words_en": 1775,
+        "words_fr": 1968,
+        "words_ratio_fr_en": 1.1087
+      }
+    },
+    "words_by_language": {
+      "en": 17238,
+      "fr": 18680
+    },
+    "words_ratio_fr_en": 1.0837,
+    "words_total": 35918
+  },
+  "duplicates": {
+    "chunked_corpus": {
+      "exact_groups": [],
+      "exact_pair_count": 0,
+      "exact_pairs": [],
+      "n": 678,
+      "quasi_pair_count": 0,
+      "quasi_pairs": []
+    },
+    "cleaned_corpus": {
+      "exact_groups": [],
+      "exact_pair_count": 0,
+      "exact_pairs": [],
+      "n": 522,
+      "quasi_pair_count": 0,
+      "quasi_pairs": []
+    },
+    "intent_dataset": {
+      "cross_split": {
+        "exact_pair_count": 0,
+        "exact_pairs": [],
+        "pairs_compared": 72912,
+        "quasi_pair_count": 0,
+        "quasi_pairs": []
+      },
+      "intra_split": {
+        "test": {
+          "exact_groups": [],
+          "exact_pair_count": 0,
+          "exact_pairs": [],
+          "n": 84,
+          "quasi_pair_count": 0,
+          "quasi_pairs": []
+        },
+        "train": {
+          "exact_groups": [],
+          "exact_pair_count": 0,
+          "exact_pairs": [],
+          "n": 392,
+          "quasi_pair_count": 0,
+          "quasi_pairs": []
+        },
+        "val": {
+          "exact_groups": [],
+          "exact_pair_count": 0,
+          "exact_pairs": [],
+          "n": 84,
+          "quasi_pair_count": 0,
+          "quasi_pairs": []
+        }
+      }
+    },
+    "rag_vs_intent_dataset": {
+      "exact_pair_count": 0,
+      "exact_pairs": [],
+      "n_a": 140,
+      "n_b": 560,
+      "pairs_compared": 78400,
+      "quasi_pair_count": 0,
+      "quasi_pairs": []
+    },
+    "rag_vs_robustness": {
+      "exact_pair_count": 0,
+      "exact_pairs": [],
+      "n_a": 140,
+      "n_b": 35,
+      "pairs_compared": 4900,
+      "quasi_pair_count": 0,
+      "quasi_pairs": []
+    }
+  },
+  "findings": [
+    "Le corpus nettoyé contient 522 sections (261 FR, 261 EN) et le corpus chunké 678 chunks (339 FR, 339 EN) : la parité en nombre d'unités est exacte.",
+    "Le manifeste décrit 74 fichiers de connaissance (37 FR, 37 EN) pour 35 918 mots ; les documents FR totalisent 18 680 mots contre 17 238 en EN (ratio 1,08), donc la parité en mots n'est pas parfaite.",
+    "Les familles sont déséquilibrées : 10 politiques et 8 FAQ par langue, contre 4 procédures et 4 synthèses réglementaires par langue.",
+    "La longueur médiane d'un document est de 478 mots (min 304, max 729) ; celle d'un chunk est de 37 mots (min 5, max 221).",
+    "672 chunks sur 678 (99,1 %) sont indexés dans le RAG ; la part est de 99,6 % pour l'audience customer (562/564) et 96,5 % pour l'audience internal (110/114). Les 6 chunks exclus sont marqués too_short.",
+    "Le jeu d'intentions contient 560 exemples : 392 train, 84 val, 84 test. La classe majoritaire est promotion_loyalty (42), la minoritaire payment_info (38), soit un ratio max/min de 1,11.",
+    "Les val/test sont équilibrés à 6 exemples par intention ; le train varie de 26 (payment_info) à 30 (promotion_loyalty).",
+    "2 exemples sur 560 (0,4 %) sont marqués ambigus : INT-0321, INT-0325, tous en train et promotion_loyalty avec payment_info, promotion_loyalty comme étiquettes acceptables.",
+    "Le jeu d'intentions est à 60,0 % FR (336) et 40,0 % EN (224) ; chaque intention suit ce déséquilibre (24 FR/16 EN), sauf payment_info (23/15), promotion_loyalty (25/17).",
+    "Aucun doublon exact ni quasi-doublon (Jaccard trigrammes ≥ 0,80) n'est détecté dans le corpus nettoyé, le corpus chunké, le jeu d'intentions (intra- et inter-splits), entre rag_eval et robustness_eval, ou entre rag_eval et intent_dataset.",
+    "Le jeu RAG contient 140 questions (84 FR, 56 EN) : 56 sémantiques, 42 lexicales, 28 procédurales et 14 hors corpus. Les procédurales sont majoritairement EN (20 EN vs 8 FR, soit 71,4 % EN), alors que les sémantiques sont majoritairement FR (40 FR vs 16 EN).",
+    "Parmi les 126 questions answerable, 109 ont un seul chunk gold et 17 en ont deux ; 120 ont un seul document gold et 6 en ont deux. Les 14 questions hors corpus n'ont aucun gold. La couverture atteint 30 documents sur 37 (81,1 %) ; OPS-01, OPS-02, OPS-03, OPS-05, REG-01, REG-02, REG-03 ne sont jamais gold."
+  ],
+  "intents": {
+    "ambiguous_count": 2,
+    "ambiguous_examples": [
+      {
+        "acceptable_labels": [
+          "payment_info",
+          "promotion_loyalty"
+        ],
+        "id": "INT-0321",
+        "intent": "promotion_loyalty",
+        "language": "fr",
+        "split": "train"
+      },
+      {
+        "acceptable_labels": [
+          "payment_info",
+          "promotion_loyalty"
+        ],
+        "id": "INT-0325",
+        "intent": "promotion_loyalty",
+        "language": "en",
+        "split": "train"
+      }
+    ],
+    "ambiguous_share": 0.0036,
+    "by_intent_language": {
+      "account_privacy": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "delivery_issue": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "human_support": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "order_change_cancel": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "order_tracking": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "out_of_scope": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "payment_info": {
+        "en": 15,
+        "fr": 23,
+        "total": 38
+      },
+      "payment_issue": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "product_info": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "promotion_loyalty": {
+        "en": 17,
+        "fr": 25,
+        "total": 42
+      },
+      "refund_status": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "return_request": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "technical_support": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      },
+      "warranty_claim": {
+        "en": 16,
+        "fr": 24,
+        "total": 40
+      }
+    },
+    "by_intent_split": {
+      "account_privacy": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "delivery_issue": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "human_support": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "order_change_cancel": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "order_tracking": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "out_of_scope": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "payment_info": {
+        "test": 6,
+        "total": 38,
+        "train": 26,
+        "val": 6
+      },
+      "payment_issue": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "product_info": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "promotion_loyalty": {
+        "test": 6,
+        "total": 42,
+        "train": 30,
+        "val": 6
+      },
+      "refund_status": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "return_request": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "technical_support": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      },
+      "warranty_claim": {
+        "test": 6,
+        "total": 40,
+        "train": 28,
+        "val": 6
+      }
+    },
+    "labels": [
+      "account_privacy",
+      "delivery_issue",
+      "human_support",
+      "order_change_cancel",
+      "order_tracking",
+      "out_of_scope",
+      "payment_info",
+      "payment_issue",
+      "product_info",
+      "promotion_loyalty",
+      "refund_status",
+      "return_request",
+      "technical_support",
+      "warranty_claim"
+    ],
+    "language_totals": {
+      "en": 224,
+      "fr": 336
+    },
+    "majority": {
+      "count": 42,
+      "label": "promotion_loyalty",
+      "labels": [
+        "promotion_loyalty"
+      ],
+      "share": 0.075
+    },
+    "max_min_ratio": 1.1053,
+    "minority": {
+      "count": 38,
+      "label": "payment_info",
+      "labels": [
+        "payment_info"
+      ],
+      "share": 0.0679
+    },
+    "split_stats": {
+      "test": {
+        "majority_labels": [
+          "account_privacy",
+          "delivery_issue",
+          "human_support",
+          "order_change_cancel",
+          "order_tracking",
+          "out_of_scope",
+          "payment_info",
+          "payment_issue",
+          "product_info",
+          "promotion_loyalty",
+          "refund_status",
+          "return_request",
+          "technical_support",
+          "warranty_claim"
+        ],
+        "max_count": 6,
+        "max_min_ratio": 1.0,
+        "min_count": 6,
+        "min_labels": [
+          "account_privacy",
+          "delivery_issue",
+          "human_support",
+          "order_change_cancel",
+          "order_tracking",
+          "out_of_scope",
+          "payment_info",
+          "payment_issue",
+          "product_info",
+          "promotion_loyalty",
+          "refund_status",
+          "return_request",
+          "technical_support",
+          "warranty_claim"
+        ],
+        "total": 84
+      },
+      "train": {
+        "majority_labels": [
+          "promotion_loyalty"
+        ],
+        "max_count": 30,
+        "max_min_ratio": 1.1538,
+        "min_count": 26,
+        "min_labels": [
+          "payment_info"
+        ],
+        "total": 392
+      },
+      "val": {
+        "majority_labels": [
+          "account_privacy",
+          "delivery_issue",
+          "human_support",
+          "order_change_cancel",
+          "order_tracking",
+          "out_of_scope",
+          "payment_info",
+          "payment_issue",
+          "product_info",
+          "promotion_loyalty",
+          "refund_status",
+          "return_request",
+          "technical_support",
+          "warranty_claim"
+        ],
+        "max_count": 6,
+        "max_min_ratio": 1.0,
+        "min_count": 6,
+        "min_labels": [
+          "account_privacy",
+          "delivery_issue",
+          "human_support",
+          "order_change_cancel",
+          "order_tracking",
+          "out_of_scope",
+          "payment_info",
+          "payment_issue",
+          "product_info",
+          "promotion_loyalty",
+          "refund_status",
+          "return_request",
+          "technical_support",
+          "warranty_claim"
+        ],
+        "total": 84
+      }
+    },
+    "split_totals": {
+      "test": 84,
+      "train": 392,
+      "val": 84
+    },
+    "total": 560
+  },
+  "languages": {
+    "chunked_corpus": {
+      "en": 339,
+      "en_share": 0.5,
+      "fr": 339,
+      "fr_share": 0.5,
+      "total": 678
+    },
+    "cleaned_corpus": {
+      "en": 261,
+      "en_share": 0.5,
+      "fr": 261,
+      "fr_share": 0.5,
+      "total": 522
+    },
+    "intent_dataset": {
+      "en": 224,
+      "en_share": 0.4,
+      "fr": 336,
+      "fr_share": 0.6,
+      "total": 560
+    },
+    "rag_eval": {
+      "en": 56,
+      "en_share": 0.4,
+      "fr": 84,
+      "fr_share": 0.6,
+      "total": 140
+    },
+    "robustness_eval": {
+      "en": 17,
+      "en_share": 0.4857,
+      "fr": 18,
+      "fr_share": 0.5143,
+      "total": 35
+    },
+    "source_manifest_kb": {
+      "en": 37,
+      "en_share": 0.5,
+      "fr": 37,
+      "fr_share": 0.5,
+      "total": 74
+    }
+  },
+  "meta": {
+    "figures": [
+      "docs/figures/eda/documents_familles_langue.png",
+      "docs/figures/eda/longueurs_documents_chunks.png",
+      "docs/figures/eda/parite_fr_en.png",
+      "docs/figures/eda/chunks_indexes_audience.png",
+      "docs/figures/eda/langues_jeux.png",
+      "docs/figures/eda/intentions_split_et_langue.png",
+      "docs/figures/eda/doublons_resume.png",
+      "docs/figures/eda/questions_longueur.png",
+      "docs/figures/eda/questions_types_langue.png",
+      "docs/figures/eda/questions_couverture_et_chunks.png"
+    ],
+    "inputs": {
+      "chunked_corpus": "data/processed/chunked_corpus.jsonl",
+      "cleaned_corpus": "data/processed/cleaned_corpus.jsonl",
+      "intent_dataset": "data/annotations/intent_dataset.jsonl",
+      "rag_eval": "data/annotations/rag_eval.jsonl",
+      "robustness_eval": "data/annotations/robustness_eval.jsonl",
+      "source_manifest": "data/source_manifest.csv"
+    },
+    "private_data_used": false,
+    "seed": 42
+  },
+  "questions": {
+    "answerable": 126,
+    "by_language": {
+      "en": 56,
+      "fr": 84
+    },
+    "by_type": {
+      "lexical": 42,
+      "out_of_corpus": 14,
+      "procedural": 28,
+      "semantic": 56
+    },
+    "by_type_language": {
+      "lexical": {
+        "en": 14,
+        "fr": 28,
+        "total": 42
+      },
+      "out_of_corpus": {
+        "en": 6,
+        "fr": 8,
+        "total": 14
+      },
+      "procedural": {
+        "en": 20,
+        "fr": 8,
+        "total": 28
+      },
+      "semantic": {
+        "en": 16,
+        "fr": 40,
+        "total": 56
+      }
+    },
+    "candidate_documents": 37,
+    "coverage_by_document": {
+      "CAT-01": 4,
+      "CAT-02": 4,
+      "CAT-03": 4,
+      "CAT-04": 4,
+      "CAT-05": 4,
+      "CAT-06": 4,
+      "FAQ-01": 4,
+      "FAQ-02": 4,
+      "FAQ-03": 4,
+      "FAQ-04": 5,
+      "FAQ-05": 5,
+      "FAQ-06": 4,
+      "FAQ-07": 4,
+      "FAQ-08": 4,
+      "OPS-04": 4,
+      "POL-01": 5,
+      "POL-02": 5,
+      "POL-03": 8,
+      "POL-04": 6,
+      "POL-05": 5,
+      "POL-06": 4,
+      "POL-07": 4,
+      "POL-08": 4,
+      "POL-09": 5,
+      "POL-10": 4,
+      "PRO-01": 4,
+      "PRO-02": 4,
+      "PRO-03": 4,
+      "PRO-04": 4,
+      "REG-04": 4
+    },
+    "covered_documents": 30,
+    "gold_chunks_per_question": {
+      "0": 14,
+      "1": 109,
+      "2": 17
+    },
+    "gold_docs_per_question": {
+      "0": 14,
+      "1": 120,
+      "2": 6
+    },
+    "length": {
+      "by_language": {
+        "en": {
+          "max": 21,
+          "mean": 11.95,
+          "median": 12.0,
+          "min": 5,
+          "n": 56
+        },
+        "fr": {
+          "max": 17,
+          "mean": 11.1,
+          "median": 11.0,
+          "min": 5,
+          "n": 84
+        }
+      },
+      "by_type": {
+        "lexical": {
+          "max": 17,
+          "mean": 11.05,
+          "median": 11.0,
+          "min": 7,
+          "n": 42
+        },
+        "out_of_corpus": {
+          "max": 12,
+          "mean": 8.43,
+          "median": 8.5,
+          "min": 5,
+          "n": 14
+        },
+        "procedural": {
+          "max": 21,
+          "mean": 14.25,
+          "median": 15.0,
+          "min": 8,
+          "n": 28
+        },
+        "semantic": {
+          "max": 16,
+          "mean": 11.07,
+          "median": 12.0,
+          "min": 5,
+          "n": 56
+        }
+      },
+      "by_type_language": {
+        "lexical": {
+          "en": {
+            "max": 13,
+            "mean": 10.29,
+            "median": 10.0,
+            "min": 7,
+            "n": 14
+          },
+          "fr": {
+            "max": 17,
+            "mean": 11.43,
+            "median": 11.0,
+            "min": 9,
+            "n": 28
+          }
+        },
+        "out_of_corpus": {
+          "en": {
+            "max": 12,
+            "mean": 9.67,
+            "median": 9.5,
+            "min": 8,
+            "n": 6
+          },
+          "fr": {
+            "max": 10,
+            "mean": 7.5,
+            "median": 7.5,
+            "min": 5,
+            "n": 8
+          }
+        },
+        "procedural": {
+          "en": {
+            "max": 21,
+            "mean": 15.8,
+            "median": 16.0,
+            "min": 10,
+            "n": 20
+          },
+          "fr": {
+            "max": 16,
+            "mean": 10.38,
+            "median": 9.5,
+            "min": 8,
+            "n": 8
+          }
+        },
+        "semantic": {
+          "en": {
+            "max": 13,
+            "mean": 9.44,
+            "median": 9.0,
+            "min": 5,
+            "n": 16
+          },
+          "fr": {
+            "max": 16,
+            "mean": 11.72,
+            "median": 12.0,
+            "min": 5,
+            "n": 40
+          }
+        }
+      },
+      "overall": {
+        "max": 21,
+        "mean": 11.44,
+        "median": 11.0,
+        "min": 5,
+        "n": 140
+      }
+    },
+    "out_of_corpus": 14,
+    "rag_total": 140,
+    "uncovered_documents": [
+      "OPS-01",
+      "OPS-02",
+      "OPS-03",
+      "OPS-05",
+      "REG-01",
+      "REG-02",
+      "REG-03"
+    ]
+  },
+  "robustness": {
+    "by_category": {
+      "ambiguous": 6,
+      "explicit_answer": 10,
+      "human_handoff": 5,
+      "no_answer": 8,
+      "rephrasing": 6
+    },
+    "by_category_language": {
+      "ambiguous": {
+        "en": 3,
+        "fr": 3,
+        "total": 6
+      },
+      "explicit_answer": {
+        "en": 5,
+        "fr": 5,
+        "total": 10
+      },
+      "human_handoff": {
+        "en": 2,
+        "fr": 3,
+        "total": 5
+      },
+      "no_answer": {
+        "en": 4,
+        "fr": 4,
+        "total": 8
+      },
+      "rephrasing": {
+        "en": 3,
+        "fr": 3,
+        "total": 6
+      }
+    },
+    "by_language": {
+      "en": 17,
+      "fr": 18
+    },
+    "total": 35
+  }
+}

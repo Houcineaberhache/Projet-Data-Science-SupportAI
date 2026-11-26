@@ -1859,6 +1859,11 @@ def write_single_report(
         f"> Version des guidelines : commit `{commit_hash}` (`docs/annotation_guidelines.md`, "
         f"{guidelines_state_value})."
     )
+    lines.append(
+        "> Ce rapport décrit la source canonique v1.0. La source dérivée v1.1 ne diffère que "
+        "par le `split` de `INT-0421` (train → test), regroupé avec `INT-0445` pour corriger "
+        "la fuite de traduction TR-0001 ; aucun texte ni étiquette n'est modifié."
+    )
     lines.append("")
     lines.append("## 1. Contexte et protocole")
     lines.append("")
@@ -2051,7 +2056,7 @@ def write_single_report(
     lines.append("")
     lines.append("```bash")
     lines.append("python scripts/merge_annotations.py --single-annotator")
-    lines.append("python scripts/merge_annotations.py --build --single-annotator")
+    lines.append("python scripts/merge_annotations.py --build --single-annotator --today 2026-11-14")
     lines.append("python tests/test_merge_annotations.py")
     lines.append("```")
     lines.append("")

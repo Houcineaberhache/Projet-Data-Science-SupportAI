@@ -1,0 +1,279 @@
+{
+  "annotation_status": "single_annotator",
+  "checks": {
+    "a": {
+      "blocking": true,
+      "details": {
+        "by_language": {
+          "test": {
+            "en": 42,
+            "fr": 43
+          },
+          "train": {
+            "en": 154,
+            "fr": 237
+          },
+          "val": {
+            "en": 28,
+            "fr": 56
+          }
+        },
+        "counts": {
+          "test": 85,
+          "train": 391,
+          "val": 84
+        },
+        "overlaps": [],
+        "total_rows": 560,
+        "union_size": 560
+      },
+      "id": "a",
+      "label": "ids uniques et union complète",
+      "status": "OK"
+    },
+    "b": {
+      "blocking": true,
+      "details": {
+        "other_rows": 475,
+        "pairs": [],
+        "test_rows": 85
+      },
+      "id": "b",
+      "label": "aucun texte exact test ↔ train/val",
+      "status": "OK"
+    },
+    "c": {
+      "blocking": true,
+      "details": {
+        "blocking_pairs": [],
+        "pairs_compared": 40375,
+        "review_pairs": [],
+        "review_range": [
+          0.6,
+          0.8
+        ],
+        "threshold": 0.8
+      },
+      "id": "c",
+      "label": "aucun quasi-doublon test ↔ train/val (Jaccard ≥ 0,80)",
+      "status": "OK"
+    },
+    "d": {
+      "blocking": true,
+      "details": {
+        "definition": "Bloquant : ORD-\\d+ ou nombre d'au moins 3 chiffres partagé. Les nombres courts (ex. 14 jours) sont listés mais non bloquants.",
+        "shared_identifier_numbers": [],
+        "shared_order_ids": [],
+        "shared_short_numbers": [
+          {
+            "other_ids": [
+              "INT-0223"
+            ],
+            "test_ids": [
+              "INT-0421",
+              "INT-0445"
+            ],
+            "value": "14"
+          }
+        ]
+      },
+      "id": "d",
+      "label": "aucun identifiant de commande ni numéro identifiant partagé",
+      "status": "OK"
+    },
+    "e": {
+      "blocking": false,
+      "details": {
+        "method": "Langue différente + nombre/identifiant commun + au moins un mot rare commun après normalisation. Signalement uniquement.",
+        "rare_max_document_frequency": 4,
+        "suspicious_pairs": [
+          {
+            "other_id": "INT-0223",
+            "other_language": "fr",
+            "other_split": "val",
+            "shared_numbers_or_ids": [
+              "14"
+            ],
+            "shared_rare_tokens": [
+              "14"
+            ],
+            "test_id": "INT-0445",
+            "test_language": "en"
+          }
+        ]
+      },
+      "id": "e",
+      "label": "recherche de fuite par traduction (signalement)",
+      "status": "OK"
+    },
+    "f": {
+      "blocking": true,
+      "details": {
+        "blocking_pairs": [],
+        "review_pairs": [],
+        "threshold": 0.8
+      },
+      "id": "f",
+      "label": "aucun doublon RAG/robustesse ↔ intentions",
+      "status": "OK"
+    },
+    "g": {
+      "blocking": true,
+      "details": {
+        "chunked_corpus_rows": 678,
+        "gold_links_checked": 159,
+        "invalid_links": []
+      },
+      "id": "g",
+      "label": "gold_chunk_id valides, customer et indexés",
+      "status": "OK"
+    }
+  },
+  "checks_summary": {
+    "all_blocking_ok": true,
+    "blocking_ko": [],
+    "review_required": [
+      "d",
+      "e"
+    ]
+  },
+  "frozen_dir": "data/frozen/v1.1",
+  "frozen_files": {
+    "intent_test.jsonl": {
+      "lines": 85,
+      "path": "data/frozen/v1.1/intent_test.jsonl",
+      "sha256": "dce0fe099df745e52b60ff0e5f6fd1995fdb550d7601ba9ac5ac5825d46fd304",
+      "size_bytes": 36941
+    },
+    "intent_test_inputs.jsonl": {
+      "lines": 85,
+      "path": "data/frozen/v1.1/intent_test_inputs.jsonl",
+      "sha256": "8f60a7ea7effc6deb636bd596552e94fa045e15f9e350da331a88e2aa36acca1",
+      "size_bytes": 18741
+    },
+    "intent_val.jsonl": {
+      "lines": 84,
+      "path": "data/frozen/v1.1/intent_val.jsonl",
+      "sha256": "e53a00c169954508567587b95837e60cd4325c72e603cd123e88e4d9220ad31c",
+      "size_bytes": 36744
+    },
+    "rag_eval.jsonl": {
+      "lines": 140,
+      "path": "data/frozen/v1.1/rag_eval.jsonl",
+      "sha256": "78e94300d610db7a1280adbd107a2b14a335e54c580cd443006c81dde6959eda",
+      "size_bytes": 90117
+    },
+    "robustness_eval.jsonl": {
+      "lines": 35,
+      "path": "data/frozen/v1.1/robustness_eval.jsonl",
+      "sha256": "2b487ee17ca9f2b4ecb2373917164c00c396019860fdb79837713ede11a17c99",
+      "size_bytes": 9141
+    },
+    "split_ids.json": {
+      "lines": 606,
+      "path": "data/frozen/v1.1/split_ids.json",
+      "sha256": "7218e940a7c6133cd9234edcb1178dec01257ddc14e10d8b7795e3c3f7fa0a78",
+      "size_bytes": 12265
+    }
+  },
+  "git": {
+    "clean": false,
+    "head": "04b6a3ce3a7803d7e1fc004aae0cd87d46dc2d87",
+    "porcelain": [
+      " M dataset_card.md",
+      " M docs/data-engineering/README.en.md",
+      " M docs/data-engineering/README.md",
+      " M docs/data_schema.md",
+      " M docs/reports/intent_dataset_report.md",
+      " M scripts/build_rag_eval.py",
+      " M scripts/merge_annotations.py",
+      " M tests/test_intent_prep.py",
+      "?? data/annotations/intent_dataset_v1.1.jsonl",
+      "?? data/frozen/",
+      "?? docs/figures/",
+      "?? docs/reports/eda_findings.md",
+      "?? docs/reports/eda_metrics.json",
+      "?? docs/reports/freeze_report.md",
+      "?? docs/reports/freeze_report_v1.0.md",
+      "?? notebooks/",
+      "?? scripts/apply_translation_split_fix.py",
+      "?? scripts/freeze_test_sets.py",
+      "?? scripts/run_eda.py",
+      "?? scripts/translation_leak.py",
+      "?? tests/test_eda.py",
+      "?? tests/test_freeze.py",
+      "?? tests/test_translation_leak.py"
+    ],
+    "state": "dirty"
+  },
+  "guidelines": {
+    "commit": "83f8ff9f6b62620cda88018ea01905d0438e7513",
+    "path": "docs/annotation_guidelines.md",
+    "sha256": "44c60cc722fa6a785d53b2dd246e10c3ef833af86c8f48d28b9cfce80614c35e"
+  },
+  "license": "NovaShop-Proprietary-Synthetic",
+  "license_notes": "Licence confirmée pour les 74 fichiers de langue du corpus (reuse_permission=full_text_index). Les 7 références externes ne sont pas indexées et gardent leurs licences propres. Les jeux dérivés (intent_dataset, rag_eval, robustness_eval, gel v1.1) n'ont pas de licence distincte explicite dans le dépôt ; la redistribution hors projet reste à confirmer.",
+  "license_source": "data/source_manifest.csv",
+  "license_status": "internal_verified",
+  "seed": 42,
+  "sources": {
+    "chunked_corpus": {
+      "lines": 678,
+      "path": "data/processed/chunked_corpus.jsonl",
+      "sha256": "57b0515b2efaa02519372710426e5ccad4858fe140eb8ad61e2a6ac153b80f6e",
+      "size_bytes": 963689
+    },
+    "intent_dataset": {
+      "lines": 560,
+      "path": "data/annotations/intent_dataset_v1.1.jsonl",
+      "sha256": "1dd83e5e7c03a8c40c31d9e2a0daa1b52cf677ff1475ebee795d892da2e80dbd",
+      "size_bytes": 207253
+    },
+    "rag_eval": {
+      "lines": 140,
+      "path": "data/annotations/rag_eval.jsonl",
+      "sha256": "78e94300d610db7a1280adbd107a2b14a335e54c580cd443006c81dde6959eda",
+      "size_bytes": 90117
+    },
+    "robustness_eval": {
+      "lines": 35,
+      "path": "data/annotations/robustness_eval.jsonl",
+      "sha256": "2b487ee17ca9f2b4ecb2373917164c00c396019860fdb79837713ede11a17c99",
+      "size_bytes": 9141
+    }
+  },
+  "translation_fix": {
+    "group_id": "TR-0001",
+    "legitimate_pairs": [
+      {
+        "ids": [
+          "INT-0445",
+          "INT-0223"
+        ],
+        "reason": "Intentions différentes (`warranty_claim` vs `return_request`) ; seul le nombre 14 est partagé."
+      }
+    ],
+    "members": [
+      {
+        "id": "INT-0421",
+        "intent": "warranty_claim",
+        "language": "fr",
+        "new_split": "test",
+        "original_split": "train",
+        "source": "data/annotations/_private/intent_candidates.jsonl"
+      },
+      {
+        "id": "INT-0445",
+        "intent": "warranty_claim",
+        "language": "en",
+        "new_split": "test",
+        "original_split": "test",
+        "source": "data/annotations/blind/annotate_aya_done.csv"
+      }
+    ],
+    "strategy": "Regrouper les exemples traduits dans le même split ; seul le champ `split` est modifié, aucun texte ni étiquette n'est touché.",
+    "target_split": "test"
+  },
+  "version": "1.1",
+  "version_notes": "Correction de la fuite de traduction TR-0001 : `INT-0421` rejoint `INT-0445` dans `test`. Aucune suppression, aucun texte ni étiquette modifié. `INT-0445` / `INT-0223` reste un cas légitime documenté."
+}

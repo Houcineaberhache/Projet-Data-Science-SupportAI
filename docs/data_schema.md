@@ -12,6 +12,7 @@
 | `data/processed/extracted/documents.jsonl` | 522 extracted, cleaned records |
 | `data/annotations/intents.csv` | Bilingual intent taxonomy (13 intents + `out_of_scope`) |
 | `data/source_manifest.csv` | Master manifest: 74 documents + 7 external references |
+| `data/frozen/v1.0/`, `data/frozen/v1.1/` | Immutable freezes: split ids, intent test/val, RAG and robustness test sets, `MANIFEST.json`; v1.1 corrige la fuite de traduction TR-0001 |
 | `docs/reports/` | Generated quality reports and annotation logs |
 | `scripts/` | Build, validate, extract and test pipeline |
 
@@ -412,11 +413,13 @@ Commandes :
 
 ```bash
 python scripts/merge_annotations.py --single-annotator
-python scripts/merge_annotations.py --build --single-annotator
+python scripts/merge_annotations.py --build --single-annotator --today 2026-11-14
 python scripts/merge_annotations.py          # mode deux annotateurs
 python scripts/merge_annotations.py --build  # mode deux annotateurs, après arbitrage
 python tests/test_merge_annotations.py
 ```
+
+La date `2026-11-14` fixe `created_at` pour reproduire le gel `v1.0` ; sans `--today`, la date courante est utilisée et les empreintes changent.
 
 ### 10.6 Mode annotateur unique (`--single-annotator`)
 
@@ -568,3 +571,36 @@ Au dernier passage, les sept contrôles sont **OK**. `reviewed_by` reste `null`
 pour les 140 lignes : la relecture humaine par Aya n'est pas encore faite. Le
 jeu de robustesse ne contient pas encore de résultats de modèle : il définit
 les comportements attendus avant tout test.
+
+## 12. `data/frozen/v1.0/` et `data/frozen/v1.1/`
+
+Gels immuables des jeux d'évaluation, générés par
+`python scripts/freeze_test_sets.py freeze --version X` et vérifiés par
+`python scripts/freeze_test_sets.py verify --version X`. Chaque dossier existe
+déjà : un second `freeze` refuse d'écraser la version correspondante. Aucun
+fichier du gel n'est retapé : les lignes sont copiées octet pour octet depuis
+les sources enregistrées dans le `MANIFEST.json`.
+
+`v1.0` reste intact et utilise `data/annotations/intent_dataset.jsonl`. `v1.1`
+utilise la source dérivée `data/annotations/intent_dataset_v1.1.jsonl`, écrite
+par `scripts/apply_translation_split_fix.py` : `INT-0421` y rejoint `INT-0445`
+dans `test`, sans changement de texte ni d'étiquette. `INT-0445` / `INT-0223`
+reste documenté comme cas légitime.
+
+| Fichier | Contenu v1.1 |
+| --- | --- |
+| `split_ids.json` | Ids triés par split (`train` 391, `val` 84, `test` 85), effectifs, répartition FR/EN et SHA-256 de chaque liste d'ids |
+| `intent_test.jsonl` | 85 lignes exactes du split `test` de `intent_dataset_v1.1.jsonl` |
+| `intent_test_inputs.jsonl` | Mêmes texte et identifiant que le test, sans `intent`, `acceptable_labels`, `ambiguous`, `notes`, `annotator_*` ni `adjudicated` |
+| `intent_val.jsonl` | 84 lignes exactes du split `val` |
+| `rag_eval.jsonl` | Copie intégrale des 140 questions RAG |
+| `robustness_eval.jsonl` | Copie intégrale des 35 cas de robustesse |
+| `MANIFEST.json` | Clés triées, sans horodatage : version, licence `NovaShop-Proprietary-Synthetic` (`internal_verified`, source `data/source_manifest.csv`, redistribution hors projet à confirmer), graine `42`, `single_annotator`, empreintes/taille/lignes des fichiers gelés et des **sources déclarées par version**, commit git, état `dirty`/`clean`, commit des guidelines, contrôles a→g et, pour v1.1, le groupe `TR-0001` |
+
+`verify` lit les chemins de sources depuis le `MANIFEST.json`, recalcule toutes
+les empreintes, rejoue les contrôles a→g, affiche `OK`/`KO` par fichier et
+termine avec un code non nul au moindre écart. Il ne modifie aucun fichier. Les
+contrôles bloquants sont a, b, c, d, f et g ; le contrôle e signale les suites
+de traduction suspectes sans rien corriger. La non-régression est complétée par
+`python tests/test_translation_leak.py`, qui détecte la fuite en v1.0 et
+confirme son absence en v1.1.

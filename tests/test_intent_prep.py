@@ -1,8 +1,10 @@
 import contextlib
 import csv
 import io
+import shutil
 import subprocess
 import sys
+import tempfile
 import unittest
 from collections import Counter
 from pathlib import Path
@@ -16,12 +18,32 @@ import prepare_intent_annotation as prep  # noqa: E402
 class IntentPreparationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        cls._real_blind_dir = prep.BLIND_DIR
+        cls._real_split_path = prep.SPLIT_PATH
+        cls._tmp_dir = Path(tempfile.mkdtemp())
+        tmp_private = cls._tmp_dir / "data" / "annotations" / "_private"
+        tmp_blind = cls._tmp_dir / "data" / "annotations" / "blind"
+        tmp_private.mkdir(parents=True)
+        tmp_blind.mkdir(parents=True)
+        shutil.copy2(
+            cls._real_blind_dir / "README_annotation.md",
+            tmp_blind / "README_annotation.md",
+        )
+        prep.SPLIT_PATH = tmp_private / "intent_split.csv"
+        prep.BLIND_DIR = tmp_blind
+
         cls.rows = prep.read_jsonl(prep.CANDIDATES_PATH)
         cls.intents = prep.read_intents()
         cls.by_id = {row["id"]: row for row in cls.rows}
         cls.split_of = prep.build_split(cls.rows, cls.intents)
         prep.write_split(cls.rows, cls.split_of)
         prep.write_sheets(cls.rows, cls.split_of)
+
+    @classmethod
+    def tearDownClass(cls):
+        prep.SPLIT_PATH = cls._real_split_path
+        prep.BLIND_DIR = cls._real_blind_dir
+        shutil.rmtree(cls._tmp_dir, ignore_errors=True)
 
     def test_candidate_volume_and_taxonomy(self):
         self.assertEqual(len(self.rows), 560)

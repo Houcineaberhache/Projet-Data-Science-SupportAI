@@ -1,7 +1,8 @@
 # Rapport de fusion des annotations d'intentions — SupportAI
 
 > Généré par `scripts/merge_annotations.py --single-annotator`. Aucun horodatage : le rapport est reproductible à partir des fichiers d'entrée.
-> Version des guidelines : commit `8d5c6a2a655a8dd04c8fc4dc9cea7e4928784d7e` (`docs/annotation_guidelines.md`, identique à HEAD).
+> Version des guidelines : commit `04b6a3ce3a7803d7e1fc004aae0cd87d46dc2d87` (`docs/annotation_guidelines.md`, identique à HEAD).
+> Ce rapport décrit la source canonique v1.0. La source dérivée v1.1 ne diffère que par le `split` de `INT-0421` (train → test), regroupé avec `INT-0445` pour corriger la fuite de traduction TR-0001 ; aucun texte ni étiquette n'est modifié.
 
 ## 1. Contexte et protocole
 
@@ -106,6 +107,6 @@ Les effectifs val/test sont ceux des étiquettes d'Aya, sans arbitrage ni double
 
 ```bash
 python scripts/merge_annotations.py --single-annotator
-python scripts/merge_annotations.py --build --single-annotator
+python scripts/merge_annotations.py --build --single-annotator --today 2026-11-14
 python tests/test_merge_annotations.py
 ```

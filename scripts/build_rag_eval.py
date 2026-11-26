@@ -558,7 +558,6 @@ def build_outputs(rag, rob, corpus, checks, ooc_details, numeric_questions):
     lines.append("- `reviewed_by` is still `null` for every row. Aya performs the final human review.")
     lines.append("- No retrieval metric (Recall@k, MRR, nDCG) was computed: this task builds the evaluation set, it does not run a retriever.")
     lines.append("- The contradictory and prompt-injection robustness categories are out of scope for this task.")
-    lines.append("")
     REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
     # Human review sheet: 25 answerable sampled with seed 42 + all OOC.
@@ -611,6 +610,8 @@ def build_outputs(rag, rob, corpus, checks, ooc_details, numeric_questions):
         lines.append("- [ ] Numbers verified")
         lines.append("- [ ] Natural customer question")
         lines.append("")
+    while lines and lines[-1] == "":
+        lines.pop()
     REVIEW_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 

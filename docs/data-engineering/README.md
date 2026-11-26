@@ -22,6 +22,8 @@ Livrables de la **tâche 1 — Étudiant 1 (Data Engineer & Dataset Manager)**.
 | `data/annotations/intents.csv` | Taxonomie bilingue machine-lisible : 13 intentions + `out_of_scope` |
 | `docs/reports/corpus_stats.md` | Statistiques du corpus (générées) |
 | `docs/reports/extraction_report.md` | Rapport d'extraction : couverture, OCR, contrôles d'accents (généré) |
+| `docs/reports/eda_findings.md` + `docs/figures/eda/` | Analyse exploratoire reproductible : notebook, figures, métriques et constats — générée par `python scripts/run_eda.py` |
+| `data/frozen/v1.0/`, `data/frozen/v1.1/` + `docs/reports/freeze_report.md` | Gels v1.0 (historique) et v1.1 (courant, fuite TR-0001 corrigée) des jeux de test (85 test, 84 val, 140 RAG, 35 robustesse en v1.1) avec `MANIFEST.json`, contrôles a→g et empreintes — générés par `freeze_test_sets.py --version X` |
 | `scripts/manage_corpus.py` | Générateur de manifeste + validateur qualité, avec contrôle de parité FR/EN |
 | `scripts/build_sources.py` | Génère les livrables PDF / DOCX / FAQ depuis le Markdown |
 | `scripts/extract_documents.py` | Pipeline PDF / DOCX / FAQ → nettoyage → JSONL |
@@ -88,6 +90,18 @@ python scripts/clean_corpus.py
 python scripts/build_rag_eval.py validate
 python scripts/build_rag_eval.py build
 python tests/test_rag_eval.py
+
+# 7. Analyse exploratoire (figures, métriques, constats)
+python scripts/run_eda.py
+python tests/test_eda.py
+
+# 8. Gel versionné des jeux de test (une seule fois par version, puis vérification)
+python scripts/apply_translation_split_fix.py
+python scripts/freeze_test_sets.py freeze --version 1.1
+python scripts/freeze_test_sets.py verify --version 1.1
+python scripts/freeze_test_sets.py verify --version 1.0
+python tests/test_freeze.py
+python tests/test_translation_leak.py
 
 # Tests du nettoyage et des extracteurs
 python scripts/test_extraction.py
