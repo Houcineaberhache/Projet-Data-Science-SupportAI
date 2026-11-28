@@ -1,2 +1,11 @@
 node_modules
 .next
+.git
+.gitignore
+.env
+.env.*
+Dockerfile*
+README*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

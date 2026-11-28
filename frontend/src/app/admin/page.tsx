@@ -1,181 +1,136 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const API_URL = "http://localhost:8000";
-
-type Stats = {
-  total_questions: number;
-  avg_latency_ms: number;
-  abstained: number;
-  intents: Record<string, number>;
-  thumbs_up: number;
-  thumbs_down: number;
-};
-type Doc = { id: number; title: string; chunks_count: number; uploaded_at: string };
-type Row = {
-  id: number;
-  question: string;
-  intent: string;
-  latency_ms: number;
-  is_abstained: boolean;
-};
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 export default function Admin() {
-  const [stats, setStats] = useState<Stats | null>(null);
-  const [docs, setDocs] = useState<Doc[]>([]);
-  const [history, setHistory] = useState<Row[]>([]);
   const [msg, setMsg] = useState("");
+  const [uploading, setUploading] = useState(false);
   const [dragging, setDragging] = useState(false);
-
-  async function load() {
-    const [s, d, h] = await Promise.all([
-      fetch(`${API_URL}/api/admin/stats`).then((r) => r.json()),
-      fetch(`${API_URL}/api/admin/documents`).then((r) => r.json()),
-      fetch(`${API_URL}/api/admin/history`).then((r) => r.json()),
-    ]);
-    setStats(s);
-    setDocs(d);
-    setHistory(h);
-  }
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    load();
+    setIsDark(document.documentElement.classList.contains("dark"));
   }, []);
 
+  function toggleTheme() {
+    const isCurrentlyDark = document.documentElement.classList.contains("dark");
+    const nextDark = !isCurrentlyDark;
+    if (nextDark) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+    setIsDark(nextDark);
+  }
+
   async function upload(file: File) {
-    setMsg("Uploading...");
+    setUploading(true);
+    setMsg("Uploading document...");
     const form = new FormData();
     form.append("file", file);
-    const res = await fetch(`${API_URL}/api/admin/upload`, {
-      method: "POST",
-      body: form,
-    });
-    if (res.ok) {
-      const data = await res.json();
-      setMsg(`✅ ${data.title} uploaded (${data.chunks_count} chunks)`);
-      load();
-    } else {
-      const err = await res.json();
-      setMsg(`❌ ${err.detail || "Upload failed"}`);
+    try {
+      const res = await fetch(`${API_URL}/api/admin/upload`, {
+        method: "POST",
+        body: form,
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setMsg(`✅ Successfully indexed "${data.title}" (${data.chunks_count} chunks)`);
+      } else {
+        const err = await res.json();
+        setMsg(`❌ ${err.detail || "Upload failed"}`);
+      }
+    } catch {
+      setMsg("❌ Network error uploading document");
+    } finally {
+      setUploading(false);
     }
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 text-gray-900 p-6">
-      <div className="max-w-4xl mx-auto space-y-6">
-        <h1 className="text-xl font-semibold">🛠️ NovaShop Admin</h1>
-
-        {/* Stats */}
-        {stats && (
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <Card label="Questions" value={stats.total_questions} />
-            <Card label="Avg latency (ms)" value={stats.avg_latency_ms} />
-            <Card label="Unanswered" value={stats.abstained} />
-            <Card label="👍 / 👎" value={`${stats.thumbs_up} / ${stats.thumbs_down}`} />
+    <main className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 p-4 sm:p-8 transition-colors">
+      <div className="max-w-3xl mx-auto space-y-6">
+        {/* Navigation / Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-gray-200 dark:border-gray-800">
+          <div>
+            <Link
+              href="/"
+              className="text-xs font-medium text-indigo-600 dark:text-indigo-400 hover:underline flex items-center gap-1 mb-1"
+            >
+              ← Back to Support Chat
+            </Link>
+            <h1 className="text-xl sm:text-2xl font-bold tracking-tight flex items-center gap-2">
+              🛠️ Document Administration
+            </h1>
+            <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+              Upload documents to index into the knowledge base
+            </p>
           </div>
-        )}
 
-        {/* Intents */}
-        {stats && (
-          <div className="bg-white border rounded-xl p-4">
-            <h2 className="font-medium mb-2">Intents</h2>
-            <div className="flex flex-wrap gap-2 text-sm">
-              {Object.entries(stats.intents).map(([k, v]) => (
-                <span key={k} className="bg-gray-100 rounded px-2 py-1">
-                  {k}: {v}
-                </span>
-              ))}
-            </div>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle theme"
+              className="w-8 h-8 rounded-lg flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700 transition text-sm cursor-pointer"
+            >
+              {isDark ? "☀️" : "🌙"}
+            </button>
           </div>
-        )}
-
-        {/* Upload */}
-        <div
-          onDragOver={(e) => {
-            e.preventDefault();
-            setDragging(true);
-          }}
-          onDragLeave={() => setDragging(false)}
-          onDrop={(e) => {
-            e.preventDefault();
-            setDragging(false);
-            const f = e.dataTransfer.files[0];
-            if (f) upload(f);
-          }}
-          className={
-            "border-2 border-dashed rounded-xl p-8 text-center bg-white " +
-            (dragging ? "border-blue-500" : "border-gray-300")
-          }
-        >
-          <p className="text-sm text-gray-600 mb-2">
-            Drag a PDF, DOCX or TXT here, or
-          </p>
-          <input
-            type="file"
-            accept=".pdf,.docx,.txt"
-            onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])}
-            className="text-sm"
-          />
-          {msg && <p className="mt-3 text-sm">{msg}</p>}
         </div>
 
-        {/* Documents */}
-        <div className="bg-white border rounded-xl p-4">
-          <h2 className="font-medium mb-2">Documents</h2>
-          {docs.length === 0 ? (
-            <p className="text-sm text-gray-400">No documents yet.</p>
-          ) : (
-            <table className="w-full text-sm">
-              <tbody>
-                {docs.map((d) => (
-                  <tr key={d.id} className="border-t">
-                    <td className="py-1">📄 {d.title}</td>
-                    <td>{d.chunks_count} chunks</td>
-                    <td className="text-gray-500">
-                      {new Date(d.uploaded_at).toLocaleString()}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
-        </div>
-
-        {/* History */}
-        <div className="bg-white border rounded-xl p-4">
-          <h2 className="font-medium mb-2">Recent questions</h2>
-          <table className="w-full text-sm">
-            <thead className="text-left text-gray-500">
-              <tr>
-                <th>Question</th>
-                <th>Intent</th>
-                <th>ms</th>
-                <th>Answered</th>
-              </tr>
-            </thead>
-            <tbody>
-              {history.map((h) => (
-                <tr key={h.id} className="border-t">
-                  <td className="py-1">{h.question}</td>
-                  <td>{h.intent}</td>
-                  <td>{h.latency_ms}</td>
-                  <td>{h.is_abstained ? "❌" : "✅"}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+        {/* Document Ingestion Card */}
+        <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 sm:p-8 shadow-xs space-y-4">
+          <h2 className="text-base font-semibold flex items-center gap-2">
+            <span>📥</span> Upload Document
+          </h2>
+          <div
+            onDragOver={(e) => {
+              e.preventDefault();
+              setDragging(true);
+            }}
+            onDragLeave={() => setDragging(false)}
+            onDrop={(e) => {
+              e.preventDefault();
+              setDragging(false);
+              const f = e.dataTransfer.files[0];
+              if (f) upload(f);
+            }}
+            className={`border-2 border-dashed rounded-xl p-8 sm:p-12 text-center transition-all ${
+              dragging
+                ? "border-indigo-500 bg-indigo-50/50 dark:bg-indigo-950/30"
+                : "border-gray-200 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-800/20"
+            }`}
+          >
+            <div className="text-4xl mb-3">📄</div>
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
+              Drag and drop knowledge base documents here, or browse files
+            </p>
+            <p className="text-xs text-gray-400 dark:text-gray-500 mb-5">
+              Supported formats: .PDF, .DOCX, .TXT
+            </p>
+            <label className="inline-flex items-center px-4 py-2 rounded-lg text-xs font-medium bg-indigo-600 hover:bg-indigo-700 text-white cursor-pointer transition shadow-xs">
+              {uploading ? "Uploading..." : "Choose File"}
+              <input
+                type="file"
+                accept=".pdf,.docx,.txt"
+                disabled={uploading}
+                onChange={(e) => e.target.files?.[0] && upload(e.target.files[0])}
+                className="hidden"
+              />
+            </label>
+            {msg && (
+              <p className="mt-4 text-xs sm:text-sm font-medium text-indigo-600 dark:text-indigo-400">
+                {msg}
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </main>
-  );
-}
-
-function Card({ label, value }: { label: string; value: string | number }) {
-  return (
-    <div className="bg-white border rounded-xl p-4">
-      <p className="text-xs text-gray-500">{label}</p>
-      <p className="text-xl font-semibold">{value}</p>
-    </div>
   );
 }
