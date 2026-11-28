@@ -1,0 +1,27 @@
+{
+  "version": "2.0",
+  "description": "Intentions officielles NovaShop (data/annotations/intents.csv) + routage PROPOSÉ pour le backend. Seul 'route' / 'needs_order_id' est ajouté par le module NLP ; les noms d'intentions doivent rester identiques à intents.csv (vérifier avec: python -m intent_clf.check_intents).",
+  "routes": {
+    "rag": "Répondre via RAG (FAQ, politiques, catalogue)",
+    "order_api": "Appeler l'API commandes (données client, jamais via le vector DB)",
+    "human_handoff": "Transférer à un conseiller humain",
+    "canned": "Réponse prédéfinie (salutation / remerciement)",
+    "fallback": "Hors périmètre : refuser poliment et recentrer"
+  },
+  "intents": {
+    "order_tracking":      {"route": "order_api",     "needs_order_id": true},
+    "order_change_cancel": {"route": "order_api",     "needs_order_id": true},
+    "delivery_issue":      {"route": "order_api",     "needs_order_id": true},
+    "return_request":      {"route": "rag",           "needs_order_id": false},
+    "refund_status":       {"route": "order_api",     "needs_order_id": true},
+    "payment_info":        {"route": "rag",           "needs_order_id": false},
+    "payment_issue":       {"route": "human_handoff", "needs_order_id": true},
+    "technical_support":   {"route": "rag",           "needs_order_id": false},
+    "warranty_claim":      {"route": "rag",           "needs_order_id": false},
+    "product_info":        {"route": "rag",           "needs_order_id": false},
+    "promotion_loyalty":   {"route": "rag",           "needs_order_id": false},
+    "account_privacy":     {"route": "rag",           "needs_order_id": false},
+    "human_support":       {"route": "human_handoff", "needs_order_id": false},
+    "out_of_scope":        {"route": "fallback",      "needs_order_id": false}
+  }
+}

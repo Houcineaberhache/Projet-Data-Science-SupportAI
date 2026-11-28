@@ -1,0 +1,896 @@
+text,intent,lang,template_id
+wach kayn promo 3la clavier please,promotion_loyalty,ma,promotion_loyalty|ma|6
+L'khlas b carte ma khdamch,payment_issue,ma,payment_issue|ma|5
+Comment reinitialiser mon clavier mecanique ?,technical_support,fr,technical_support|fr|6
+When are the sales?,promotion_loyalty,en,promotion_loyalty|en|3
+Fin wsalat commande dyali ORD999 ?,order_tracking,ma,order_tracking|ma|0
+Statut du remboursement ORD744 3afak,refund_status,fr,refund_status|fr|6
+Quand vis-je être remboursé stp,refund_status,fr,refund_status|fr|0
+When will Iget my refund 3afak,refund_status,en,refund_status|en|0
+wsl ecouteurs mkser,delivery_issue,ma,delivery_issue|ma|7
+Cancelorder ORD580,order_change_cancel,en,order_change_cancel|en|8
+Modifier ma commande ORD646 svp,order_change_cancel,fr,order_change_cancel|fr|6
+Wach kayn promo 3la câble USB-C,promotion_loyalty,ma,promotion_loyalty|ma|6
+Le bluetooth de mon écouteurs sans fil ne se connecte plus,technical_support,fr,technical_support|fr|8
+I want to return order ORD346,return_request,en,return_request|en|9
+My refund hasn't shown up on my card,refund_status,en,refund_status|en|4
+Chko nrba7 l match lbare7 ?,out_of_scope,ma,out_of_scope|ma|2
+Je veux un échange sous garantie pour mon écran 24 pouces svp,warranty_claim,fr,warranty_claim|fr|8
+What's the storage capacity of this power bank?,product_info,en,product_info|en|3
+Hello,out_of_scope,fr,out_of_scope|fr|21
+Je voudrias changer le écouteurs sans fil de ma commande ORD517 3afak,order_change_cancel,fr,order_change_cancel|fr|4
+Mon remboursement n'est pas arrivé sur ma carte,refund_status,fr,refund_status|fr|4
+"mon paiement a ete refuse, pourquoi ?",payment_issue,fr,payment_issue|fr|2
+Colis dyli daya3,delivery_issue,ma,delivery_issue|ma|5
+"Mon ordinateur portable ne fonctionne plus, il est sous garantie 3afak",warranty_claim,fr,warranty_claim|fr|0
+"Batterie de mon powerbank défectueuse, garantie merci",warranty_claim,fr,warranty_claim|fr|7
+I want a warranty exchange for my power bank,warranty_claim,en,warranty_claim|en|8
+Où en est ma commande ORD792 ?,order_tracking,fr,order_tracking|fr|0
+Is there a deal on mechanical keyboard?,promotion_loyalty,en,promotion_loyalty|en|6
+Where is my order ORD586?,order_tracking,en,order_tracking|en|0
+Acceptez-vous les cartes isa et Mastercard merci,payment_info,fr,payment_info|fr|2
+"Defective batery on my laptop, warranty?",warranty_claim,en,warranty_claim|en|7
+Le carton de mon ontre connectée était ouvert à la livraison,delivery_issue,fr,delivery_issue|fr|8
+Bghit nchouf responsable,human_support,ma,human_support|ma|2
+Je veux endre ma commande ORD319,return_request,fr,return_request|fr|10
+The box of my mechanical keyboard was open when delivered,delivery_issue,en,delivery_issue|en|8
+Quel ordinateur portable me recommandez-vous pour un budget limité ?,product_info,fr,product_info|fr|7
+Où en est ma commande ORD127 ?,order_tracking,fr,order_tracking|fr|0
+My package was delivered to the wrong address,delivery_issue,en,delivery_issue|en|5
+"Bonsoir, vous êtes là ?",out_of_scope,fr,out_of_scope|fr|15
+Comment changer mon mot de passe svp,account_privacy,fr,account_privacy|fr|7
+Comment annuler ma commande,order_change_cancel,fr,order_change_cancel|fr|1
+mon ordinateu rportable ne s'allume plus,technical_support,fr,technical_support|fr|0
+pouvez-vous me conseiller un smartphone our le gaming ?,product_info,fr,product_info|fr|5
+Comment acceder a mes donnees personnelles ?,account_privacy,fr,account_privacy|fr|8
+Proposez-vous le paiement en 3 fois opur un powerbank ?,payment_info,fr,payment_info|fr|8
+Cancel order ORD126,order_change_cancel,en,order_change_cancel|en|8
+Suivi dyal commande ORD735 3afak,order_tracking,ma,order_tracking|ma|4
+How do I pay for my order?,payment_info,en,payment_info|en|8
+Comment puis-je retourner mon montre connectée ?,return_request,fr,return_request|fr|0
+3tini wasfat tajine,out_of_scope,ma,out_of_scope|ma|3
+My card is blocked on your site 3afak,payment_issue,en,payment_issue|en|3
+Passez-moi un agent humain,human_support,fr,human_support|fr|1
+do you offer installments for awireless mouse?,payment_info,en,payment_info|en|7
+Merci pour votre aide,out_of_scope,fr,out_of_scope|fr|17
+Waqtach ghadi yrj3o lia flous stp,refund_status,ma,refund_status|ma|0
+Ce montre conncetée est-il compatible avec iPhone ?,product_info,fr,product_info|fr|2
+I want to cancel my order ORD950,order_change_cancel,en,order_change_cancel|en|0
+How long does a refund take,refund_status,en,refund_status|en|3
+je veuxr envoyer mon ordinateur portable,return_request,fr,return_request|fr|1
+What's the status of order ORD553?,order_tracking,en,order_tracking|en|4
+N5ls cash ?,payment_info,ma,payment_info|ma|6
+Le montant débité est incorrect,payment_issue,fr,payment_issue|fr|4
+My payment won't go trhough,payment_issue,en,payment_issue|en|8
+The bo of my tablet was open when delivered,delivery_issue,en,delivery_issue|en|8
+Le colis es marqué livré mais je ne l'ai pas reçu,delivery_issue,fr,delivery_issue|fr|6
+Put me through to a real person,human_support,en,human_support|en|3
+"J'ai commande par erreur, je veux annuler",order_change_cancel,fr,order_change_cancel|fr|3
+Payment failed but I was charged,payment_issue,en,payment_issue|en|6
+How long is the warranty on this 24-inch monitor?,warranty_claim,en,warranty_claim|en|2
+"defective abttery on my 24-inch monitor, warranty?",warranty_claim,en,warranty_claim|en|7
+Still no refund,refund_status,en,refund_status|en|9
+Flous dyali ma rj3ouch l carte,refund_status,ma,refund_status|ma|4
+Erreur lors du paiement de ma commande ORD415 svp,payment_issue,fr,payment_issue|fr|7
+Quel temps fait-il à Fès,out_of_scope,fr,out_of_scope|fr|0
+Chno hiya 3asimat l yaban,out_of_scope,ma,out_of_scope|ma|5
+Je veux un échange sous garantie pour mon ordinateur portable,warranty_claim,fr,warranty_claim|fr|8
+How can I access m ypersonal data?,account_privacy,en,account_privacy|en|8
+Comment accéder à mes données personnelles ?,account_privacy,fr,account_privacy|fr|8
+What payment methods do you accept?,payment_info,en,payment_info|en|0
+Comment puis-je retourner mon casque Bluetooth ?,return_request,fr,return_request|fr|0
+Je souhaite échanger mon powerbank,return_request,fr,return_request|fr|5
+où est mon clavier mécanique svp,order_tracking,fr,order_tracking|fr|8
+Has my refund been processed,refund_status,en,refund_status|en|7
+How do I reset my tablet?,technical_support,en,technical_support|en|6
+mon colis a ete livre au mauvais endroit,delivery_issue,fr,delivery_issue|fr|5
+Où trouver le mode d'emploi de mon écran2 4 pouces stp,technical_support,fr,technical_support|fr|5
+Bghit n'echangi powerbank dyali,return_request,ma,return_request|ma|3
+Quand vais-je être remboursé ?,refund_status,fr,refund_status|fr|0
+What's the best restaurant in Rabat stp,out_of_scope,en,out_of_scope|en|9
+I want to send back my smartwatch,return_request,en,return_request|en|1
+Ma commande ORD239 n'est toujours pas arrivée,delivery_issue,fr,delivery_issue|fr|0
+"casque dyali twqef 3la lkhdma, wach fih garantie ?",warranty_claim,ma,warranty_claim|ma|0
+chno ta9tarh 3lina casque l gamin g?,product_info,ma,product_info|ma|3
+How do I pay for m order?,payment_info,en,payment_info|en|8
+"I ordered by mistake, I want to cancel",order_change_cancel,en,order_change_cancel|en|3
+Where is my refund for rder ORD312,refund_status,en,refund_status|en|1
+Is the 24-inch monitor waterproof,product_info,en,product_info|en|4
+Mazal ma wslni remboursement,refund_status,ma,refund_status|ma|2
+Remboursement dyal commande ORD557 fin wsl merci,refund_status,ma,refund_status|ma|1
+Refund status for ORD137,refund_status,en,refund_status|en|6
+Mrc bzaf,out_of_scope,ma,out_of_scope|ma|14
+Où envoyer mon ordinateur portable en panne pour le SAV ?,warranty_claim,fr,warranty_claim|fr|6
+Où en est mon remboursement pour la commande ORD237 ?,refund_status,fr,refund_status|fr|1
+"Super, merci !",out_of_scope,fr,out_of_scope|fr|18
+How long is the warranty on this fast charger,warranty_claim,en,warranty_claim|en|2
+Mon powerbank ne s'allume plus,technical_support,fr,technical_support|fr|0
+Is the Bluetooth speaker available,product_info,en,product_info|en|9
+Is this tablet compatible with iPhone?,product_info,en,product_info|en|2
+Remboursement dyal commande ORD354 fin wsl,refund_status,ma,refund_status|ma|1
+Le smartphone est arrivé endommagé,delivery_issue,fr,delivery_issue|fr|10
+How do I fix my car?,out_of_scope,en,out_of_scope|en|4
+Bghit nrajje3 câble USB-C,return_request,ma,return_request|ma|1
+Mon écouteurs sans fil ne charge plus,technical_support,fr,technical_support|fr|1
+Le bluetooth de mon ordinateur portable ne se connecte plus,technical_support,fr,technical_support|fr|8
+Mon écouteurs sans fil redémarre tout seul,technical_support,fr,technical_support|fr|9
+ach hiya a7sen restaurant f dakhla please,out_of_scope,ma,out_of_scope|ma|8
+Please modify my order ORD477,order_change_cancel,en,order_change_cancel|en|6
+Statut du remboursement ORD901,refund_status,fr,refund_status|fr|6
+Remboursement dyal commande ORD197 fin wsl ?,refund_status,ma,refund_status|ma|1
+Nsit mot de passe,account_privacy,ma,account_privacy|ma|1
+My power bank is frozen,technical_support,en,technical_support|en|3
+I want to send back my laptop 3afak,return_request,en,return_request|en|1
+Kifach n3awd nrje3 écran dyali ?,return_request,ma,return_request|ma|0
+Bghit nanuli commande dyali ORD404,order_change_cancel,ma,order_change_cancel|ma|0
+Un agent s'il vous plaît,human_support,fr,human_support|fr|7
+What's the tsorage capacity of this USB-C cable?,product_info,en,product_info|en|3
+Wach kayn promo 3la casque ?,promotion_loyalty,ma,promotion_loyalty|ma|6
+I want to cancel my order ORD942,order_change_cancel,en,order_change_cancel|en|0
+Kifach nms7 compte dyali ?,account_privacy,ma,account_privacy|ma|0
+J'ai oublié mon mot de passe,account_privacy,fr,account_privacy|fr|1
+Le paiement par carte est-il sécurisé ?,payment_info,fr,payment_info|fr|4
+Quand vais-je recevoir mon clavier mécanique merci,order_tracking,fr,order_tracking|fr|3
+My wireles sheadphones gets very hot,technical_support,en,technical_support|en|7
+Quelles donnees personnelles colelctez-vous ?,account_privacy,fr,account_privacy|fr|2
+comment installer windows sur mon pc,out_of_scope,fr,out_of_scope|fr|11
+How do I install Windows on my PC?,out_of_scope,en,out_of_scope|en|11
+Remboursement dyal commande ORD515 fin wsl ?,refund_status,ma,refund_status|ma|1
+How can I return my Bluetooth speaker,return_request,en,return_request|en|0
+Combien coûte le écran 24 pouces ?,product_info,fr,product_info|fr|12
+When will my wireless mouse arrive?,order_tracking,en,order_tracking|en|3
+Je préfère parler à une vraie personne,human_support,fr,human_support|fr|6
+I want to speak to a humana gent stp,human_support,en,human_support|en|0
+Ch7al kayakhod remboursement,refund_status,ma,refund_status|ma|3
+How long is the warranty on this fast charger?,warranty_claim,en,warranty_claim|en|2
+Give me a tajine recipe merci,out_of_scope,en,out_of_scope|en|3
+Error when paying for order ORD602,payment_issue,en,payment_issue|en|7
+Je veux rendre ma commande ORD533,return_request,fr,return_request|fr|10
+"J'ai commandé un tablette hier, quand sera-t-il livré ?",order_tracking,fr,order_tracking|fr|9
+Statut de la commande ORD350 svp,order_tracking,fr,order_tracking|fr|4
+Pouvez-vou sme conseiller un casque Bluetooth pour le gaming ?,product_info,fr,product_info|fr|5
+"Mon écran 24 pouces ne fonctionne plus, il est sous garantie ?",warranty_claim,fr,warranty_claim|fr|0
+Où envoyer mon câble USB-C en panne pour le SAV ?,warranty_claim,fr,warranty_claim|fr|6
+chno hiya les données li kat jm3 3liya ?,account_privacy,ma,account_privacy|ma|2
+Annulation commande ORD362,order_change_cancel,fr,order_change_cancel|fr|8
+Je veux annuler ma commande ORD166 stp,order_change_cancel,fr,order_change_cancel|fr|0
+Wach kayn promo 3la laptop please,promotion_loyalty,ma,promotion_loyalty|ma|6
+Comment utiliser un code de reduction ?,promotion_loyalty,fr,promotion_loyalty|fr|5
+Je veux annuler ma commande ORD236,order_change_cancel,fr,order_change_cancel|fr|0
+Black Friday: what offers on wireless mouse?,promotion_loyalty,en,promotion_loyalty|en|9
+Quand le ordinateur portable sera-t-il de nouveau en stock ?,product_info,fr,product_info|fr|13
+I'm waiting for the refund for my wireless headphones,refund_status,en,refund_status|en|5
+je veux parler a un responsable,human_support,fr,human_support|fr|2
+Le bluetooth de mon tablette ne se connecte plus please,technical_support,fr,technical_support|fr|8
+Do you offer installments for a mechanical keyboard?,payment_info,en,payment_info|en|7
+Où est mon écouteurs sans fil ?,order_tracking,fr,order_tracking|fr|8
+Où est mon clavier mécanique ?,order_tracking,fr,order_tracking|fr|8
+Proposez-vous le paiement en 3 fois pour un montre connectee,payment_info,fr,payment_info|fr|8
+Quel temps fait-il à Agadir,out_of_scope,fr,out_of_scope|fr|0
+My laptop won't charge anymore 3afak,technical_support,en,technical_support|en|1
+Do you offer installments for a Bluetooth speaker?,payment_info,en,payment_info|en|7
+Je voudrais changer le tablette de ma commande ORD460,order_change_cancel,fr,order_change_cancel|fr|4
+Erreur lors du paiement de ma commande ORD711,payment_issue,fr,payment_issue|fr|7
+Do you have any promo codes please,promotion_loyalty,en,promotion_loyalty|en|0
+Quel est le meilleur restaurant à Dakhal 3afak,out_of_scope,fr,out_of_scope|fr|9
+The amount charged is wrong,payment_issue,en,payment_issue|en|4
+Merci beaucoup,out_of_scope,fr,out_of_scope|fr|16
+Comment je peux suivre mon colis ?,order_tracking,fr,order_tracking|fr|2
+Can I change the delivery address of my order?,order_change_cancel,en,order_change_cancel|en|2
+Pouvez-vous me donner le numéro de suivi de ma commande ?,order_tracking,fr,order_tracking|fr|5
+Remboursement dyal commande ORD515 fin wsl svp,refund_status,ma,refund_status|ma|1
+Wach kayn chi code promo ?,promotion_loyalty,ma,promotion_loyalty|ma|0
+Do you accept Visa and Mastercard?,payment_info,en,payment_info|en|2
+Is there a deal on smartwatch,promotion_loyalty,en,promotion_loyalty|en|6
+Can you transfer me to a human merci,human_support,en,human_support|en|5
+Please modify my order ORD297,order_change_cancel,en,order_change_cancel|en|6
+I want a warranty exchange for my fast charger,warranty_claim,en,warranty_claim|en|8
+Can I pay cash on delivery?,payment_info,en,payment_info|en|1
+Est-ce que ma commande a été expédiée,order_tracking,fr,order_tracking|fr|6
+What's the status of order ORD649?,order_tracking,en,order_tracking|en|4
+3tini wasaft tajine,out_of_scope,ma,out_of_scope|ma|3
+I want to get my 24-inch monitor repaired under warranty merci,warranty_claim,en,warranty_claim|en|4
+Le câble USB-C ne me convient pas je voudrais le retourner please,return_request,fr,return_request|fr|4
+What does the warranty cover?,warranty_claim,en,warranty_claim|en|5
+How do I cancel my order?,order_change_cancel,en,order_change_cancel|en|1
+I want to return order ORD910,return_request,en,return_request|en|9
+Le wifi de mon tablette ne marche pas,technical_support,fr,technical_support|fr|4
+Ch7al dyal garantie f had lapop ?,warranty_claim,ma,warranty_claim|ma|2
+Je ne veux pas parler à un robot,human_support,fr,human_support|fr|4
+Kifach nms 7compte dyali ?,account_privacy,ma,account_privacy|ma|0
+Ch7al dyal garantie f had powerbank ?,warranty_claim,ma,warranty_claim|ma|2
+I haven't received my refund yet,refund_status,en,refund_status|en|2
+Bghit n'unsubscribi mn newsletter,account_privacy,ma,account_privacy|ma|3
+"Defective battery on my 24-inch monitor, warranty?",warranty_claim,en,warranty_claim|en|7
+Black Friday: what offers on tablet please,promotion_loyalty,en,promotion_loyalty|en|9
+Je veux que mes données soient supprimées,account_privacy,fr,account_privacy|fr|5
+où envoyer mon câble usb-c en panne pour le sav,warranty_claim,fr,warranty_claim|fr|6
+Comment utiliser mes points ?,promotion_loyalty,fr,promotion_loyalty|fr|10
+Proposez-vous le paiement en 3 fois pour un casque Bluetooth ?,payment_info,fr,payment_info|fr|8
+Le smartphone est-il disponible please,product_info,fr,product_info|fr|9
+My tablet won't charge anymore,technical_support,en,technical_support|en|1
+do you offer installments for a mechaical keyboard?,payment_info,en,payment_info|en|7
+How do I get my invoice?,payment_info,en,payment_info|en|6
+Mon paiement ne passe pas merci,payment_issue,fr,payment_issue|fr|8
+Bghit nsalah écouteurs f garantie,warranty_claim,ma,warranty_claim|ma|4
+Error when paying for order ORD936,payment_issue,en,payment_issue|en|7
+Where is my order ORD533 stp,order_tracking,en,order_tracking|en|0
+Where do I send my faulty laptop for after-sales service?,warranty_claim,en,warranty_claim|en|6
+Colis t livra f blasa machi hiya,delivery_issue,ma,delivery_issue|ma|4
+Erreur lors du paiement de ma commande ORD828,payment_issue,fr,payment_issue|fr|7
+Error when paying for order ORD706,payment_issue,en,payment_issue|en|7
+Est-il encore possible d'annuler ma commande ?,order_change_cancel,fr,order_change_cancel|fr|5
+commande ord229 mazal ma wslatch svp,delivery_issue,ma,delivery_issue|ma|0
+My payment won't go through,payment_issue,en,payment_issue|en|8
+Je n'ai pas encore recu mon remboursement,refund_status,fr,refund_status|fr|2
+I want to talk to a manager merci,human_support,en,human_support|en|2
+Je veux renvoyer mon montre connectée,return_request,fr,return_request|fr|1
+quand le écouteurs sans fil sera-t-il de nouveau en stock please,product_info,fr,product_info|fr|13
+Refund status for ORD761,refund_status,en,refund_status|en|6
+Where is my refund for order ORD394?,refund_status,en,refund_status|en|1
+Where can I find my tracking link?,order_tracking,en,order_tracking|en|10
+Puis-je payer par virement bancaire ?,payment_info,fr,payment_info|fr|5
+Mon écran 24 pouces ne fonctionne plus il est sous garantie stp,warranty_claim,fr,warranty_claim|fr|0
+Je souhaite échanger mon écouteurs sans fil merci,return_request,fr,return_request|fr|5
+Peut-on payer en plusieurs fois,payment_info,fr,payment_info|fr|3
+Dert commande men 10 iyam o mazal ma wslatch stp,delivery_issue,ma,delivery_issue|ma|6
+laptop ma kayshl3ch,technical_support,ma,technical_support|ma|1
+"Great, thanks!",out_of_scope,en,out_of_scope|en|18
+Qui a gagné le match hier ?,out_of_scope,fr,out_of_scope|fr|2
+Proposez-vous le paiement en 3 fois pour un powerbank ?,payment_info,fr,payment_info|fr|8
+Avez-vous le powerbank en noir ?,product_info,fr,product_info|fr|14
+J'attends le remboursement de mon ordinateur portable,refund_status,fr,refund_status|fr|5
+Le paiement a échoué mais j'ai été débité,payment_issue,fr,payment_issue|fr|6
+Comment appairer mon souris sans fil ?,technical_support,fr,technical_support|fr|2
+Proposez-vous le paiement en 3 fois pour un casque Bluetooth,payment_info,fr,payment_info|fr|8
+Mon chargeur rapide chauffe beaucoup 3afak,technical_support,fr,technical_support|fr|7
+Can I get a invoice for my company please,payment_info,en,payment_info|en|9
+casque dyali ma bqach kaykhdem,technical_support,ma,technical_support|ma|0
+Quelle est l'autonomie de la batterie du ordinateur portable ?,product_info,fr,product_info|fr|1
+How can I return my tablet?,return_request,en,return_request|en|0
+erreur lors du paieemnt de ma commande ord711,payment_issue,fr,payment_issue|fr|7
+Mdifier ma commande ORD358 svp,order_change_cancel,fr,order_change_cancel|fr|6
+I ordered a fast charger 12 days ago and received nothing,delivery_issue,en,delivery_issue|en|2
+The amount harged is wrong,payment_issue,en,payment_issue|en|4
+What'st he status of order ORD649?,order_tracking,en,order_tracking|en|4
+ma promotion n'a pas été appliquée merci,promotion_loyalty,fr,promotion_loyalty|fr|13
+Kifach nsta3ml les points dyali ?,promotion_loyalty,ma,promotion_loyalty|ma|8
+Good evening 3afak,out_of_scope,en,out_of_scope|en|15
+Comment supprimer mon compte stp,account_privacy,fr,account_privacy|fr|0
+How can I return my power bank please,return_request,en,return_request|en|0
+puis-je ajouter un article a ma commande ?,order_change_cancel,fr,order_change_cancel|fr|9
+Mon tablette ne charge plus,technical_support,fr,technical_support|fr|1
+Je veux réparer mon montre connectée sous garantie,warranty_claim,fr,warranty_claim|fr|4
+Je n'ai pas encore reçu mon remboursement,refund_status,fr,refund_status|fr|2
+Puis-je cumuler deux codes promo ?,promotion_loyalty,fr,promotion_loyalty|fr|8
+Is this laptop new or refurbished merci,product_info,en,product_info|en|8
+t7sbt 3liya joj mrat please,payment_issue,ma,payment_issue|ma|1
+Mon paiement ne passe pas,payment_issue,fr,payment_issue|fr|8
+L'khlas b catre ma khdamch,payment_issue,ma,payment_issue|ma|5
+Carte dyali bloquée,payment_issue,ma,payment_issue|ma|3
+Quand le tablette sera-t-il de nouveau en stock ?,product_info,fr,product_info|fr|13
+commande ord896 mazal ma wslatch 3afak,delivery_issue,ma,delivery_issue|ma|0
+Ma carte est bloquée sur votre site,payment_issue,fr,payment_issue|fr|3
+Where is my refund for order ORD405,refund_status,en,refund_status|en|1
+Waqtach ghadi yrj3o lia flous ?,refund_status,ma,refund_status|ma|0
+"Nobody answers my messages, I want a manager",human_support,en,human_support|en|8
+"J'ai commandé par erreur, je veux annuler",order_change_cancel,fr,order_change_cancel|fr|3
+Chkon rba7 l match lbare7 ?,out_of_scope,ma,out_of_scope|ma|2
+Le carton de mon souris sans fil était ouvert à la livraison,delivery_issue,fr,delivery_issue|fr|8
+My mechanical keyboard won't turn on,technical_support,en,technical_support|en|0
+Je veux prler à un conseiller,human_support,fr,human_support|fr|0
+Where is my order ORD935 stp,order_tracking,en,order_tracking|en|0
+Bghit nbddel câble USB-C f commande ORD777,order_change_cancel,ma,order_change_cancel|ma|4
+Wach remboursement t3ml ?,refund_status,ma,refund_status|ma|5
+Le wifi de mon écouteurs sans fil ne marche pas,technical_support,fr,technical_support|fr|4
+Cancel order ORD216,order_change_cancel,en,order_change_cancel|en|8
+J'ai commandé un smartphone il y a 12 jours et je n'ai rien reçu,delivery_issue,fr,delivery_issue|fr|2
+How can I track my parcel?,order_tracking,en,order_tracking|en|2
+Le wifi de mon powerbank ne marche pas,technical_support,fr,technical_support|fr|4
+J'a icommandé un smartphone il y a 12 jours et je n'ai rien reçu,delivery_issue,fr,delivery_issue|fr|2
+Fin n9der nchri bitaq tayyara ?,out_of_scope,ma,out_of_scope|ma|7
+Mon code promo ne fonctionne pas,promotion_loyalty,fr,promotion_loyalty|fr|2
+Kifah nconnecti écouteurs dyali,technical_support,ma,technical_support|ma|2
+Puis-je payer a la livraison stp,payment_info,fr,payment_info|fr|1
+Le clavier mécanique est arrivé endommagé,delivery_issue,fr,delivery_issue|fr|10
+Livreur ma jach,delivery_issue,ma,delivery_issue|ma|3
+When will my laptop arrive?,order_tracking,en,order_tracking|en|3
+Ch7al dyal garantie f had laptop ?,warranty_claim,ma,warranty_claim|ma|2
+Waqtach kaybda soldes,promotion_loyalty,ma,promotion_loyalty|ma|3
+Annulation commande ORD304 stp,order_change_cancel,fr,order_change_cancel|fr|8
+Ce câble USB-C est-il compatible avec iPhone ?,product_info,fr,product_info|fr|2
+Statut du remboursement ORD212,refund_status,fr,refund_status|fr|6
+I want to talk to a manager,human_support,en,human_support|en|2
+The box of my mechanical keyboard was open when delivered svp,delivery_issue,en,delivery_issue|en|8
+"J'ai reçu un ordinateur portable défectueux, je veux le renvoyer",return_request,fr,return_request|fr|8
+Je souhaite échanger mon souris sans fil,return_request,fr,return_request|fr|5
+Can I pay in installments?,payment_info,en,payment_info|en|3
+Can you transfer me to a human?,human_support,en,human_support|en|5
+"Dert commande b ghalat, bghit nanuliha",order_change_cancel,ma,order_change_cancel|ma|3
+Payment faield but I was charged,payment_issue,en,payment_issue|en|6
+Bghit agent machi robot,human_support,ma,human_support|ma|1
+Ma commande OD664 n'est toujours pas arrivée,delivery_issue,fr,delivery_issue|fr|0
+Suivi colis ORD611,order_tracking,fr,order_tracking|fr|7
+Ch7al dyal garantie f had câbel USB-C ?,warranty_claim,ma,warranty_claim|ma|2
+Bghit nanuli commande dyali ORD201,order_change_cancel,ma,order_change_cancel|ma|0
+Le powerbank est-il étanche 3afak,product_info,fr,product_info|fr|4
+Quand vais-je recevoir mon écouteurs sans fil ?,order_tracking,fr,order_tracking|fr|3
+Can I get an invoice for my company?,payment_info,en,payment_info|en|9
+Y a-t-il une promo sur les montre connectee ?,promotion_loyalty,fr,promotion_loyalty|fr|6
+Mon powerbank chauffe beaucoup,technical_support,fr,technical_support|fr|7
+Can you give me the tracking number for ORD777?,order_tracking,en,order_tracking|en|5
+Accetpez-vous le paiement en espèces ?,payment_info,fr,payment_info|fr|6
+Lmontant li t5ssem ghalat,payment_issue,ma,payment_issue|ma|4
+Quelleest la capitale du Japon,out_of_scope,fr,out_of_scope|fr|5
+Wach commande dyali tsiftat ?,order_tracking,ma,order_tracking|ma|3
+Kifach n3awd nsayb laptop,technical_support,ma,technical_support|ma|5
+Wach t9dro t7wlouni l chi agent ?,human_support,ma,human_support|ma|5
+Bghit nsalah clavier f garantie,warranty_claim,ma,warranty_claim|ma|4
+Puis-je retourner un article ouvert svp,return_request,fr,return_request|fr|6
+Wach garantie katghati l'ecran mkser ?,warranty_claim,ma,warranty_claim|ma|3
+"Ok merci, c'est note",out_of_scope,fr,out_of_scope|fr|23
+Black Friday: what offers on wireless mouse 3afak,promotion_loyalty,en,promotion_loyalty|en|9
+what payment methods do youaccept?,payment_info,en,payment_info|en|0
+Track my parcel ORD692,order_tracking,en,order_tracking|en|7
+Wach mazal 3ndkom tablette ?,product_info,ma,product_info|ma|7
+J'ai une carte cadeau commentl'utiliser,promotion_loyalty,fr,promotion_loyalty|fr|12
+Please modify my order ORD438,order_change_cancel,en,order_change_cancel|en|6
+I want to track my order stp,order_tracking,en,order_tracking|en|1
+Je veux rendre ma commande ORD402,return_request,fr,return_request|fr|10
+I'm waiting for the refund for my USB-C cable,refund_status,en,refund_status|en|5
+Wach kayn reduction l tolba stp,promotion_loyalty,ma,promotion_loyalty|ma|4
+Mon souris sans fil chauffe beaucoup,technical_support,fr,technical_support|fr|7
+What's the status of order ORD447?,order_tracking,en,order_tracking|en|4
+Commande ORD234 mazal ma wslatch,delivery_issue,ma,delivery_issue|ma|0
+L'khlas ma daz ch w t5ls lflous,payment_issue,ma,payment_issue|ma|2
+Avez-vous une réduction pour les étudiants ?,promotion_loyalty,fr,promotion_loyalty|fr|4
+Comment puis-je retourner mon powerbank ?,return_request,fr,return_request|fr|0
+Mon montre connectée redémarre tout seul,technical_support,fr,technical_support|fr|9
+ch7al kat3ish batterie dyal téléphone,product_info,ma,product_info|ma|1
+How long is the warranty on this power bank svp,warranty_claim,en,warranty_claim|en|2
+Quel est le cours du bitcoin ?,out_of_scope,fr,out_of_scope|fr|12
+The bluetooth on my USB-C cable won't connect,technical_support,en,technical_support|en|8
+Batterie de mon montre connectée défectueuse garantie 3afak,warranty_claim,fr,warranty_claim|fr|7
+The box of my smartphone was open when dleivered,delivery_issue,en,delivery_issue|en|8
+Ce écran 24 pouces est-il compatible avec iPhone ?,product_info,fr,product_info|fr|2
+I want to dispute a charge on my card,payment_issue,en,payment_issue|en|5
+It's been 10 days and nothing arrived,delivery_issue,en,delivery_issue|en|9
+Je veux rendre ma commande ORD485,return_request,fr,return_request|fr|10
+Quel odrinateur portable me recommandez-vous pour un budget limité ?,product_info,fr,product_info|fr|7
+"Ma bghitch robot, bghit chi wa7d",human_support,ma,human_support|ma|4
+Modifier ma commande ORD316 svp,order_change_cancel,fr,order_change_cancel|fr|6
+Bghit nanuli commande dyali ORD720 3afak,order_change_cancel,ma,order_change_cancel|ma|0
+The wifi on my laptop doesn't work,technical_support,en,technical_support|en|4
+laptop ma kayshl3ch 3afak,technical_support,ma,technical_support|ma|1
+Cancl order ORD666,order_change_cancel,en,order_change_cancel|en|8
+Bghit nbddel câble USB-C f commande ORD372,order_change_cancel,ma,order_change_cancel|ma|4
+Quels moyens de paiement acceptez-vous,payment_info,fr,payment_info|fr|0
+I'd like to change the wireless mouse in my order ORD386,order_change_cancel,en,order_change_cancel|en|4
+Je n'arrive pas à me connecter à mon compte 3afak,account_privacy,fr,account_privacy|fr|9
+I want to cancel my order ORD970 svp,order_change_cancel,en,order_change_cancel|en|0
+Comment suis-je rembourse ?,refund_status,fr,refund_status|fr|8
+Comment réparer am voiture,out_of_scope,fr,out_of_scope|fr|4
+Bghit nhdr m3a chi wa7d mn l'équipe,human_support,ma,human_support|ma|0
+Who won the football match yesterday?,out_of_scope,en,out_of_scope|en|2
+Wach SAV kayssalhou smartwatch ?,warranty_claim,ma,warranty_claim|ma|5
+Comment faire jouer la garantie,warranty_claim,fr,warranty_claim|fr|1
+i'd like to change the wireless mouse in my order ord386 merci,order_change_cancel,en,order_change_cancel|en|4
+Fin wsalat commande dyali ORD315 ?,order_tracking,ma,order_tracking|ma|0
+J'ai été débité deux fois pour la même commande,payment_issue,fr,payment_issue|fr|1
+Has my package been shipped?,order_tracking,en,order_tracking|en|6
+Statut de la commande ORD786 svp,order_tracking,fr,order_tracking|fr|4
+When will I get my refund?,refund_status,en,refund_status|en|0
+Colis wsl m9ttae3,delivery_issue,ma,delivery_issue|ma|2
+Salam,out_of_scope,ma,out_of_scope|ma|9
+I want to get my fast charger repaired under warranty,warranty_claim,en,warranty_claim|en|4
+Black Friday : quelles offres sur les ecran 24 pouces merci,promotion_loyalty,fr,promotion_loyalty|fr|9
+How do I pair my USB-C cable?,technical_support,en,technical_support|en|2
+The courier never showe dup,delivery_issue,en,delivery_issue|en|4
+Does the warranty cover a cracked screen?,warranty_claim,en,warranty_claim|en|3
+bghit nhdr m3a chi wa7d mn l'equipe,human_support,ma,human_support|ma|0
+"câble USB-C dyali twqef 3la lkhdma, wach fih garantie ?",warranty_claim,ma,warranty_claim|ma|0
+J'ai commandé un tablette il y a 12 jours et je n'ai rien reçu,delivery_issue,fr,delivery_issue|fr|2
+Wach mazal 3ndkom clavier merci,product_info,ma,product_info|ma|7
+Kifach nst3ml code réduction merci,promotion_loyalty,ma,promotion_loyalty|ma|5
+Ch7al kat3ish batterie dyal souris ?,product_info,ma,product_info|ma|1
+Can I pay by bank transfer?,payment_info,en,payment_info|en|5
+I received a damaged wireless mouse and want to return it,return_request,en,return_request|en|7
+Où trouver le mode d'emploi de mon écran 24 pouces ?,technical_support,fr,technical_support|fr|5
+Combien de temps pour un remboursement ?,refund_status,fr,refund_status|fr|3
+quelle est la duree de garantie de ce cable usb-c ?,warranty_claim,fr,warranty_claim|fr|2
+"I ordered a smartwatch yesterday, when will it be delivered?",order_tracking,en,order_tracking|en|9
+Fin wsalat commande dyali ORD999,order_tracking,ma,order_tracking|ma|0
+carte dyali t rfusat f l'khlas,payment_issue,ma,payment_issue|ma|0
+Y a-t-il une étiquette de retour ?,return_request,fr,return_request|fr|11
+quelle est la durée de garantie de ce clavier mécanique,warranty_claim,fr,warranty_claim|fr|2
+How do I lose weight?,out_of_scope,en,out_of_scope|en|8
+Avez-vous le montre connectee en noir ?,product_info,fr,product_info|fr|14
+Can I pay cash on delivery,payment_info,en,payment_info|en|1
+how do i start a return 3afak,return_request,en,return_request|en|6
+How do I reset my tablet,technical_support,en,technical_support|en|6
+Ma carte a ete refusee au paiement merci,payment_issue,fr,payment_issue|fr|0
+Le montant dbite est incorrect,payment_issue,fr,payment_issue|fr|4
+Where is my refund for order ORD405?,refund_status,en,refund_status|en|1
+"My wireless headphones broke after 3 months, is it covered?",warranty_claim,en,warranty_claim|en|9
+Track my parcel ORD692 svp,order_tracking,en,order_tracking|en|7
+Kifach ndir retour l commande ORD909 ?,return_request,ma,return_request|ma|5
+Fin wsalat commande dyali ORD926 ?,order_tracking,ma,order_tracking|ma|0
+Wach n9der n5ls b tl9sit ?,payment_info,ma,payment_info|ma|3
+"J'ai recu un casque Blueototh defectueux, je veux le renvoyer",return_request,fr,return_request|fr|8
+Wach had smartwatch compatible m3a iPhone ?,product_info,ma,product_info|ma|2
+"Perfect, thank you",out_of_scope,en,out_of_scope|en|23
+"Parfait, merci",out_of_scope,fr,out_of_scope|fr|24
+My wireless mouse is frozen,technical_support,en,technical_support|en|3
+Où en est mon remboursement pour la commande ORD675,refund_status,fr,refund_status|fr|1
+Bghit n'unsubscribi mn newsletter merci,account_privacy,ma,account_privacy|ma|3
+I forgot my password,account_privacy,en,account_privacy|en|1
+Mon colis est perdu,delivery_issue,fr,delivery_issue|fr|7
+How do I start a return?,return_request,en,return_request|en|6
+Est-il encoe possible d'annuler ma commande,order_change_cancel,fr,order_change_cancel|fr|5
+mon montre connectée redémarre tout seul please,technical_support,fr,technical_support|fr|9
+My promotion wasn't applied,promotion_loyalty,en,promotion_loyalty|en|13
+Kifach l'jaw f Tanger ?,out_of_scope,ma,out_of_scope|ma|0
+Where is my refund for order ORD394 merci,refund_status,en,refund_status|en|1
+Ma commande ORD957 n'est toujours psa arrivee,delivery_issue,fr,delivery_issue|fr|0
+Do you have a loyalty program?,promotion_loyalty,en,promotion_loyalty|en|7
+Error when paying for order ORD706 svp,payment_issue,en,payment_issue|en|7
+Mon clavier mecanique ne s'allume plus,technical_support,fr,technical_support|fr|0
+Mon colis est arrivé acssé,delivery_issue,fr,delivery_issue|fr|3
+Modifier ma command ORD646 svp,order_change_cancel,fr,order_change_cancel|fr|6
+B ch7al casque,product_info,ma,product_info|ma|8
+Where do I send my faulty tablet for after-sales service?,warranty_claim,en,warranty_claim|en|6
+Comment puis-je retourner mon smartphone svp,return_request,fr,return_request|fr|0
+où est mon chargeur rapide,order_tracking,fr,order_tracking|fr|8
+Quel est le prix du écran 24 pouces ?,product_info,fr,product_info|fr|10
+I ordered a 24-inch monitor 12 days ago and received nothing,delivery_issue,en,delivery_issue|en|2
+I received a damaged laptop and want to return it merci,return_request,en,return_request|en|7
+Waqtach ghadi yrj3 écran f stock ?,product_info,ma,product_info|ma|9
+Y a--til une promo sur les câble USB-C ?,promotion_loyalty,fr,promotion_loyalty|fr|6
+Combien de jours pour retourner un produit,return_request,fr,return_request|fr|3
+Please modify my order ORD477 3afak,order_change_cancel,en,order_change_cancel|en|6
+Comment changer mon mot de passe ?,account_privacy,fr,account_privacy|fr|7
+Annulation commande ORD584 stp,order_change_cancel,fr,order_change_cancel|fr|8
+"Ghlt f l'adresse, wach n9der nsal7ha ?",order_change_cancel,ma,order_change_cancel|ma|6
+Puis-je cumuler deux codes promo,promotion_loyalty,fr,promotion_loyalty|fr|8
+mon remboursement n'est pas arrivé sur ma carte svp,refund_status,fr,refund_status|fr|4
+I'd like to exchange my laptop,return_request,en,return_request|en|4
+Quand vais-je recevoir mon smartphone ?,order_tracking,fr,order_tracking|fr|3
+Meci beaucoup,out_of_scope,fr,out_of_scope|fr|16
+The wifi on my tablet doesn't work,technical_support,en,technical_support|en|4
+j'ai ublié mon mot de passe,account_privacy,fr,account_privacy|fr|1
+Comment payer ma commande 3afak,payment_info,fr,payment_info|fr|9
+I want to get my 24-inch monitor repaired under warranty,warranty_claim,en,warranty_claim|en|4
+Bghit nbddel casque f commande ORD911,order_change_cancel,ma,order_change_cancel|ma|4
+Comment puis-je retourner mon casque Bluetooth 3afak,return_request,fr,return_request|fr|0
+Wach kayn réduction l tolba ?,promotion_loyalty,ma,promotion_loyalty|ma|4
+Je veux annuler ma commande ORD630,order_change_cancel,fr,order_change_cancel|fr|0
+Kifach n3awd nrje3 chargeur dyali,return_request,ma,return_request|ma|0
+Code promo dyali ma khdamch stp,promotion_loyalty,ma,promotion_loyalty|ma|2
+What's the difference between these two wireless headphones?,product_info,en,product_info|en|6
+What are the specs of this USB-C cable?,product_info,en,product_info|en|0
+Code promo dyali ma khdamch,promotion_loyalty,ma,promotion_loyalty|ma|2
+Puis-je retourner un article ouvert ?,return_request,fr,return_request|fr|6
+Le remboursement est-il fait ?,refund_status,fr,refund_status|fr|7
+How many loyalty points do I have?,promotion_loyalty,en,promotion_loyalty|en|11
+I ordered a fast charger 12 days ago and received nothing svp,delivery_issue,en,delivery_issue|en|2
+ch7al taman dyal chargeur,product_info,ma,product_info|ma|6
+"écran dyali twqef 3la lkhdma, wach fih garantie ?",warranty_claim,ma,warranty_claim|ma|0
+Je veux parler à un conseiller,human_support,fr,human_support|fr|0
+Ch7al tamn dyal tablette,product_info,ma,product_info|ma|6
+Wach n9der n5ls 3nd l'istilam ?,payment_info,ma,payment_info|ma|1
+Bght nrajje3 laptop,return_request,ma,return_request|ma|1
+Pouvez-vous me conseiller un casque Bluetooth pour le gaming,product_info,fr,product_info|fr|5
+How long does a refund take?,refund_status,en,refund_status|en|3
+My apyment was declined why,payment_issue,en,payment_issue|en|2
+Statut du remboursement ORD744,refund_status,fr,refund_status|fr|6
+lkhlas b carte amen ?,payment_info,ma,payment_info|ma|4
+Suivi colis ORD167,order_tracking,fr,order_tracking|fr|7
+Remboursement dyal commande ORD354 fin wsl ?,refund_status,ma,refund_status|ma|1
+Proposez-vous le paiement en 3 fois pour un ordinateur portable ?,payment_info,fr,payment_info|fr|8
+My wireless headphones gets very hot,technical_support,en,technical_support|en|7
+Y a-t-il une promo sur les câble USB-C ?,promotion_loyalty,fr,promotion_loyalty|fr|6
+I'd like to exchange my wireless headphones svp,return_request,en,return_request|en|4
+Ma commande ORD664 n'est toujours pas arrivée,delivery_issue,fr,delivery_issue|fr|0
+Quel est le meilleur restaurant à Dakhla ?,out_of_scope,fr,out_of_scope|fr|9
+Peux-tu me raconter une blague ?,out_of_scope,fr,out_of_scope|fr|1
+Annulation commande ORD584,order_change_cancel,fr,order_change_cancel|fr|8
+Is anyone there svp,out_of_scope,en,out_of_scope|en|24
+J'ai commandé un powerbank hier quand sera-t-il livré,order_tracking,fr,order_tracking|fr|9
+Ch7al kat3ish batterie dyal clavier ?,product_info,ma,product_info|ma|1
+"Le souris sans fil ne me convient pas, je voudrais le retourner",return_request,fr,return_request|fr|4
+Ou envoyer mon tablette en panne pour le SAV ?,warranty_claim,fr,warranty_claim|fr|6
+Je voudrais changer le clavier mécanique de ma commande ORD888 3afak,order_change_cancel,fr,order_change_cancel|fr|4
+My card was declined at checkout,payment_issue,en,payment_issue|en|0
+The wifi on my laptop doesn't work please,technical_support,en,technical_support|en|4
+What's teh weather like in Meknès,out_of_scope,en,out_of_scope|en|0
+I don't want to talk to a bot,human_support,en,human_support|en|4
+I'd rather speak to a real person,human_support,en,human_support|en|6
+My order ORD294 still hasn't arrived,delivery_issue,en,delivery_issue|en|0
+Le carton de mon ordinateur portable etait ouvert a la livraison 3afak,delivery_issue,fr,delivery_issue|fr|8
+Le remboursement est-ilf ait ?,refund_status,fr,refund_status|fr|7
+Where is my rfund for order ORD659,refund_status,en,refund_status|en|1
+Where is my order ORD508?,order_tracking,en,order_tracking|en|0
+Kifach nsalah tomobil dyali ?,out_of_scope,ma,out_of_scope|ma|4
+Le livreur n'est psa venu,delivery_issue,fr,delivery_issue|fr|4
+bghit nbddel tééphone f commande ord823,order_change_cancel,ma,order_change_cancel|ma|4
+Y a--til une promo sur les montre connectée,promotion_loyalty,fr,promotion_loyalty|fr|6
+Waqtach ghadi twsalni powerbank ?,order_tracking,ma,order_tracking|ma|2
+Wach n9der n5ls b tl9sit 3afak,payment_info,ma,payment_info|ma|3
+What is the price of bitcoin merci,out_of_scope,en,out_of_scope|en|12
+Ça fait 10 jours et je n'ai rien reçu,delivery_issue,fr,delivery_issue|fr|9
+Le wifi de mon chargeur rapide ne marche pas,technical_support,fr,technical_support|fr|4
+Comment payer ma commande ?,payment_info,fr,payment_info|fr|9
+is there a dealon mechanical keyboard?,promotion_loyalty,en,promotion_loyalty|en|6
+I'm waiting for the refund for my wireless mouse,refund_status,en,refund_status|en|5
+I ordered a 24-inch monitor yesterday when will it be delivered,order_tracking,en,order_tracking|en|9
+I want to speak to a human agent,human_support,en,human_support|en|0
+Black Friday chno homa les offres ?,promotion_loyalty,ma,promotion_loyalty|ma|7
+What personal data do you collect?,account_privacy,en,account_privacy|en|2
+Peut-on payer en plusieurs fois ?,payment_info,fr,payment_info|fr|3
+"My fast charger stopped working, is itunder warranty?",warranty_claim,en,warranty_claim|en|0
+Wher eis my order ORD508 svp,order_tracking,en,order_tracking|en|0
+It says delivered but I never got it,delivery_issue,en,delivery_issue|en|6
+Bghit nrajje3 écouteurs,return_request,ma,return_request|ma|1
+J veux me désinscrire de la newsletter,account_privacy,fr,account_privacy|fr|3
+Ce écran 24 pouces est-il compatible avec iPhone mrci,product_info,fr,product_info|fr|2
+proposez-vous un programme de fidélité,promotion_loyalty,fr,promotion_loyalty|fr|7
+Ma9drtch ndkhol l compte dyali,account_privacy,ma,account_privacy|ma|6
+J'ai commandé un ordinateur portable il y a 12 jours et je n'ai rien reçu,delivery_issue,fr,delivery_issue|fr|2
+i'm waiting for the refund for my wireless hadphones,refund_status,en,refund_status|en|5
+Où envoyer mon écouteurs sans fil en panne pour le SAV ?,warranty_claim,fr,warranty_claim|fr|6
+Where is my order ORD586,order_tracking,en,order_tracking|en|0
+Kifach nanuli commande ?,order_change_cancel,ma,order_change_cancel|ma|1
+Où en est mon remboursemnet pour la commande ORD237,refund_status,fr,refund_status|fr|1
+Je souhaite échanger mon écouteurs sans fil,return_request,fr,return_request|fr|5
+I want to get my power bank repaired under warranty,warranty_claim,en,warranty_claim|en|4
+What is the capital of Japan?,out_of_scope,en,out_of_scope|en|5
+Le carton de mon souris sans fil etait ouvert a la livraison,delivery_issue,fr,delivery_issue|fr|8
+Bghit nbddel casque f commande ORD911 3afak,order_change_cancel,ma,order_change_cancel|ma|4
+Bghit nsalah clavier f garantie 3afak,warranty_claim,ma,warranty_claim|ma|4
+Le carton de mon powerbank était ouvert à la livraison,delivery_issue,fr,delivery_issue|fr|8
+Où en est mon remboursement pour la commande ORD388 ?,refund_status,fr,refund_status|fr|1
+"Personne ne repond a mes messages, je veux un responsable",human_support,fr,human_support|fr|8
+Quel powerbank me recommandez-vous pour un budget limité please,product_info,fr,product_info|fr|7
+Wach had powerbank compatible m3a iPhone,product_info,ma,product_info|ma|2
+Do you still have the power bank in stock?,product_info,en,product_info|en|11
+Where do I send my faulty tablet for after-sales service merci,warranty_claim,en,warranty_claim|en|6
+powerbank dyali ma qbach kaykhdem,technical_support,ma,technical_support|ma|0
+Peux-tu me raconter uneblague ?,out_of_scope,fr,out_of_scope|fr|1
+Has my package been shipped,order_tracking,en,order_tracking|en|6
+An agent please,human_support,en,human_support|en|7
+The courier never showed up,delivery_issue,en,delivery_issue|en|4
+What is the price of the wireless mouse?,product_info,en,product_info|en|10
+My parcel is lost,delivery_issue,en,delivery_issue|en|7
+Order status please,order_tracking,en,order_tracking|en|8
+Mon clavier mécanique est planté,technical_support,fr,technical_support|fr|3
+Statut de la commande ORD975 svp,order_tracking,fr,order_tracking|fr|4
+Good evening,out_of_scope,en,out_of_scope|en|15
+Quelles données personnelles collectez-vous ?,account_privacy,fr,account_privacy|fr|2
+casque kayskon bzaf merci,technical_support,ma,technical_support|ma|6
+Quel powerbank me recommandez-vous pour un budget limité ?,product_info,fr,product_info|fr|7
+How do I reset my Bluetooth spaker?,technical_support,en,technical_support|en|6
+J'attends le remboursement de mon casqeu Bluetooth,refund_status,fr,refund_status|fr|5
+"Mon ordinateur portable ne fonctionne plus, il est sous garantie ?",warranty_claim,fr,warranty_claim|fr|0
+Bghit nrajje3 laptop,return_request,ma,return_request|ma|1
+Suivi colis ORD651,order_tracking,fr,order_tracking|fr|7
+Je veux parler à un responsable,human_support,fr,human_support|fr|2
+J'ai ee debite deux fois pour la meme commande,payment_issue,fr,payment_issue|fr|1
+Quelle est la capitale du Japon ?,out_of_scope,fr,out_of_scope|fr|5
+Acceptez-vous les cartes Visa et Mastercard ?,payment_info,fr,payment_info|fr|2
+Kifach n3awd nrje3 ecran dyali merci,return_request,ma,return_request|ma|0
+Track my parcel ORD791,order_tracking,en,order_tracking|en|7
+Is anyone there?,out_of_scope,en,out_of_scope|en|24
+Comment obtenir ma facture stp,payment_info,fr,payment_info|fr|7
+My luetooth speaker is frozen merci,technical_support,en,technical_support|en|3
+"Great, thans!",out_of_scope,en,out_of_scope|en|18
+kifach nbddel email yal compte ?,account_privacy,ma,account_privacy|ma|4
+Quelle différence entre ces deux smartphone ?,product_info,fr,product_info|fr|6
+J'ai commande un tablette il y a12 jours et je n'ai rien recu,delivery_issue,fr,delivery_issue|fr|2
+Passez-moi un agent humain3 afak,human_support,fr,human_support|fr|1
+Do you use cookies?,account_privacy,en,account_privacy|en|6
+Kifach n3awd nsayb laptop ?,technical_support,ma,technical_support|ma|5
+what's the weather like in meknès merci,out_of_scope,en,out_of_scope|en|0
+Comment supprimer mon compte ?,account_privacy,fr,account_privacy|fr|0
+"Batterie de mon powerbank defectueuse, garantie merci",warranty_claim,fr,warranty_claim|fr|7
+Waxxa choukran,out_of_scope,ma,out_of_scope|ma|18
+My package is late,delivery_issue,en,delivery_issue|en|1
+Quel est le meilleur restaurant à Knitra,out_of_scope,fr,out_of_scope|fr|9
+Commande ORD896 mazal ma wslatch,delivery_issue,ma,delivery_issue|ma|0
+Quelle différence entre ces deux écran 24 pouces 3afak,product_info,fr,product_info|fr|6
+quelle est l'autonomie de la batterie du ordinateur portable,product_info,fr,product_info|fr|1
+Y a-t-il une promo sur les montre connectée ?,promotion_loyalty,fr,promotion_loyalty|fr|6
+Je veux annuler ma commande ORD616,order_change_cancel,fr,order_change_cancel|fr|0
+Wach n9der nrje3 produit mfthouh merci,return_request,ma,return_request|ma|4
+Black Friday: what offers on smartwatch merci,promotion_loyalty,en,promotion_loyalty|en|9
+Je voudrais changer le montre connectée de ma commande ORD599,order_change_cancel,fr,order_change_cancel|fr|4
+Erreur olrs du paiement de ma commande ORD291 please,payment_issue,fr,payment_issue|fr|7
+My card is blocked on your site,payment_issue,en,payment_issue|en|3
+What does the warranty cover 3afak,warranty_claim,en,warranty_claim|en|5
+I'd like to change the power bank in my order ORD286,order_change_cancel,en,order_change_cancel|en|4
+Statut de la commande ORD564 svp,order_tracking,fr,order_tracking|fr|4
+Le carton de mon montre connectée était ouvert à la livraison,delivery_issue,fr,delivery_issue|fr|8
+Comment obtenir ma facture ?,payment_info,fr,payment_info|fr|7
+Cohukran bzaf svp,out_of_scope,ma,out_of_scope|ma|12
+Colis dyali daya3,delivery_issue,ma,delivery_issue|ma|5
+how do i change my password,account_privacy,en,account_privacy|en|7
+Is there a deal on smartwatch?,promotion_loyalty,en,promotion_loyalty|en|6
+Fin wsalat commande dyali ORD926 please,order_tracking,ma,order_tracking|ma|0
+Let me talk to a representative,human_support,en,human_support|en|1
+Suivic olis ORD611,order_tracking,fr,order_tracking|fr|7
+I want to dispute a hcarge on my card,payment_issue,en,payment_issue|en|5
+Wach n9der nrje3 produit mfthouh ?,return_request,ma,return_request|ma|4
+Où en est mon remboursement pour la commande ORD675 ?,refund_status,fr,refund_status|fr|1
+Combien coûte el smartphone 3afak,product_info,fr,product_info|fr|12
+Je veux un échange sous garantie pour mon chargeur rapide,warranty_claim,fr,warranty_claim|fr|8
+Is the tablet availble,product_info,en,product_info|en|9
+Ch7al kat3ish batterie dyal souris,product_info,ma,product_info|ma|1
+Je veux me désinscrire de la newsletter,account_privacy,fr,account_privacy|fr|3
+Kifahc n3awd nrje3 casque dyali please,return_request,ma,return_request|ma|0
+Wach mazal 3ndkom câble USB-C ?,product_info,ma,product_info|ma|7
+J'attends le remboursement de mon chargeur rapide 3afak,refund_status,fr,refund_status|fr|5
+Erreur lors du paiemetn de ma commande ORD828,payment_issue,fr,payment_issue|fr|7
+The box of my wireless mouse as open when delivered,delivery_issue,en,delivery_issue|en|8
+Black Friday: what offers on laptop 3afak,promotion_loyalty,en,promotion_loyalty|en|9
+Bghit nchouf responsable stp,human_support,ma,human_support|ma|2
+"mon ordinateur portable est tombe en panne apres 3 mois, c'est couvert ?",warranty_claim,fr,warranty_claim|fr|9
+The wifi on my Bluetooth speaker doesn't work,technical_support,en,technical_support|en|4
+Mon cols est en retard,delivery_issue,fr,delivery_issue|fr|1
+The box of my smartphone was open when delivered,delivery_issue,en,delivery_issue|en|8
+Y a-t-il une promo sur les écouteurs sans fil ?,promotion_loyalty,fr,promotion_loyalty|fr|6
+Thanks for your help,out_of_scope,en,out_of_scope|en|17
+Black Friday : quelles offres sur les câble USB-C ?,promotion_loyalty,fr,promotion_loyalty|fr|9
+Statut du remboursement ORD274 svp,refund_status,fr,refund_status|fr|6
+le wifi de mon écouteurs sans fil ne marche pas 3afak,technical_support,fr,technical_support|fr|4
+Combien de temps pour un remboursement stp,refund_status,fr,refund_status|fr|3
+My order ORD608 still hasn't arrived,delivery_issue,en,delivery_issue|en|0
+Cancel order ORD666,order_change_cancel,en,order_change_cancel|en|8
+Utilisez-vous des cokies,account_privacy,fr,account_privacy|fr|6
+Le câble USB-C est-il étanche please,product_info,fr,product_info|fr|4
+My parcel arrived damaged merci,delivery_issue,en,delivery_issue|en|3
+Where can I buy plane tickets?,out_of_scope,en,out_of_scope|en|7
+Le colis est marqué livré mais je ne l'ai pas reçu,delivery_issue,fr,delivery_issue|fr|6
+Ch7al taman dyal smartwatch ?,product_info,ma,product_info|ma|6
+J'ai reçu un ordinateur portable défectueux je veux le renvoyer,return_request,fr,return_request|fr|8
+Ch7al kayakhod remboursement ?,refund_status,ma,refund_status|ma|3
+Proposez-vous le paiement en 3 fois pour un montre connectée ?,payment_info,fr,payment_info|fr|8
+Je voudrais changer le tablette de a commande ORD460 merci,order_change_cancel,fr,order_change_cancel|fr|4
+Le tablette est arrivé endommagé,delivery_issue,fr,delivery_issue|fr|10
+Le livreur n'est pas venu,delivery_issue,fr,delivery_issue|fr|4
+Erreur lors du paiement de ma commande ORD291,payment_issue,fr,payment_issue|fr|7
+I received a damaged USB-C cable and want to return it,return_request,en,return_request|en|7
+"Mon paiement a été refusé, pourquoi ?",payment_issue,fr,payment_issue|fr|2
+"Personne ne répond à mes messages, je veux un responsable",human_support,fr,human_support|fr|8
+I entered the wrong address can I fix it,order_change_cancel,en,order_change_cancel|en|7
+Chno homa les caractéristiques dyal had laptop svp,product_info,ma,product_info|ma|0
+Do you offer installments for a wireless mouse?,payment_info,en,payment_info|en|7
+Kifach nsta3ml code réduction ?,promotion_loyalty,ma,promotion_loyalty|ma|5
+Do you have a student discount?,promotion_loyalty,en,promotion_loyalty|en|4
+Pouvez-vous me transférer à un humain ?,human_support,fr,human_support|fr|5
+Comment puis-je retourner mon smartphone ?,return_request,fr,return_request|fr|0
+What's the storage capacity of this power bank,product_info,en,product_info|en|3
+Khllini nhdr m3a chi bnadem,human_support,ma,human_support|ma|3
+Let me talk to a representative 3afak,human_support,en,human_support|en|1
+Can you help me write my resume?,out_of_scope,en,out_of_scope|en|6
+avez-vous encore du stock de casque bluetooth merci,product_info,fr,product_info|fr|11
+Comment modifier l'adresse email de mon compte ?,account_privacy,fr,account_privacy|fr|4
+Wach kayn promo 3la laptop ?,promotion_loyalty,ma,promotion_loyalty|ma|6
+Do you offer installments for a fas charger please,payment_info,en,payment_info|en|7
+What's the best restaurant in Marrakech?,out_of_scope,en,out_of_scope|en|9
+How do I pair my fast charger?,technical_support,en,technical_support|en|2
+Comment puis-je retourner mon montre connectée,return_request,fr,return_request|fr|0
+Comment utilser mes points ?,promotion_loyalty,fr,promotion_loyalty|fr|10
+Erreur lors du paiement de ma commande ORD415,payment_issue,fr,payment_issue|fr|7
+Mon chargeur rapide est planté please,technical_support,fr,technical_support|fr|3
+Modifier ma commande ORD358 svp,order_change_cancel,fr,order_change_cancel|fr|6
+Je veux renvoyer monmontre connectée,return_request,fr,return_request|fr|1
+How do I change the email o nmy account?,account_privacy,en,account_privacy|en|4
+wach mazal 3nkom souris ?,product_info,ma,product_info|ma|7
+I have a gift card how do I use it stp,promotion_loyalty,en,promotion_loyalty|en|12
+Is card payment secure?,payment_info,en,payment_info|en|4
+Au revoir,out_of_scope,fr,out_of_scope|fr|19
+I want my data deleted,account_privacy,en,account_privacy|en|5
+Return my mechanical keyboard,return_request,en,return_request|en|10
+Black Friday: what offers on tablet?,promotion_loyalty,en,promotion_loyalty|en|9
+Y a-t-il des promotions en ce moment ?,promotion_loyalty,fr,promotion_loyalty|fr|1
+Où en est mon remboursement pour la commande ORD175 ?,refund_status,fr,refund_status|fr|1
+When will the USB-C cable be back in stock stp,product_info,en,product_info|en|13
+Carte dyali t refusat f l'khlas,payment_issue,ma,payment_issue|ma|0
+un agent s'il vous plaît please,human_support,fr,human_support|fr|7
+Wach katakhdo carte Visa ?,payment_info,ma,payment_info|ma|2
+How mayn days do I have to return an item?,return_request,en,return_request|en|3
+What is the price of the laptop,product_info,en,product_info|en|10
+Is this smartphone compatible with iPhone?,product_info,en,product_info|en|2
+J'attends le remboursement de mon casque Bluetooth,refund_status,fr,refund_status|fr|5
+Do you offer installments for a fast charger?,payment_info,en,payment_info|en|7
+Puis-je avoir une facture pour mon entreprise ?,payment_info,fr,payment_info|fr|10
+Return my fast charger,return_request,en,return_request|en|10
+Ach hiya a7sen restaurant f Meknès ?,out_of_scope,ma,out_of_scope|ma|8
+Wach kayn promo 3la câble USB-C ?,promotion_loyalty,ma,promotion_loyalty|ma|6
+kifach nconnecti téléphone dyali,technical_support,ma,technical_support|ma|2
+Comment suis-je remboursé ?,refund_status,fr,refund_status|fr|8
+Kifach nconnecti écouteurs dyali ?,technical_support,ma,technical_support|ma|2
+Avez-vous encore du stock de smartphone ?,product_info,fr,product_info|fr|11
+Golu lia chi nokta,out_of_scope,ma,out_of_scope|ma|1
+Where can I buy plane tickets svp,out_of_scope,en,out_of_scope|en|7
+Nobody answers my messages I want a manager,human_support,en,human_support|en|8
+Le clavier mécanique est-il disponible ?,product_info,fr,product_info|fr|9
+I can't log into my account,account_privacy,en,account_privacy|en|9
+What's the difference between these two 24-inch monitor?,product_info,en,product_info|en|6
+How do I change the email on my account?,account_privacy,en,account_privacy|en|4
+Wach SAV kayssalhou tablette,warranty_claim,ma,warranty_claim|ma|5
+What is the capital of Japna,out_of_scope,en,out_of_scope|en|5
+Does th ewarranty cover a cracked screen,warranty_claim,en,warranty_claim|en|3
+Wach n9der nbddel l'adresse dyal livraison ?,order_change_cancel,ma,order_change_cancel|ma|2
+Kifach ndir retour l commande ORD477 merci,return_request,ma,return_request|ma|5
+Mon code promo ne fonctione pas,promotion_loyalty,fr,promotion_loyalty|fr|2
+The box of my tablet was open when delivered,delivery_issue,en,delivery_issue|en|8
+how do i reset my smartphone please,technical_support,en,technical_support|en|6
+Comment je peux suivre mon colis please,order_tracking,fr,order_tracking|fr|2
+My wireless headphones broke after 3 months is it covered,warranty_claim,en,warranty_claim|en|9
+my order ord140 still han't arrived,delivery_issue,en,delivery_issue|en|0
+Ce ordinateur portable est-il neuf ou reconditionné please,product_info,fr,product_info|fr|8
+I want to unsubscribe from the newsletter,account_privacy,en,account_privacy|en|3
+How do I delete my account,account_privacy,en,account_privacy|en|0
+Où acheter des billets d'avion,out_of_scope,fr,out_of_scope|fr|7
+Black Friday : quelles offres sur les écran 24 pouces ?,promotion_loyalty,fr,promotion_loyalty|fr|9
+Can I change the delivery address of m yorder stp,order_change_cancel,en,order_change_cancel|en|2
+How long is the warranty n this fast charger,warranty_claim,en,warranty_claim|en|2
+I received a damaged smartwatcha nd want to return it,return_request,en,return_request|en|7
+Where do I send my faulty fast charger for after-sales service 3afak,warranty_claim,en,warranty_claim|en|6
+how many loyalty points do i have,promotion_loyalty,en,promotion_loyalty|en|11
+Lmonatnt li t5ssem ghalat,payment_issue,ma,payment_issue|ma|4
+Wach SAV kayssalhou casque ?,warranty_claim,ma,warranty_claim|ma|5
+Chno hiya les données li kat jm3o 3liya ?,account_privacy,ma,account_privacy|ma|2
+Ma commande ORD906 n'est toujours pas arrivée,delivery_issue,fr,delivery_issue|fr|0
+How do I get my invoice 3afak,payment_info,en,payment_info|en|6
+Puis-je avoir un facture pour mon entreprise ?,payment_info,fr,payment_info|fr|10
+Je n'arrive pas à me connecter à mon compte,account_privacy,fr,account_privacy|fr|9
+Bghit n'echangi écouteurs dyali,return_request,ma,return_request|ma|3
+I want to track my order,order_tracking,en,order_tracking|en|1
+Wach had téléphone compatible m3a iPhone ?,product_info,ma,product_info|ma|2
+Passez-moi quelqu'un de reel,human_support,fr,human_support|fr|3
+how much does the smartwatch cost stp,product_info,en,product_info|en|12
+Is there a deal on USB-C cable?,promotion_loyalty,en,promotion_loyalty|en|6
+Mon smartphone est tombé en panne après 3 mois c'estc ouvert,warranty_claim,fr,warranty_claim|fr|9
+Ma promotion n'a pas été appliquée,promotion_loyalty,fr,promotion_loyalty|fr|13
+quand ont lieu les soldes,promotion_loyalty,fr,promotion_loyalty|fr|3
+Bghit nbddel téléphone f commande ORD823,order_change_cancel,ma,order_change_cancel|ma|4
+is here a deal on laptop?,promotion_loyalty,en,promotion_loyalty|en|6
+Ch7al dyal garantie f had écran ?,warranty_claim,ma,warranty_claim|ma|2
+Is cardpayment secure?,payment_info,en,payment_info|en|4
+How do I reset my smartphone?,technical_support,en,technical_support|en|6
+wach commande dyali tsiftat,order_tracking,ma,order_tracking|ma|3
+"J'ai commande un cable USB-C hier, quand sera-t-il livre ?",order_tracking,fr,order_tracking|fr|9
+i ordreed a power bank 12 days ago and received nothing,delivery_issue,en,delivery_issue|en|2
+Please modify my order ORD856 svp,order_change_cancel,en,order_change_cancel|en|6
+Où en est ma commande ORD127 3afak,order_tracking,fr,order_tracking|fr|0
+Kifach nbddel email dyal compte ?,account_privacy,ma,account_privacy|ma|4
+Kifach ndir retour l commande ORD477 ?,return_request,ma,return_request|ma|5
+How do I reset my wireless headphones?,technical_support,en,technical_support|en|6
+Chno hiya toro9 dyal l'khlas ?,payment_info,ma,payment_info|ma|0
+Refund status for ORD261,refund_status,en,refund_status|en|6
+carte dyali bloquee,payment_issue,ma,payment_issue|ma|3
+Wach kayn promotions daba ?,promotion_loyalty,ma,promotion_loyalty|ma|1
+L'khlas b carte amen ?,payment_info,ma,payment_info|ma|4
+Où envoyer mon tablette en panne pour le SAV ?,warranty_claim,fr,warranty_claim|fr|6
+Mon tablette est plante,technical_support,fr,technical_support|fr|3
+Je voudrais changer le clavier mécanique de ma commande ORD888,order_change_cancel,fr,order_change_cancel|fr|4
+Can you give me the trackig number for ORD516?,order_tracking,en,order_tracking|en|5
+Comment appairer mon tablette,technical_support,fr,technical_support|fr|2
+what's the difference between these two smartphone please,product_info,en,product_info|en|6
+"I ordered by mistake, I wnat to cancel",order_change_cancel,en,order_change_cancel|en|3
+Qui a gagné le match hier please,out_of_scope,fr,out_of_scope|fr|2
+Mon souris sans fil ne charge plus,technical_support,fr,technical_support|fr|1
+waqtach ghadi twsalni câble usb-c please,order_tracking,ma,order_tracking|ma|2
+"I ordered a 24-inch monitor yesterday, when will it be delivered?",order_tracking,en,order_tracking|en|9
+Colis wsl m9ttea3,delivery_issue,ma,delivery_issue|ma|2
+Suivi colis ORD167 please,order_tracking,fr,order_tracking|fr|7
+How do I pair my power bank svp,technical_support,en,technical_support|en|2
+Quels moyens de paiement acceptez-vous ?,payment_info,fr,payment_info|fr|0
+The smartwatch arrived broken,delivery_issue,en,delivery_issue|en|10
+I wnat my data deleted,account_privacy,en,account_privacy|en|5
+I want to send back my wireless mouse,return_request,en,return_request|en|1
+Can you give me the tracking number for ORD777 please,order_tracking,en,order_tracking|en|5
+Where is my refund for order ORD659?,refund_status,en,refund_status|en|1
+Bghit tms7o données dyali,account_privacy,ma,account_privacy|ma|5
+Black Firday : quelles offres sur les clavier mécanique stp,promotion_loyalty,fr,promotion_loyalty|fr|9
+How do I use a discount code?,promotion_loyalty,en,promotion_loyalty|en|5
+J'attends e remboursement de mon casque Bluetooth merci,refund_status,fr,refund_status|fr|5
+Are there any promotions right now?,promotion_loyalty,en,promotion_loyalty|en|1
+Who pays for return shipping?,return_request,en,return_request|en|8
+Black Friday : quelles offres sur les câble USB-C merci,promotion_loyalty,fr,promotion_loyalty|fr|9
+Mon ordinateur portable est planté,technical_support,fr,technical_support|fr|3
+Je conteste un prélèvement sur ma carte,payment_issue,fr,payment_issue|fr|5
+Goul lia chi nokta,out_of_scope,ma,out_of_scope|ma|1
+kifach ndir retour l commande ord909,return_request,ma,return_request|ma|5
+Colis dyali t3attal bzaf,delivery_issue,ma,delivery_issue|ma|1
+I ordered a tablet 12 days ago and received nothing,delivery_issue,en,delivery_issue|en|2
+How do I make a warranty claim?,warranty_claim,en,warranty_claim|en|1
+Comment utiliser un code de réduction ?,promotion_loyalty,fr,promotion_loyalty|fr|5
+Kifach nakhod facture dyali ?,payment_info,ma,payment_info|ma|5
+Can I combine two promo codes?,promotion_loyalty,en,promotion_loyalty|en|8
+telephone ma kayshl3ch,technical_support,ma,technical_support|ma|1
+What personal data do you cllect?,account_privacy,en,account_privacy|en|2
+Cancel order ORD580,order_change_cancel,en,order_change_cancel|en|8
+Je veux réparer mon écouteurs sans fil sous garantie merci,warranty_claim,fr,warranty_claim|fr|4
+Proposez-vous le paimeent en 3 fois pour un ordinateur portable ?,payment_info,fr,payment_info|fr|8
+Quand vais-je recevoir mon écouteurs sans fil,order_tracking,fr,order_tracking|fr|3
+Kifach l'jaw f Dakhla ?,out_of_scope,ma,out_of_scope|ma|0
+"My Bluetooth speaker stopped working, is it under warranty?",warranty_claim,en,warranty_claim|en|0
+I want to cancel my order ORD538,order_change_cancel,en,order_change_cancel|en|0
+Le tablette estarrivé endommagé,delivery_issue,fr,delivery_issue|fr|10
+Numéro de suivi dyal colis dyali ?,order_tracking,ma,order_tracking|ma|6
+Je veux que mes odnnées soient supprimées,account_privacy,fr,account_privacy|fr|5
+My mechanical keyboard won't charge anymore,technical_support,en,technical_support|en|1
+Ma carte a été refusée au paiement,payment_issue,fr,payment_issue|fr|0
+I was charged twice,payment_issue,en,payment_issue|en|1
+Kifach nakhod facture dyali svp,payment_info,ma,payment_info|ma|5
+I'd like to change the Bluetooth speaker in my order ORD558,order_change_cancel,en,order_change_cancel|en|4
+Où en est mon remboursement pour lac ommande ORD388 please,refund_status,fr,refund_status|fr|1
+Quelle est la durée de garantie de ce câble USB-C ?,warranty_claim,fr,warranty_claim|fr|2
+Refund staus for ORD137,refund_status,en,refund_status|en|6
+Utilisez-vous des cookies ?,account_privacy,fr,account_privacy|fr|6
+Je veux rendre ma commande ORD319,return_request,fr,return_request|fr|10
+When will my latop arrive svp,order_tracking,en,order_tracking|en|3
+Statut du remboursement ORD274,refund_status,fr,refund_status|fr|6
+Mon écran 24 pouces est tombé en panne près 3 mois c'est couvert,warranty_claim,fr,warranty_claim|fr|9
+Puis-je payer à la livraison ?,payment_info,fr,payment_info|fr|1
+Je souhaite échangr mon ordinateur portable,return_request,fr,return_request|fr|5
+Le câble USB-C est arrivé endommagé,delivery_issue,fr,delivery_issue|fr|10
+Ahlan,out_of_scope,ma,out_of_scope|ma|17
+Chno ta9tarh 3lina powerbank l gaming stp,product_info,ma,product_info|ma|3
+Passez-moi quelqu'un de réel,human_support,fr,human_support|fr|3
+casque dyali bloque svp,technical_support,ma,technical_support|ma|3
+kifach nsalah toombil dyali ?,out_of_scope,ma,out_of_scope|ma|4
+My mechanical keyboard is frozen,technical_support,en,technical_support|en|3
+Kifach l'jaw f Oujda,out_of_scope,ma,out_of_scope|ma|0
+How can I return my tablet stp,return_request,en,return_request|en|0
+Wach garantie katghati l'écran mkser ?,warranty_claim,ma,warranty_claim|ma|3
+cable USB-C dyali twqef 3la lkhdma wach fih garantie,warranty_claim,ma,warranty_claim|ma|0
+Avez-vous des codes promo ?,promotion_loyalty,fr,promotion_loyalty|fr|0
+Ma commande ORD957 n'est toujours pas arrivée,delivery_issue,fr,delivery_issue|fr|0
+How do I delete my account?,account_privacy,en,account_privacy|en|0
+can i combine two promo codes stp,promotion_loyalty,en,promotion_loyalty|en|8
+My mechancal keyboard won't turn on,technical_support,en,technical_support|en|0
+Proposez-vous un programme de fidélité ?,promotion_loyalty,fr,promotion_loyalty|fr|7
+kifach n3awd sayb smartwatch ?,technical_support,ma,technical_support|ma|5
+"J'ai commandé un souris sans fil hier, quand sera-t-il livré please",order_tracking,fr,order_tracking|fr|9
+Where can I find the user manual for my fast charger?,technical_support,en,technical_support|en|5
+Wach SVA kayssalhou chargeur,warranty_claim,ma,warranty_claim|ma|5
+Chno hiya 3asimat l yaban ?,out_of_scope,ma,out_of_scope|ma|5
+How do I change my password?,account_privacy,en,account_privacy|en|7
+I received a damaged smartwatch and want to return it,return_request,en,return_request|en|7
+Où trouver mon lien de suivi ?,order_tracking,fr,order_tracking|fr|10
+Where is my refund for order ORD312?,refund_status,en,refund_status|en|1
+T7sbt 3liya joj mrat,payment_issue,ma,payment_issue|ma|1
+Wsl clavier mkser,delivery_issue,ma,delivery_issue|ma|7
+Bghit nrajje3 écoutuers,return_request,ma,return_request|ma|1
+Wsl écouteurs mkser,delivery_issue,ma,delivery_issue|ma|7
+Do you offre installments for a Bluetooth speaker please,payment_info,en,payment_info|en|7
+wach t9dro t7wlouni l chi agent svp,human_support,ma,human_support|ma|5
+Error when paying for orde rORD825,payment_issue,en,payment_issue|en|7
+Mon souris sans fil ne charge plus please,technical_support,fr,technical_support|fr|1
+Où en est mon rembursement pour la commande ORD175 merci,refund_status,fr,refund_status|fr|1
+How can I access my personal data?,account_privacy,en,account_privacy|en|8
+Refund status for ORD337,refund_status,en,refund_status|en|6
+Ch7al dyal stockage f had souris ?,product_info,ma,product_info|ma|4
+Modifier ma commande ORD316 svp 3afak,order_change_cancel,fr,order_change_cancel|fr|6
+quelle différence entre cse deux smartphone ?,product_info,fr,product_info|fr|6
+Tell me a joke,out_of_scope,en,out_of_scope|en|1
+"I entered the wrong address, can I fix it?",order_change_cancel,en,order_change_cancel|en|7
+Acceptez-vous le paiement en espèces ?,payment_info,fr,payment_info|fr|6
+I want to cancel my order ORD970,order_change_cancel,en,order_change_cancel|en|0
+Error when paying for order ORD825,payment_issue,en,payment_issue|en|7
+J'attends le remboursement de mon chargeur rapide,refund_status,fr,refund_status|fr|5
+Can I return an opened product?,return_request,en,return_request|en|5
+Kifach n3awd nsayb chargeur ?,technical_support,ma,technical_support|ma|5
+I'd like to change the fast charger in my ordre ORD347,order_change_cancel,en,order_change_cancel|en|4
+Quelle est l'autonomie de la batterie du câble USB-C ?,product_info,fr,product_info|fr|1
+Ou en est ma commande ORD125 stp,order_tracking,fr,order_tracking|fr|0
+Combien de points de fidélité ai-je ?,promotion_loyalty,fr,promotion_loyalty|fr|11
+Comment annuler ma commande ?,order_change_cancel,fr,order_change_cancel|fr|1
+"Je me suis trompé d'adresse, puis-je la corriger ?",order_change_cancel,fr,order_change_cancel|fr|7
+I want to send back my Bluetooth speaker,return_request,en,return_request|en|1
+Bonne juornée,out_of_scope,fr,out_of_scope|fr|20
+"My payment was declined, why?",payment_issue,en,payment_issue|en|2
+Puis-je modifier l'adresse de livraison de ma commande ?,order_change_cancel,fr,order_change_cancel|fr|2
