@@ -44,35 +44,27 @@ I can't apply my coupon at checkout,promotion_loyalty,en,technical_support,tfidf
 Je souhaite joindre un vrai conseiller,human_support,fr,return_request,tfidf_svm
 Can I get a call back from someone please,human_support,en,payment_info,tfidf_svm
 What's the exchange rate of the euro today?,out_of_scope,en,product_info,tfidf_svm
-When does my laptop get delivered,order_tracking,en,delivery_issue,embed_lr
+Je n'ai pas reçu de mail de suivi après mon achat,order_tracking,fr,delivery_issue,embed_lr
 Wach n9der nchouf fin wsl colis dyali,order_tracking,ma,delivery_issue,embed_lr
-How do I stop my order from being shipped,order_change_cancel,en,order_tracking,embed_lr
+"Annulez ma commande s'il vous plaît, je l'ai passée en double",order_change_cancel,fr,order_tracking,embed_lr
+"J'ai commandé deux fois par erreur, annulez la deuxième",order_change_cancel,fr,payment_issue,embed_lr
+Wach n9der nwqef l commande 9bel ma tsift ?,order_change_cancel,ma,payment_issue,embed_lr
 Je veux ajouter un câble à ma commande en cours,order_change_cancel,fr,return_request,embed_lr
-"Delivery delayed, what's going on with my order?",delivery_issue,en,order_tracking,embed_lr
-My package came with a broken screen,delivery_issue,en,order_tracking,embed_lr
-What's the procedure to send an item back,return_request,en,product_info,embed_lr
-Can I swap my headphones for a different colour?,return_request,en,technical_support,embed_lr
-Quelles sont les conditions pour un retour ?,return_request,fr,promotion_loyalty,embed_lr
-"I returned my keyboard two weeks ago, still waiting for my money back",refund_status,en,return_request,embed_lr
-Combien de jours faut-il pour que l'argent revienne sur ma carte ?,refund_status,fr,payment_issue,embed_lr
-How many days until the money is back in my bank account?,refund_status,en,promotion_loyalty,embed_lr
+Mon colis est bloqué à Casablanca depuis 3 jours,delivery_issue,fr,warranty_claim,embed_lr
+"J'ai changé d'avis, je peux renvoyer l'article ?",return_request,fr,order_change_cancel,embed_lr
+"Bghit nrje3 l'article, ma 3jbnich",return_request,ma,delivery_issue,embed_lr
+Peut-on retourner un téléphone déjà déballé ?,return_request,fr,warranty_claim,embed_lr
+Wach t'rembourssa lcommande dyali ?,refund_status,ma,out_of_scope,embed_lr
 Flous dyal l'article li rje3t mazal ma wslouni,refund_status,ma,delivery_issue,embed_lr
-Is my credit card information safe on your site?,payment_info,en,payment_issue,embed_lr
-The checkout keeps saying transaction failed,payment_issue,en,promotion_loyalty,embed_lr
-I see two payments for one order on my statement,payment_issue,en,payment_info,embed_lr
-Mon casque fait un bruit étrange,technical_support,fr,return_request,embed_lr
-My phone keeps freezing since the update,technical_support,en,product_info,embed_lr
-Je peux envoyer mon casque défectueux en SAV ?,warranty_claim,fr,return_request,embed_lr
-Is accidental damage covered?,warranty_claim,en,delivery_issue,embed_lr
-Le casque a-t-il une réduction de bruit active ?,product_info,fr,promotion_loyalty,embed_lr
+Ach men tari9a dyal khlas kayn ?,payment_info,ma,out_of_scope,embed_lr
+"L'khlas ma daz ch, flous tkhssmo",payment_issue,ma,out_of_scope,embed_lr
+Souris dyali ma kat'connectach,technical_support,ma,out_of_scope,embed_lr
 Wach had telephone fih 128 go wla 256 ?,product_info,ma,warranty_claim,embed_lr
-Any discount for buying two items,promotion_loyalty,en,payment_issue,embed_lr
+"Cet article est indisponible, il revient quand ?",product_info,fr,out_of_scope,embed_lr
+Il y a un coupon pour ma première commande ?,promotion_loyalty,fr,payment_info,embed_lr
 Le code BLACK20 est refusé au paiement,promotion_loyalty,fr,payment_issue,embed_lr
-Does the newsletter give a welcome voucher?,promotion_loyalty,en,account_privacy,embed_lr
-I can't apply my coupon at checkout,promotion_loyalty,en,technical_support,embed_lr
-"I can't log in, it says wrong password",account_privacy,en,payment_issue,embed_lr
-Je souhaite joindre un vrai conseiller,human_support,fr,return_request,embed_lr
-Can I get a call back from someone please,human_support,en,technical_support,embed_lr
-Please escalate my case to a supervisor,human_support,en,order_tracking,embed_lr
-Ok bye,out_of_scope,en,payment_info,embed_lr
-What's the exchange rate of the euro today?,out_of_scope,en,product_info,embed_lr
+Wach kayn tkhfid f had simana ?,promotion_loyalty,ma,payment_issue,embed_lr
+Chno hiya les offres dyal had chhar ?,promotion_loyalty,ma,account_privacy,embed_lr
+I can't apply my coupon at checkout,promotion_loyalty,en,payment_issue,embed_lr
+Can I get a call back from someone please,human_support,en,return_request,embed_lr
+Passez-moi votre service client s'il vous plaît,human_support,fr,return_request,embed_lr

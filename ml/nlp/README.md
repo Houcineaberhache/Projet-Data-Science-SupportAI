@@ -49,19 +49,32 @@ Les salutations/remerciements sont une sous-partie d'`out_of_scope` (officiel) ;
 > Les **routes sont une proposition** du module NLP (colonne `route` de `data/intents.json`), à valider avec le backend. Choix à discuter : `payment_issue` → `human_handoff` (donnée sensible), `delivery_issue` → `order_api`.
 
 ## Résultats
+Run de référence sur Google Colab avec **vrais embeddings** (`paraphrase-multilingual-MiniLM-L12-v2`) ; fichiers dans `reports/` et `models/config.json`.
+
 | Modèle | CV groupée F1 macro | Test manuel (140) accuracy | Test manuel F1 macro | Pilot 20 accuracy |
 |---|---|---|---|---|
-| TF-IDF + LogReg | 0,701 | 0,836 | 0,834 | 0,95 |
-| **TF-IDF + Linear SVM** | **0,733** | **0,843** | **0,842** | 0,95 |
-| Embeddings + LogReg (repli LSA) | 0,708 | 0,771 | 0,776 | 0,95 |
+| TF-IDF + LogReg | 0,698 | 0,836 | 0,834 | 0,95 |
+| TF-IDF + Linear SVM | 0,722 | **0,843** | **0,842** | 0,95 |
+| **Embeddings SBERT + LogReg** | **0,738** | 0,829 | 0,827 | 0,90 |
 
-Le pilot 20 n'a que 20 phrases (1 erreur = 5 points) : il ne départage pas les modèles. Détail par classe, matrice de confusion, analyse d'erreurs et courbe seuil/couverture : voir le notebook.
+**Lecture honnête.** Les embeddings sont meilleurs sur la CV (critère de sélection : le protocole retient `embed_lr`), le SVM l'est légèrement sur le test manuel. Avec 140 phrases, l'incertitude est d'environ ±6 points : **les trois modèles ne sont pas statistiquement distinguables**. Leurs erreurs sont en revanche très différentes (5 erreurs en commun sur 22 et 24) :
+
+| Test manuel, accuracy par langue | EN | FR | darija |
+|---|---|---|---|
+| Embeddings SBERT | 0,97 | 0,81 | **0,54** |
+| TF-IDF + Linear SVM | 0,75 | 0,88 | 0,96 (artefact probable) |
+
+Les embeddings comprennent bien les paraphrases (surtout en anglais) mais **ne connaissent pas le darija en lettres latines** (un message darija inconnu est souvent classé `out_of_scope`). Le score du SVM en darija est gonflé par le vocabulaire commun entre gabarits et test. Combiner les deux modèles (moyenne des probabilités) est une piste non testée. Détail par classe, matrice de confusion, analyse d'erreurs et courbe seuil/couverture : voir le notebook.
+
+### Modèle servi
+Par défaut, l'image Docker sert le **TF-IDF + Linear SVM** : pas de PyTorch (image beaucoup plus légère, pas de téléchargement Hugging Face), précision équivalente sur le test manuel et pas d'écart significatif sur la CV. Pour servir les embeddings (retenus par la CV) : `docker build --build-arg WITH_SBERT=1 ml/nlp` ; `train` sélectionne alors automatiquement `embed_lr`. Décision à confirmer par l'équipe, en tenant compte de l'importance du darija.
 
 ## Limites (honnêteté scientifique)
 - **Données d'entraînement synthétiques** (gabarits + bruit) : un split aléatoire donnerait des scores gonflés ; d'où la CV groupée par gabarit et un test manuel indépendant (10 phrases par intention, rédigées par le même auteur que les gabarits).
-- **Embeddings** : le modèle multilingue pré-entraîné n'était pas téléchargeable dans l'environnement où le code a été exécuté ; un **repli LSA** (SVD sur TF-IDF caractères) a été utilisé, qui n'est *pas* un vrai embedding sémantique. Sur une machine avec accès à Hugging Face, `python -m intent_clf.train` bascule automatiquement sur `paraphrase-multilingual-MiniLM-L12-v2`. La conclusion « SVM > embeddings » ne vaut donc pas pour de vrais embeddings.
-- Seuil de confiance calculé sur la CV synthétique ; scores SVM non calibrés. À recalibrer sur de vraies requêtes.
-- Darija en alphabet latin : peu de données, orthographe non standardisée. Le score élevé en darija sur le test manuel (0,96, 24 phrases) est un **artefact** (mêmes auteur et vocabulaire restreint pour gabarits et test), pas une preuve de facilité ; EN 0,75 et FR 0,88 sur le même test.
+- **Test manuel petit** (140 phrases, 24 en darija) : ±6 points d'incertitude globale, davantage par classe ou par langue. Le pilot 20 (20 phrases) est trop petit pour départager les modèles.
+- **Darija en alphabet latin** : orthographe non standardisée, peu de données ; faible avec les embeddings pré-entraînés (0,54) et inconnu en réalité pour le SVM (artefact). Il faut de **vrais messages darija** annotés.
+- **Embeddings non fine-tunés** (extraction de caractéristiques + LogReg). Un fine-tuning ou un mélange avec le TF-IDF reste à tester.
+- Seuil de confiance calculé sur la CV synthétique ; scores du SVM non calibrés. À recalibrer sur de vraies requêtes.
 
 ## Points à valider avec l'équipe (décisions de design de ma part)
 Vérifié contre `docs/annotation_guidelines.md` (§5.2, §5.3 et annexe A) : les 14 intentions et les frontières (retard/non-reçu/cassé → `delivery_issue`, « où est ma commande » → `order_tracking`, priorité `refund_status` > `return_request` > `order_tracking`) sont respectées par mes données. Restent deux **trous de taxonomie** :
@@ -69,4 +82,5 @@ Vérifié contre `docs/annotation_guidelines.md` (§5.2, §5.3 et annexe A) : le
 2. **Plaintes sans demande d'agent** (« votre service est nul ») : `human_support` = demande *explicite* d'un agent ; l'arbre renvoie sinon à `out_of_scope`. Même question : règle explicite à écrire dans les guidelines.
 3. **Routes** proposées dans `data/intents.json` (ex. `payment_issue` → `human_handoff`) : à valider avec le backend.
 4. **Frontières** les plus confuses dans les tests : `order_tracking` ↔ `delivery_issue`, `refund_status` ↔ `return_request`, code promo refusé au paiement (`promotion_loyalty` vs `payment_issue`).
-5. Données réelles/annotées par l'équipe : les ajouter au test (et à l'entraînement) dès que disponibles.
+5. Données réelles/annotées par l'équipe : les ajouter au test (et à l'entraînement) dès que disponibles, **en particulier des messages en darija**.
+6. **Modèle servi** par défaut (SVM) ou embeddings : voir « Modèle servi ».

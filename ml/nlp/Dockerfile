@@ -4,8 +4,9 @@
 # pendant la construction de l'image à partir de data/train.csv (≈ 1-2 min).
 #
 # Build : docker build -t supportai-nlp ml/nlp
-# Vrais embeddings SBERT (ajoute ~2 Go : torch) : docker build --build-arg WITH_SBERT=1 ...
-#   -> inutile tant que le meilleur modèle est le Linear SVM TF-IDF (cf. models/config.json).
+# Par défaut : sans PyTorch, `train` retient le Linear SVM TF-IDF (modèle servi).
+# Vrais embeddings SBERT (image beaucoup plus lourde : torch) : docker build --build-arg WITH_SBERT=1 ...
+#   -> `train` retient alors le meilleur modèle par CV, soit les embeddings (cf. README, « Modèle servi »).
 
 # Stage 1: Build stage (dépendances + entraînement)
 FROM python:3.11-slim AS builder
@@ -20,6 +21,10 @@ RUN pip install --no-cache-dir -r requirements-serve.txt
 
 ARG WITH_SBERT=0
 RUN if [ "$WITH_SBERT" = "1" ]; then pip install --no-cache-dir sentence-transformers; fi
+
+# Cache Hugging Face dans /opt/hf : le modèle téléchargé au build est recopié dans l'image finale
+ENV HF_HOME=/opt/hf
+RUN mkdir -p /opt/hf
 
 COPY intent_clf ./intent_clf
 COPY data ./data
@@ -36,9 +41,12 @@ RUN groupadd -g 10001 appgroup && \
 
 COPY --from=builder /opt/venv /opt/venv
 COPY --from=builder --chown=appuser:appgroup /app /app
+COPY --from=builder --chown=appuser:appgroup /opt/hf /opt/hf
 ENV PATH="/opt/venv/bin:$PATH" \
     PYTHONUNBUFFERED=1 \
-    PYTHONDONTWRITEBYTECODE=1
+    PYTHONDONTWRITEBYTECODE=1 \
+    HF_HOME=/opt/hf \
+    HF_HUB_OFFLINE=1
 
 USER appuser
 
