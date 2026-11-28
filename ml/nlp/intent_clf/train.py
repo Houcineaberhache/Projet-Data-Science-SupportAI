@@ -8,7 +8,7 @@ import joblib
 import numpy as np
 import pandas as pd
 
-from .nlp_core import ROOT, load_data, load_pilot, make_pipelines, cv_predict, metrics, predict_proba_any
+from .nlp_core import ROOT, load_data, load_pilot, make_pipelines, cv_predict, metrics
 
 MODELS = ROOT / "models"
 REPORTS = ROOT / "reports"

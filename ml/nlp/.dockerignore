@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+models/*.joblib
+notebooks/
+reports/
+tests/
+conftest.py
+README.md

@@ -360,12 +360,33 @@ def build_train():
     return df
 
 
+DARIJA_TOKENS = {
+    "wach", "kifach", "bghit", "ch7al", "chhal", "chno", "waqtach", "mazal", "dyal", "dyali", "choukran", "salam",
+    "kayn", "kaynin", "chkon", "n9der", "m3a", "bzaf", "wsl", "wslat", "wslouni", "t3attal", "nrje3", "nbddel",
+    "flous", "khlas", "l'khlas", "tsiftat", "nsift", "nwqef", "nms7", "nmhaya", "nconnecti", "bnadem", "agent",
+    "3andkom", "7ta", "yjawb", "3ayet", "n3ayet", "nchouf", "ma9drtch", "ach", "hwa", "tilifon", "t7ra", "tkhfid",
+    "simana", "chhar", "hiya", "li", "rje3t", "3nd", "daz", "tkhssmo", "t'rembourssa", "3la", "9bel", "tsift", "ma3",
+    "kay'chargi", "kat'connectach", "mkser", "mfthouh", "lcommande", "ghadi", "daya3", "n3awd",
+    "labas", "rfdat", "t", "mrc", "bslama", "marhba", "ahlan", "waxxa", "maw3id", "3jbnich", "ma", "khdamch",
+}
+# 'ma', 'li', 't', 'agent', 'ach'... sont ambigus (français/anglais) : on exige >= 2 jetons darija non ambigus.
+AMBIGUOUS = {"ma", "li", "t", "agent", "ach", "3la", "hiya"}
+FR_HINT = re.compile(r"[éèàçùêôû]|\b(je|vous|mon|est|le|la|les|un|une|peut|peut-on|quel|quelle|quand|combien|comment|"
+                     r"puis-je|mes|ce|cet|pas|que|qui|pour|dans|sur|avec|j'ai|c'est|il|elle|ne|se)\b")
+
+
+def detect_lang(t):
+    toks = re.findall(r"[a-z0-9']+", t.lower())
+    darija = [w for w in toks if w in DARIJA_TOKENS and w not in AMBIGUOUS]
+    if len(darija) >= 1 and not re.search(r"[éèàçùêôû]", t) and len(darija) >= max(1, len(toks) // 6):
+        return "ma"
+    if FR_HINT.search(t.lower()):
+        return "fr"
+    return "en"
+
+
 def build_test():
-    rows = []
-    for intent, texts in TEST.items():
-        for t in texts:
-            lang = "ma" if re.search(r"\b(wach|kifach|bghit|ch7al|chhal|chno|fin|waqtach|mazal|dyal|dyali|choukran|salam|kayn|ach|chkon|ma)\b", t.lower()) else ("fr" if re.search(r"[éèàçùêô]|\b(je|vous|mon|ma|est|le|la|les|un|une|peut|quel|quelle)\b", t.lower()) else "en")
-            rows.append({"text": t, "intent": intent, "lang": lang})
+    rows = [{"text": t, "intent": intent, "lang": detect_lang(t)} for intent, texts in TEST.items() for t in texts]
     return pd.DataFrame(rows)
 
 
