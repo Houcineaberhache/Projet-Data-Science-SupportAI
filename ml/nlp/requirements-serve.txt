@@ -1,0 +1,9 @@
+# Dépendances minimales pour entraîner (au build) et servir le classifieur.
+# Pour le développement / notebooks / tests : requirements.txt
+scikit-learn>=1.4,<2
+pandas
+numpy
+joblib
+fastapi
+uvicorn
+pydantic>=2

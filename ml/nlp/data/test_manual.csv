@@ -11,15 +11,15 @@ Quand est-ce que mon casque sera expédié ?,order_tracking,fr
 Please send me the tracking link for my order,order_tracking,en
 "I placed the wrong order, please cancel it before it ships",order_change_cancel,en
 Peut-on changer l'adresse de livraison avant l'expédition ?,order_change_cancel,fr
-Bghit nbddel numéro téléphone f commande dyali,order_change_cancel,ma
-"Annulez ma commande s'il vous plaît, je l'ai passée en double",order_change_cancel,ma
+Bghit nbddel numéro téléphone f commande dyali,order_change_cancel,fr
+"Annulez ma commande s'il vous plaît, je l'ai passée en double",order_change_cancel,fr
 Can I switch the colour of the item I just ordered?,order_change_cancel,en
 "J'ai commandé deux fois par erreur, annulez la deuxième",order_change_cancel,fr
 How do I stop my order from being shipped,order_change_cancel,en
 Wach n9der nwqef l commande 9bel ma tsift ?,order_change_cancel,ma
-Je veux ajouter un câble à ma commande en cours,order_change_cancel,ma
+Je veux ajouter un câble à ma commande en cours,order_change_cancel,fr
 Is it too late to cancel? I ordered 10 minutes ago,order_change_cancel,en
-"Ma commande n'est toujours pas livrée, ça fait 8 jours",delivery_issue,ma
+"Ma commande n'est toujours pas livrée, ça fait 8 jours",delivery_issue,fr
 "Delivery delayed, what's going on with my order?",delivery_issue,en
 Colis dyali t3attal 3la l maw3id,delivery_issue,ma
 Mon colis est bloqué à Casablanca depuis 3 jours,delivery_issue,fr
@@ -27,7 +27,7 @@ The delivery guy left my parcel at the wrong building,delivery_issue,en
 Le livreur m'a appelé mais personne n'a livré,delivery_issue,fr
 My package came with a broken screen,delivery_issue,en
 Le colis est arrivé complètement écrasé,delivery_issue,fr
-Colis wsl lia mkser w mfthouh,delivery_issue,en
+Colis wsl lia mkser w mfthouh,delivery_issue,ma
 Tracking says delivered but there's nothing at my door,delivery_issue,en
 "J'ai changé d'avis, je peux renvoyer l'article ?",return_request,fr
 What's the procedure to send an item back,return_request,en
@@ -41,7 +41,7 @@ Peut-on retourner un téléphone déjà déballé ?,return_request,fr
 Kifach nsift l'article b retour ?,return_request,ma
 "I returned my keyboard two weeks ago, still waiting for my money back",refund_status,en
 Mon remboursement a-t-il été validé ?,refund_status,fr
-Combien de jours faut-il pour que l'argent revienne sur ma carte ?,refund_status,ma
+Combien de jours faut-il pour que l'argent revienne sur ma carte ?,refund_status,fr
 Refund not received for ORD317,refund_status,en
 Wach t'rembourssa lcommande dyali ?,refund_status,ma
 Vous m'avez promis un remboursement mais rien n'est arrivé,refund_status,fr
@@ -52,21 +52,21 @@ Will the refund go to my original payment method?,refund_status,en
 Vous acceptez PayPal ?,payment_info,fr
 Can I use a CMI card to pay online,payment_info,en
 Peut-on payer en cash au livreur ?,payment_info,fr
-Wach kaynin facilités de paiement ?,payment_info,ma
+Wach kaynin facilités de paiement ?,payment_info,fr
 Is it possible to split the payment into 3 installments?,payment_info,en
 Do you take Apple Pay?,payment_info,en
 Est-ce qu'on peut payer par virement ?,payment_info,fr
 Ach men tari9a dyal khlas kayn ?,payment_info,ma
 Is my credit card information safe on your site?,payment_info,en
-Où puis-je télécharger ma facture ?,payment_info,ma
+Où puis-je télécharger ma facture ?,payment_info,fr
 "Mon paiement par carte ne passe pas, que faire ?",payment_issue,fr
 I got a charge on my card but the order didn't go through,payment_issue,en
-Ma banque a débité deux fois le même montant,payment_issue,ma
+Ma banque a débité deux fois le même montant,payment_issue,fr
 Carte dyali t rfdat 3nd l'khlas,payment_issue,ma
 The checkout keeps saying transaction failed,payment_issue,en
 Le montant prélevé ne correspond pas au prix affiché,payment_issue,fr
 I see two payments for one order on my statement,payment_issue,en
-Erreur « paiement refusé » alors que ma carte est valide,payment_issue,ma
+Erreur « paiement refusé » alors que ma carte est valide,payment_issue,fr
 "L'khlas ma daz ch, flous tkhssmo",payment_issue,ma
 My bank blocked the payment to your site,payment_issue,en
 Mon casque fait un bruit étrange,technical_support,fr
@@ -83,13 +83,13 @@ Do I need the receipt to claim warranty?,warranty_claim,en
 "L'écran de mon téléphone a des lignes vertes après 5 mois, c'est couvert ?",warranty_claim,fr
 Je peux envoyer mon casque défectueux en SAV ?,warranty_claim,fr
 "The battery of my laptop drains in one hour, covered by warranty?",warranty_claim,en
-Kifach ndir réclamation l garantie dyal laptop ?,warranty_claim,ma
+Kifach ndir réclamation l garantie dyal laptop ?,warranty_claim,fr
 Combien de temps dure la garantie sur les smartphones ?,warranty_claim,fr
 "My charger stopped charging after two weeks, can it be replaced under warranty?",warranty_claim,en
 "Mon PC portable a 8 mois, la batterie est morte, c'est sous garantie ?",warranty_claim,fr
 "T7ra tilifon dyali, wach garantie katghatih ?",warranty_claim,ma
 Is accidental damage covered?,warranty_claim,en
-Ce laptop a combien de RAM ?,product_info,en
+Ce laptop a combien de RAM ?,product_info,fr
 Does this phone support 5G,product_info,en
 Le casque a-t-il une réduction de bruit active ?,product_info,fr
 Wach had telephone fih 128 go wla 256 ?,product_info,ma
@@ -99,7 +99,7 @@ Vous avez des iPhone en stock ?,product_info,fr
 Price of your cheapest laptop?,product_info,en
 C'est combien le casque noir ?,product_info,fr
 "Cet article est indisponible, il revient quand ?",product_info,fr
-Il y a un coupon pour ma première commande ?,promotion_loyalty,ma
+Il y a un coupon pour ma première commande ?,promotion_loyalty,fr
 Any discount for buying two items,promotion_loyalty,en
 Le code BLACK20 est refusé au paiement,promotion_loyalty,fr
 Wach kayn tkhfid f had simana ?,promotion_loyalty,ma

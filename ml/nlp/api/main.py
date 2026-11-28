@@ -1,9 +1,8 @@
 """API de classification d'intentions — SupportAI / NovaShop.
 
-Lancer : uvicorn api.main:app --port 8001
+Lancer : uvicorn api.main:app --port 8002
 Contrat consommé par le backend (Étudiant 5) : POST /classify
 """
-import json
 from typing import List, Optional
 
 from fastapi import FastAPI
